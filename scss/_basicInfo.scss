@@ -13,10 +13,12 @@
   .fbLink{
     position: absolute; right: 3px; top: 3px;
     a{ 
-      display: block; width: 36px; height: 36px; border-radius: 50%;
+      display: block; width: 32px; height: 32px; border-radius: 50%;
       text-indent: -20em; overflow: hidden; transition: .2s;
-      background: #fff;
+      background: url(../images/icon_fb0.png) no-repeat center bottom;
+      background-size:44px auto;
       &:hover{ transform: scale(1.1);}
+      &:focus{ box-shadow:$primaryColor 0 0 0 1px, rgba(255,255,255,.65) 0 0 0 3px;}
     }
   }
 
@@ -24,7 +26,7 @@
     line-height: 1.5;
     p{
       position: relative;
-      margin: 0 0 .9em; padding: 3px 0 0;
+      margin: 0 0 .9em; padding: 3px 0;
       padding-left: 36px;
       
       &::after{
@@ -33,6 +35,7 @@
         background: url(../images/icon_basicInfo.png) no-repeat 0 0;
         background-size: 28px auto;
       }
+      &.address::after{ background-position: 0 3px;}
       &.tel::after{ background-position: 0 -50px;}
       &.openingHours::after{ background-position: 0 -100px;}
       &.closed::after{ background-position: 0 -150px;}
@@ -40,8 +43,15 @@
       &.openingHours, &.closed{
         &::before{ content: attr(title)"："; display: block;}
       }
+
+      a.gmap{
+        display: inline-block; vertical-align: middle; padding: 2px; border-radius: 2px;
+        margin: -4px 0 0 4px;
+        transition: .2s;
+        img{display: block; width: 30px; height: 30px;}
+        &:hover{ box-shadow: $white 0 0 0 2px;}
+      }
     }
-    
   }
 
   .calendar{
@@ -55,8 +65,8 @@
     a{
       text-align: center;
       box-shadow: $white 0 0 0 1px; color: $fontInvert;
-      &:hover{ box-shadow: $white 0 0 0 2px;}
-      &:focus{ box-shadow:$primaryColor 0 0 0 1px, $white 0 0 0 4px; }
+      &:hover, &:focus{ box-shadow: $white 0 0 0 3px;}
+      &:focus{ background-color: $assistant; }
     }
   }
 

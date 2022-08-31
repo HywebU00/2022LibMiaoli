@@ -7,7 +7,6 @@
     text-decoration: none; color: $fontColorLight;
     &:focus{ outline:none; box-shadow:$primaryColor 0 0 0 2px inset;}
   }
-  .main .accesskey{ color: #fff;}
 }
 
 @media screen and (min-width: $wwMaximum){
@@ -68,11 +67,11 @@
 
 
 // 捲動至頁面最上方 ////////////////////////////////////////////////
-.goTop{
-  position: fixed; right: 10px; bottom: -60px; z-index: 99;
+button.goTop{
+  position: fixed; right: 4px; bottom: -60px; z-index: 99;
   width: 44px; height: 44px; padding: 0; border-radius: 50%;
   border: none; text-indent: -10em; overflow: hidden;
-  box-shadow: transparent 0 0 0 2px, rgba(0, 0, 0, .3) 0 0 12px;
+  box-shadow: transparent 0 0 0 2px, $shadowColor 0 0 12px;
   background-color: rgba(255, 255, 255, .8); cursor: pointer;
   transition:box-shadow .2s, background-color .2s, bottom .8s;
   &::before,  &::after{
@@ -84,16 +83,19 @@
   &::after{ margin-top: 1px;}
 
   &:hover{
-    background-color: #fff;
-    box-shadow: #fff 0 0 0 2px, rgba(0, 0, 0, .4) 0 0 20px;
+    background-color: $white;
+    box-shadow: $white 0 0 0 2px, $shadowColor 0 0 20px;
    
   }
   &:focus{
-    background-color: #fff;
-    box-shadow:$primaryColor 0 0 0 2px, rgba(0, 0, 0, .4) 0 0 10px;
+    background-color: $assistant;
+    box-shadow:$assistant 0 0 0 2px, $shadowColor 0 0 10px;
+    &::before,  &::after{
+      border-color: $white;
+    }
   }
 
-  &.show{bottom: 20px;}
+  &.show{bottom: 10px;}
 
   @media screen and ( min-width: calc(#{$wwMaximum} + 64px) ){
     right: calc(50% - #{$wwMaximum}*.5 - 25px);

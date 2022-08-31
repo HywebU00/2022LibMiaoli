@@ -32,23 +32,23 @@ $(function(){
   //   fixHeadThreshold = 0;
   // }
 
-  // _window.scroll(function(){
-  //   if (_window.scrollTop() > fixHeadThreshold ) {
-  //     _webHeader.addClass('fixed');
-  //     _body.offset({top: hh});
-  //   } else {
-  //     _webHeader.removeClass('fixed');
-  //     _body.removeAttr('style');
-  //   }
+  _window.scroll(function(){
+    // if (_window.scrollTop() > fixHeadThreshold ) {
+    //   _webHeader.addClass('fixed');
+    //   _body.offset({top: hh});
+    // } else {
+    //   _webHeader.removeClass('fixed');
+    //   _body.removeAttr('style');
+    // }
 
-  //   // goTop button 顯示、隱藏
-  //   if (_window.scrollTop() > 200) {
-  //     _goTop.addClass('show');
-  //   } else {
-  //     _goTop.removeClass('show');
-  //   }
-  // })
-  // _window.trigger('scroll');
+    // goTop button 顯示、隱藏
+    if (_window.scrollTop() > 200) {
+      _goTop.addClass('show');
+    } else {
+      _goTop.removeClass('show');
+    }
+  })
+  _window.trigger('scroll');
 
 
   // 查詢區開合 //////////////////////////////
