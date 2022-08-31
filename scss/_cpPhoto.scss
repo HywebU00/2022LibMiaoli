@@ -1,0 +1,148 @@
+
+// imgSlick 大圖容器 ////////////////////////////////////////////////////
+.imgSlick{ 
+  width: 100vw; max-width: 658px;
+  position: relative; margin: 0 auto 50px; padding:0 0 15px;
+  border-top: 1px solid $borderColor;
+  .slick-arrow{
+    &.slick-prev{ left: 5px; }
+    &.slick-next{ right: 5px; }
+  }
+
+  .slider-for{
+    position: relative;
+    .slick-slide{
+      position: relative; cursor: pointer;
+      img{
+        display: block; margin: 0 auto; 
+        width: 100%; height: 100vw; max-height: 70vh; object-fit: contain;
+      }
+      .caption{
+        position: absolute; bottom: 0;left: 0; right: 0;
+        padding:.8em 12px .7em; margin: 0; line-height: 1.5;
+        color: $fontColorDark; text-align: center;
+        background-color: rgba(255,255,255,.8);
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        transition: .6s;
+        time{ display:inline-block; margin-right: .8em; color: $hiLight;}
+        .photoViewCount{ 
+          display: block; margin-top: .5em; font-size: .9em;
+          &::before{
+            content: ''; display: inline-block; vertical-align: middle;
+            margin-right: 3px; width: 22px; height: 16px;
+            background: url(../images/icon_eye2.png) no-repeat 0 0;
+            background-size: 22px;
+          }
+        }
+      }
+      &:hover{
+        .caption{ transform: translateY(100%);}
+      }
+      &::before{
+        content: ''; position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+        box-shadow: $assistant 0 0 0 2px inset; z-index: -1;  display: none;
+      }
+      &:focus{
+        &::before{display: block;z-index: 9;}
+      }
+    }
+
+    // 第幾張
+    .slick-dots{
+      list-style: none; margin: 0; padding: 0;
+      position: absolute; right:calc(2rem + 10px);top: -25px;
+      li{ 
+        margin: 0; padding: 0; display: none;
+        &.slick-active{ display: block;}
+        button{
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 1.1rem; font-weight: bold; text-align: right;
+          margin: 0; padding: 0; height: 1.1em; line-height: 1;
+          background: none; color: $fontColorDark;
+        }
+      }
+    }
+
+    // 總張數
+    .slideTotal{
+      font-family: 'Courier New', Courier, monospace;
+      position: absolute; right: 10px; top: -24px;
+    }
+  }
+  
+  // 導覽小圖
+  .slider-nav{ 
+    margin: 15px auto 0; padding: 0;
+    .slick-slide{ 
+      cursor: pointer;display: block;padding:3px 1px; margin:0;
+      a{
+        display: block; position: relative;
+        &::before{
+          content: ''; position: absolute; left: 0;right: 0;top: 0;bottom: 0;
+        }
+      }
+      img{ display: block; height: 24vw; width: 24vw; object-fit: cover;}
+
+      &.slick-current{ 
+        position: relative;z-index: 99; 
+        a{
+          &::before{ box-shadow: $primaryColor 0 0 0 3px;}
+        }
+      }
+    }
+  }
+
+
+
+  @media screen and (min-width: $wwMedium){
+    width: $mobileWidth; max-width: none;
+    box-shadow: rgba(0,0,0 , .2) 0 0 12px; border: none;
+
+    .slider-for{ 
+      .slick-slide{
+        img{height: $mobileWidth*.625;max-height: none; }
+      }
+    }
+    .slider-nav{ 
+      .slick-slide{ 
+        img{  height: 160px; width: 160px; }
+      }
+    }
+  }
+
+  @media screen and (min-width: $wwNormal){
+    width: $normalWidth;
+    .slider-for{ 
+      .slick-slide{
+        img{width:$normalWidth; height: $normalWidth*.625;}
+      }
+    }
+  }
+
+
+  @media screen and (min-width: $wwMaximum){
+    width: $wwMaximum*.88;
+    .slider-for{ 
+      .slick-slide{
+        img{width:$wwMaximum*.88; height: $wwMaximum*.55;}
+      }
+    }
+  }
+}
+// -----------------------------------------------------------------
+
+
+// 照片描述（在照片內容頁中）//////////////////////////////////////
+.photoDescription{
+  @extend %mainWidth;
+  padding-top: 1px; padding-bottom: 40px; line-height: 1.8;
+  
+  a{
+    color: $linkColor;
+    &:hover, &:focus{text-decoration: none;}
+    &:focus{outline: 1px solid $linkColor;}
+  }
+
+  p{ margin: 1em 0 1.5em;}
+}
+// -----------------------------------------------------------------

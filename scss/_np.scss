@@ -1,0 +1,54 @@
+// 節點頁 //////////////////////////////////////////////////////////
+.np{
+  @extend %mainWidth;
+  font-size: 1.125em;padding: 0 0 4em;
+  ul{ list-style: none; margin: 0; padding: 0; line-height: 1.6;}
+  li{ padding: 2px 0;
+    a{
+      position: relative; display: block; padding: .7em .5em .65em 26px;
+      text-decoration: none; color: $fontColor;
+    }
+  }
+  &>ul>li>a{ padding-left: 30px;}
+  &>ul{
+    &>li{
+      margin: 5px 0 10px; padding:0;
+      &>a{
+        position: relative;
+        padding: .9em 16px .8em 22px; height: 100%;
+        border: 1px solid $borderColor;
+        background-color: rgba(255,255,255,.4);
+        transition: .2s;
+        &::before{
+          content: ''; position: absolute; top: 1.25em; left: 12px; width: 3px; height: 13px;
+          background-color: $primaryColor;
+          transition: .2s;
+        }
+        &:hover, &:focus{
+          z-index: 9;border-color: $primaryColor;
+          padding-left: 32px; padding-right: 6px;
+          &::before{
+            width: 13px; background-color: $assistant;
+          }
+        }
+        &:hover{ 
+          transform: translateY(-3px);
+          box-shadow:transparent 0 0 0 1px, $shadowColor 0 6px 24px -3px; background-color: rgba(255,255,255,.8);}
+        &:focus{ 
+          transform: translateY(0);
+          box-shadow:$primaryColor 0 0 0 1px, $shadowColor 0 4px 8px -2px;}
+      }
+    }
+  }
+  @media screen and (min-width: $wwMedium){
+    &>ul{
+      display: flex; flex-flow: row wrap; justify-content: space-between;
+      &>li{ flex:0 0 calc(50% - 5px); margin: 5px;
+        &:nth-child(odd){ margin-left: 0;}
+        &:nth-child(even){ margin-right: 0;}
+      }
+    }  
+  }
+}
+
+// -----------------------------------------------------------------

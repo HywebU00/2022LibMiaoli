@@ -1,0 +1,52 @@
+.cloudEbook{
+  ul{list-style: none; margin: 0; padding: 0;}
+
+  .links{
+    margin: 0 auto; width: 80vw; max-width: 320px;
+    li{
+      margin: 40px 0;
+      a{
+        display: block;
+        box-shadow: rgba(0,0,0,.4) 0 1px 3px;
+      }
+      img{
+        display: block; width: 100%; height: auto;
+        // width: 180px; height: 60px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $wwSlim){
+    .links{
+      display: flex; flex-flow: row wrap; width: calc(100% - 20px); max-width: none;
+      li{
+        flex: 0 0 calc(50% - 20px); margin: 10px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $wwMedium){
+  }
+
+  @media screen and (min-width: $wwNormal){
+    .links{
+      display: block; width: auto; margin: 0 18px;
+      li{
+        margin: 30px 0;
+      }
+    }
+  }
+}
+
+
+.row13{
+  @extend %mainWidth;
+  @media screen and (min-width: $wwNormal){
+    margin: 0 auto;
+    display: flex; align-items: flex-start;
+
+    .cloudEbook{flex: 0 0 25%;}
+    .events{flex: 1 1 calc(75% - 40px); width: calc(75% - 40px); margin-left: 40px;}
+
+  }
+}

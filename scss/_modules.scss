@@ -1,0 +1,250 @@
+// 現在位置（麵包屑） //
+.breadcrumb {
+  @extend %mainWidth;
+  padding: 20px 0 5px; font-size: 1rem;
+  ul, li{ list-style: none; margin: 0;padding: 0;}
+  ul{line-height: 1.2; overflow: hidden; }
+  li{float: left; position: relative;color: $fontColor;
+    &:nth-child(n+2){padding-left: 2em;
+      &::before{ content: '';position: absolute; left: 1em; top: .12em; 
+        width: 1px; height: 1em;
+        background: none; border-left: 1px solid $fontColorLight;
+        transform: rotate(20deg);
+      }
+    }
+    &:first-child{padding-left: 0;}
+    a{
+      display: block; text-decoration: none; color: $fontColorLight;
+      border-bottom: 1px solid transparent;
+        &:hover, &:focus{  border-bottom-color: $fontColor; color: $fontColor;}
+    }
+  }
+}
+
+// 內頁標題 //
+.pageHeader{
+  @extend %mainWidth;
+  padding: 2em 0 .5em;
+  color: $fontColor; font-size: 1.3em; line-height: 1.5;
+
+  h2{padding: 0; margin: 0;}
+  .subheading{font-size: .8em;}
+
+  @extend %mainWidth;
+}
+
+// 列印、分享、返回 等功能圖示 //
+.funcBar{
+  @extend %mainWidth;
+  position: relative; z-index: 99;
+  font-size: 1rem;
+  ul{ list-style: none; margin: 0;padding: 0; text-align: center;}
+  &>ul{display: flex; flex-flow: row wrap; justify-content: flex-end;
+    &>li{
+      position: relative; margin:3px;padding: 0; 
+      &>a, &>button{
+        position: relative; display: block; margin: 0; 
+        padding: 0 16px;line-height: 2.5; height: 2.4em; 
+        background-color:$primaryColor; color: $fontInvert;
+        border: none; text-decoration: none; box-shadow: none; border-radius: 0;
+        cursor: pointer;white-space: nowrap;
+        transition: .2s;
+        &:hover, &:focus{
+          background-color: $assistant; color: $fontInvert;
+        }
+        &:focus{
+          box-shadow: $white 0 0 0 1px inset, $assistant 0 0 0 2px;
+        }
+      }
+
+
+      // 第二層
+      &>ul{ 
+        display: none;
+        position: absolute; top: 0; left: 0; 
+        width: 44px; margin-top: 2px;
+        &>li{
+          position: absolute; top: 0; left: 0; margin: 3px 0; padding: 0;
+          &>a{
+            display: block; width: 44px; height: 44px; border-radius: 50%;
+            background-color: $primaryColor;
+            transition: .2s;
+            &:hover, &:focus{
+              box-shadow:#fff 0 0 0 1px, $primaryColor 0 0 0 3px;
+              background-color: $primaryColor;
+            }
+          }
+          img{ display: block; width: 100%; height: 100%; margin: 0 auto;border-radius: 50%; }
+        }
+      }
+
+      &.compound>button{position: relative; z-index: 19;}
+  
+    }
+  }
+}
+
+// 文字大小 //
+.fontSize{
+  button{ line-height: 44px;}
+  .smallFont{ font-size: .85rem;
+    &::after{content: '-';}
+  }
+  .mediumFont{ font-size: 1.125rem;}
+  .largeFont{ font-size: 1.3rem;
+    &::after{content: '+';}
+  }
+}
+
+
+
+// 列表上方的文字 //
+// .preface{
+//   padding:1em 2em; margin: 2em auto; line-height: 2;
+//   background: #fff; border-radius: 16px;
+//   box-shadow: rgba(0,0,0,.15) 0 0 20px;
+// }
+
+
+// 檔案下載 ////////////////////////////
+// 檔案類型圖示 //
+.fileType{
+  display: block; position: relative; 
+  margin: 0; width: 2.4rem; height: 2.7rem; line-height:3.8rem;
+  font-size: .8125rem; text-decoration: none; text-align: center;
+  color: $fontInvert; background-color: #aaa; transition: .2s;
+
+  &::before{
+    content: ''; position: absolute; top: 8px; left: 8px; right: 8px; height: 1px;
+    background-color: rgba(255,255,255,.7);
+    box-shadow: rgba(255,255,255,.7) 0 5px 0, rgba(255,255,255,.7) 0 10px 0;
+  }
+
+  &.mp3, &.mp4, &.mov, &.wmv{
+    &::before{
+      width: 0; height: 0; top: 10px; left: 16px; right: auto;
+      background-color: transparent;box-shadow: none;
+      border-style: solid;border-width: 5px 0 5px 8px;
+      border-color: transparent transparent transparent rgba(255,255,255,.8);
+    }
+  }
+  &.jpg{
+    &::before{
+      width: 10px; height: 10px; top: 9px; right: auto; left: 8px;
+      background-color: rgba(255,255,255,.8);box-shadow: none;
+    }
+    &::after{
+      position: absolute; content: '';
+      width: 12px; height: 12px; top: 8px; right: 7px; left: auto;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,.8);box-shadow: none;
+    }
+  }
+
+  &.pdf {background:#c00;
+    &:hover, &:focus{box-shadow:rgba(255,255,255,.6) 0 0 0 1px inset, #c00 0 0 0 2px;}
+  }
+  &.doc , &.docx, &.odt{
+    background:#1b76cb;
+    &:hover, &:focus{box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #1b76cb 0 0 0 2px;}
+  }
+  &.xls, &.xlsx, &.csv, &.ods {
+    background:#48920f;
+    &:hover, &:focus{box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset,  #48920f 0 0 0 2px;}
+  }
+  &.ppt, &.pptx, &.odp{
+    background:#c43e1c;
+    &:hover, &:focus{box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #c43e1c 0 0 0 2px;}
+  }
+  &.txt {
+    background:#1d98e4;
+    &:hover, &:focus{box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #1d98e4 0 0 0 2px;}
+  }
+  &.jpg {
+    background:#0b9fb2;
+    &:hover, &:focus{box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #0b9fb2 0 0 0 2px;}
+  }
+  &.mp3, &.mp4 {
+    background:#9d3a89;
+    &:hover, &:focus{box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #9d3a89 0 0 0 2px;}
+  }
+  &.mov, &.wmv{
+    background:#5843a9;
+    &:hover, &:focus{box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #5843a9 0 0 0 2px;}
+  }
+  &.zip {
+    background:#333;
+    &:hover, &:focus{box-shadow:rgba(255,255,255,.6) 0 0 0 1px inset, #333 0 0 0 2px;}
+  }
+  &.other {background:#555;
+    &:hover, &:focus{box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #555 0 0 0 2px;}
+  }
+}
+a .fileType{ color: $fontInvert;text-decoration: none; }
+a:hover, a:focus {
+  .fileType {
+    color: $fontInvert;text-decoration: none;
+    &.pdf {
+      box-shadow:rgba(255,255,255,.6) 0 0 0 1px inset, #c00 0 0 0 2px; }
+    &.doc , &.docx, &.odt{
+      box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #1b76cb 0 0 0 2px; }
+    &.xls, &.xlsx, &.csv, &.ods {
+      box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset,  #48920f 0 0 0 2px; }
+    &.ppt, &.pptx, &.odp{
+      box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #c43e1c 0 0 0 2px; }
+    &.txt {
+      box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #1d98e4 0 0 0 2px; }
+    &.jpg {
+      box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #0b9fb2 0 0 0 2px; }
+    &.mp3, &.mp4 {
+      box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #9d3a89 0 0 0 2px; }
+    &.mov, &.wmv{
+      box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #5843a9 0 0 0 2px; }
+    &.zip {
+      box-shadow:rgba(255,255,255,.6) 0 0 0 1px inset, #333 0 0 0 2px; }
+    &.other {
+      box-shadow: rgba(255,255,255,.6) 0 0 0 1px inset, #555 0 0 0 2px; }
+  }
+}
+
+// 檔案下載
+.downloadFiles{
+  list-style: none; margin: 0; padding: 0; overflow: hidden;
+  li{
+    float: left; margin: 3px;
+    a{ display: block;  margin: 0; padding: 0; text-decoration: none;}
+  }
+}
+
+// cp 頁的瀏覽人次與發布日期容器
+.pubInfo{ 
+  @extend %mainWidth; padding: .7em 3vw .7em; margin-bottom: 16px;
+  border: 1px solid $borderColorLight; border-radius: 6px;
+
+  dl{
+    line-height: 1.5; margin: 0; padding: 0;
+    display: flex; justify-content: space-between ;
+    &>div{
+      flex: 1 1 auto;
+      &+div { margin-left: 15px;}
+    }
+
+    dt, dd{ display: inline-block; margin: 0;}
+    dt{
+      color: $fontColorLight; font-size: .9em;
+      &::after{content: '：';}
+    }
+  }
+
+  @media screen and (min-width: $wwNormal){
+    margin-bottom: 20px;border-radius: 12px;
+    padding-left: 25px; padding-right: 25px;
+    dl{
+      &>div{
+        &:nth-child(n+2){text-align: center;}
+        &:last-child{ text-align: right;}
+      }
+    }
+  }
+
+}

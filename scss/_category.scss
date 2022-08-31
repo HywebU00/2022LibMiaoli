@@ -1,0 +1,37 @@
+// 資料大類 ////////////////////////////////////////////////////
+.category{
+  @extend %mainWidth; padding: 8px 0 0;
+  ul{
+    list-style: none; margin: 0; padding: 0; line-height: 1.2;
+    &::after{ content: ''; display: block; clear: both;}
+  }
+  li{
+    float: left; margin: 4px;
+    a {
+      position: relative;
+      display: block;height: 2.3em; line-height: 2.4em; padding: 0 1em;
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: $borderColor 0 0 0 1px; color: $fontColor;
+      transition: .15s;
+      &::after{
+        content: ''; position: absolute; left: 0;right: 0;bottom: 0;
+        height: 0; background-color: $primaryColor;
+        transition: .15s;
+      }
+      &:hover, &:focus{ box-shadow: $primaryColor 0 0 0 1px;
+        &::after{height: 3px;}
+      }
+    }
+    &.active{
+      a{
+        background-color: $primaryColor; color: $fontInvert;
+        box-shadow: $primaryColor 0 0 0 1px;
+        &:hover, &:focus{
+          &::after{ background-color: $hiLight;}
+        }
+      }
+    }
+  }
+}
+// -----------------------------------------------------------------

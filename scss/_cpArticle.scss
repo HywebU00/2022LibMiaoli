@@ -1,0 +1,147 @@
+// 文章形式的 cp 頁 ////////////////////////////////////////////////////
+.cpArticle{
+  @extend %mainWidth;padding-bottom: 100px;
+  line-height: 1.8;
+
+  a{color: $linkColor;
+    &:hover, &:focus{text-decoration: none;}
+    &:focus{outline: 1px solid $linkColor;}
+  }
+
+  p{ margin: 1em 0 1.5em;}
+
+  h3, h4, h5, h6{
+    font-weight: bold; margin: 2rem 0 .5rem;
+    & + p{margin-top: .5rem;}
+  }
+  h3{ font-size: 1.3em;}
+  h4{ font-size: 1.2em;}
+  h5{ font-size: 1.15em;}
+  h6{ font-size: 1em;}
+
+  figure{
+    display: block; margin: 0 auto 1.5em;
+    img{display: block; width: 100%; max-height: 65vh; object-fit: contain;}
+    figcaption{
+      display: block; margin: .5em 0 0;
+      line-height: 1.6; font-size: .875em;
+    }
+  }
+
+  table{
+    border-collapse: collapse; width: 100%; margin: 0 auto;
+    border: 3px solid $borderColor;
+    line-height: 1.8;
+
+    th, td{
+      padding:.7em .8em .6em;
+      border: 1px solid $borderColor;
+    }
+    th{font-weight: bold; color: $fontColorDark;}
+    tr th:first-child{background-color: lighten($grayLight, 5%); }
+    tr:first-child{
+      th{ background-color: $grayLight;  border-bottom-color: $borderColorDark;}
+    }
+  }
+
+  @media screen and (min-width: $wwMedium){
+    overflow: hidden;
+    figure{
+      float: left; width: 50%;max-width: 460px;
+      margin: 3px 1em .5em 3px; padding: 5px;
+      box-shadow: $borderColor 0 0 0 1px;
+      img{ max-height: none; }
+
+      &+p{margin-top: 0;}
+    }
+  }
+
+  @media screen and (min-width: $wwNormal){
+    figure{max-width: 460px;}
+  }
+
+}
+// -----------------------------------------------------------------
+
+
+// 附件下載, 相關連結, 相關圖檔 ////////////////////////////////////////////////////
+.fileDownload, .seeAlso{
+  @extend %mainWidth; margin-bottom: 50px;
+  
+  h3{font-size: 1.4em; margin: 0 0 .5em; line-height: 1.1;}
+  ul, ol{margin: 0; padding: 0; list-style: none; line-height: 1.8;}
+  a{text-decoration: none; }
+}
+// -----------------------------------------------------------------
+
+
+// 相關連結 ////////////////////////////////////////////////////
+.seeAlso{
+  &>ol{
+    border-top: 3px solid $borderColor;
+    border-bottom: 3px solid $borderColor;
+  }
+  li{
+    margin: 3px 0 0; padding: 0 0 3px;
+    border-bottom: 1px solid $borderColor;
+    a{
+      position: relative; display: block; padding: .7em 10px .6em 14px;
+      color: $fontColor;
+      transition: .2s;
+      &::before{
+        content: '';
+        position: absolute; left: 2px; top: 1.25em; width: 0; height: 0;
+        border-style: solid; 
+        border-width: 6px 0 6px 3px; border-color: $primaryColor;
+        transition:border-left-width .15s;
+      }
+      &:hover, &:focus{
+        padding-left: 22px; padding-right: 2px;
+        outline: none;
+        &::before{
+          border-color: transparent;
+          border-left-color: $primaryColor; 
+          border-width: 6px 0 6px 9px; 
+        }
+      }
+      &:focus{
+        box-shadow: $linkColor 0 0 0 1px inset;
+      }
+    }
+  }
+}
+// -----------------------------------------------------------------
+
+
+// 附件下載 ////////////////////////////////////////////////////
+.cpArticle ~ .fileDownload{
+  &>ul{
+    border-top: 3px solid $borderColor;
+    border-bottom: 2px solid $borderColor;
+    &>li{
+      margin: 0; padding: 0 0 0 3px;
+      border-bottom: 1px solid $borderColor;
+      display: flex; flex-flow: row wrap;
+      align-items: center; justify-content: flex-end;
+    }
+  }
+  .fileName{ margin: 6px 0 3px; flex: 1 1 auto; }
+
+  .downloadFiles{
+    flex: 0 1 auto;
+    li{margin:0 0 0 12px; padding:3px 0;}
+    a{
+      padding: 5px;display: block; 
+      &:hover, &:focus {
+        outline: none;
+        .fileSize{text-decoration: underline;}
+      }
+      &:focus{
+        box-shadow: $linkColor 0 0 0 1px inset;outline: none;
+      }
+    }
+  }
+
+  .fileType{ display: inline-block; vertical-align: middle; margin-right: 5px;}
+}
+// -----------------------------------------------------------------

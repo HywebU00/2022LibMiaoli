@@ -1,0 +1,87 @@
+// 頁籤基本設定 ////////////////////////////////////////////////////
+.tabSet {
+  .tabItems {
+    display: flex; flex-flow: row nowrap; margin: 0 auto;
+    button {
+      flex: 1 1 auto; font-size: 1em; text-align: center;
+      border: none; box-shadow: none; background:none;
+      cursor: pointer;
+      &.active{cursor: default;}
+    }
+  }
+
+  .tabContent {
+    display: none;
+    .skip {
+      position: absolute;right: 0;bottom: 0;
+      width: 1px;height: 1px;padding: 0;
+      background-color: transparent;border: none;
+    }
+  }
+}
+// -----------------------------------------------------------------
+
+
+////////////////////////////////////////////////////////////////////
+
+
+// 首頁：活動訊息、近期活動（頁籤）/////////////////////////////////////////
+.events{
+
+  .tabSet{
+    .tabItems{
+      margin: 0 -2px 30px;
+      button{
+        position: relative;
+        line-height: 1.5; height: auto; font-size: 1.125rem;
+        margin:0 2px;padding: .4em 1em; border-radius: 0;
+        color: $primaryColor;transition: .2s;
+        &::after{
+          content: '';position: absolute; bottom: -7px; left: 50%;
+          transform: translateX(-50%);
+          width: 0; height: 0; border-style: solid;
+          border-width: 8px 8px 0 8px; border-color: transparent;
+          transition: .2s;
+        }
+        &:focus, &:hover{
+          box-shadow: $primaryColor 0 0 0 1px inset;
+        }
+        &.active {
+          color: $fontInvert; background: $primaryColor;
+          &::after{border-top-color: $primaryColor;}
+          &:focus, &:hover{
+            box-shadow: $primaryColor 0 0 0 2px inset, $white 0 0 0 3px inset;
+          }
+        }
+      }
+    }
+  
+    .tabContent{
+      .image{
+        overflow: hidden;
+        img{display: block; width: 100%; transition: .3s;}
+        a{
+          display: block; position: relative;
+          &::before{
+            position: absolute; left: 0;right: 0;top: 0;bottom: 0;
+            box-shadow: $linkColor 0 0 0 3px inset, $white 0 0 0 4px inset;
+          }
+          &:hover, &:focus {
+            img{ transform: scale(1.05);}
+          }
+          &:focus {
+            &::before{ content: ''; z-index: 9; }
+          }
+        }
+      }
+    }
+  }
+
+
+  @media screen and (min-width: $wwNormal){
+    .tabItems{ margin: 35px 0 0;}
+  }
+
+
+}
+// -----------------------------------------------------------------

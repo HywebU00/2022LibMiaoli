@@ -1,0 +1,40 @@
+// 條款、訊息 //////////////////////////////////////////////////////
+.notice{
+  @extend %mainWidth;
+  padding: 40px 4vw; margin-bottom: 50px; line-height: 1.8;
+  box-shadow: rgba(0,0,0,.2) 0 0 16px; border-radius: 12px;
+  a{
+    &:hover, &:focus{ text-decoration: none;}
+    &:focus{
+    outline: 1px solid $linkColor;}
+  }
+  h3{
+    margin: 0 0 2rem; font-size: 1.4rem;
+    border-bottom: 3px solid $borderColor;
+  }
+  p{
+    margin: 1em 0;
+    &.greeting{ font-weight: bold; font-size: 1.125em;}
+  }
+  ol, ul{ margin: 1em 0;
+    &+.button{ margin-left: 2em;}
+  }
+  ol{
+    &.tradChineseInformal{
+      list-style-type: trad-chinese-informal;
+    }
+  }
+  li{
+    &+li{ margin-top: 1em;}
+    ol{list-style-type: lower-alpha;}
+  }
+
+  .btnDv{margin-top: 2.5em;}
+
+
+  @media screen and (min-width: $wwNormal){
+    padding: 40px;
+  }
+
+}
+// -----------------------------------------------------------------

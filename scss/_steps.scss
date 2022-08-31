@@ -1,0 +1,59 @@
+// 步驟
+.steps {
+  padding: 0;margin: 15px auto 20px;text-align: center;
+
+  ul, ol {
+    list-style: none;margin: 0 auto;padding: 0;
+    display: flex;justify-content: space-between;
+    line-height: 1.1; 
+    
+    &>li {
+      position: relative;flex: 1 1 25%;padding: 36px 0 0;
+      em{
+        position: absolute; left: 50%; top: 0; z-index: 9;
+        transform: translateX(-50%);
+        text-align: center; height: 24px; line-height: 26px;
+        font-weight: bold; font-style: normal;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;top: 10px;left: 0;right: 0;height: 4px;
+        background: $borderColor;
+      }
+
+      &:first-child {
+        &::before {left: 50%;}
+      }
+
+      &:last-child {
+        &::before {right: 50%;}
+      }
+
+      &::after {
+        content: '';position: absolute;top: 0;left: 50%;width: 24px;height: 24px;
+        margin-left: -12px;border-radius: 50%;
+        box-shadow: $borderColor 0 0 0 4px; background-color: $white;
+      }
+
+      &.done{
+        &::after {
+          background: $grayDark;box-shadow: $white 0 0 0 1px, $borderColor 0 0 0 4px;
+        }
+        em{color: $fontInvert;}
+      }
+      &.now {
+        &::after {
+          width: 24px; height: 24px;
+					background: $assistant;
+          box-shadow:$white 0 0 0 2px, $primaryColor 0 0 0 6px;
+        }
+        em{color: $primaryColor;}
+      }
+    }
+  }
+
+  @media screen and (min-width: $wwMedium) {
+    width: 96%; max-width: 960px;
+  }
+}

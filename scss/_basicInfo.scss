@@ -1,0 +1,100 @@
+// 首頁區塊：開館時間等
+// .main>*:not(.basicInfo){display:none}
+
+.basicInfo{
+  background-color: $primaryColor; color: $fontInvert;
+  margin:40px 0 40px 5vw;
+  padding: 40px 5vw;
+
+  .blockHeader{
+    position: relative; margin: 0; padding: 5px 0;
+    border-bottom: 1px solid $white;
+  }
+  .fbLink{
+    position: absolute; right: 3px; top: 3px;
+    a{ 
+      display: block; width: 36px; height: 36px; border-radius: 50%;
+      text-indent: -20em; overflow: hidden; transition: .2s;
+      background: #fff;
+      &:hover{ transform: scale(1.1);}
+    }
+  }
+
+  .informatiom{
+    line-height: 1.5;
+    p{
+      position: relative;
+      margin: 0 0 .9em; padding: 3px 0 0;
+      padding-left: 36px;
+      
+      &::after{
+        content: ''; position: absolute; left: 0; top: 0;
+        width: 28px; height: 30px;
+        background: url(../images/icon_basicInfo.png) no-repeat 0 0;
+        background-size: 28px auto;
+      }
+      &.tel::after{ background-position: 0 -50px;}
+      &.openingHours::after{ background-position: 0 -100px;}
+      &.closed::after{ background-position: 0 -150px;}
+
+      &.openingHours, &.closed{
+        &::before{ content: attr(title)"："; display: block;}
+      }
+    }
+    
+  }
+
+  .calendar{
+    width: 300px; height: 400px; 
+    background-color: #fff;
+     color: $fontColor;
+  }
+
+  .more{
+    text-align: left; margin-left: 36px; margin-top: 1.2em;
+    a{
+      text-align: center;
+      box-shadow: $white 0 0 0 1px; color: $fontInvert;
+      &:hover{ box-shadow: $white 0 0 0 2px;}
+      &:focus{ box-shadow:$primaryColor 0 0 0 1px, $white 0 0 0 4px; }
+    }
+  }
+
+  @media screen and (min-width: $wwNormal){
+    position: relative; padding:50px 0 0; margin:50px 0;
+    background-color: transparent; 
+    &::before{
+      content: ''; position: absolute; right: 0; top: 0; 
+      width: 56%; height: 43vw;
+      background: url(../images/basicInfo_bg.jpg) no-repeat 0 0;
+      background-size: cover;
+    }
+    &::after{ content: ''; display: block;  clear: both;}
+
+    .blockHeader{
+      position: absolute; left: 10vw; top: 100px; z-index: 9;
+      width: calc(54% - 14.5vw);
+    }
+    .informatiom{
+      float: left; position: relative; z-index: 8;
+      background-color: $primaryColor;
+      width: 54%;
+      padding: 110px 4.5vw 20px 10vw;
+    }
+
+    .calendar{
+      position: relative;z-index: 8;
+      margin-left: 60%;
+      box-shadow: $shadowColor 0 0 30px;
+    }
+
+  }
+
+  @media screen and (min-width: $wwMaximum){
+    &::before{ height:  $wwMaximum*.43;}
+    .blockHeader{ left: $wwMaximum*.1;  width: calc(54% - $wwMaximum*.145);}
+    .informatiom{
+      padding-left:  $wwMaximum*.1;
+    }
+  }
+}

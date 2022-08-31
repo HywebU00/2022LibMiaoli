@@ -1,0 +1,141 @@
+// 「讀者服務」＋「雲端閱讀電子書」 和 .row31, .row13  排版
+
+// 首頁區塊：讀者服務
+.services{
+  .links{
+    display: flex; flex-flow: row wrap;
+    list-style: none; margin: 0 auto; padding: 0; width: 95%;
+    font-size: 1.1rem;line-height: 1.3;
+    li{
+      flex: 0 0 calc(50% - 4px); margin:6px 2px; padding: 0;
+      a{
+        display: block; position: relative;
+        height: 100%; padding: 14px 5px 13px 54px; border-radius: 4px;
+        font-weight: bold; color: $primaryColor;text-decoration: none;
+        transition: .2s;
+        &::before{
+          content: ''; position: absolute; left: 4px; top: 4px;
+          width: 42px; height: 42px; border-radius: 2px;
+          transition: .2s;
+        }
+        img{ 
+          position: absolute; left: 10px; top: 10px;
+          width: 30px; height: 30px; object-fit: contain;
+        }
+
+        &:hover{
+          background-color: $primaryColor; color: $fontInvert;
+          &::before{ background-color: $white;}
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $wwMedium){
+    .links{
+      li{flex:0 0 calc(33.33% - 4px);}
+    }
+  }
+
+  @media screen and (min-width: $wwNormal){
+    width: auto;box-shadow: rgba(0,0,0,.25) 0 0 40px;
+    .links{display: block}
+  }
+
+}
+
+
+// 首頁區塊：雲端閱讀電子書
+.cloudEbook{
+  ul{list-style: none; margin: 0; padding: 0;}
+  .links{
+    margin: 0 auto; width: 80vw; max-width: 320px;
+    li{
+      margin: 40px 0;
+      a{
+        display: block;
+        box-shadow: rgba(0,0,0,.4) 0 1px 3px;
+      }
+      img{
+        display: block; width: 100%; height: auto;
+      }
+    }
+  }
+
+  @media screen and (min-width: $wwSlim){
+    .links{
+      display: flex; flex-flow: row wrap; width: calc(100% - 20px); max-width: none;
+      li{flex: 0 0 calc(50% - 20px); margin: 10px; }
+    }
+  }
+
+  @media screen and (min-width: $wwMedium){
+  }
+
+  @media screen and (min-width: $wwNormal){
+    margin-bottom: 50px;
+    .links{
+      display: block; width: auto; margin: 0 18px;
+      li{margin: 30px 0;}
+    }
+  }
+}
+
+
+// 區塊標題樣式
+.services, .cloudEbook {
+  padding: 0 0 30px;
+  //  margin: 0 auto;
+  background-color: $white; box-shadow: rgba(0,0,0,.25) 0 0 20px;
+
+  .blockHeader{
+    position: relative;
+    padding: 55px 0 100px; margin: 0 0 20px; line-height: 1.2;
+    text-align: center; color: $white;
+    .hc{ position: relative; z-index: 1;}
+    &::before, &:after{
+      content: ''; position: absolute; left: 0;right: 0;top: 0; bottom: 0;
+      z-index: 0;
+    }
+    &::before{ 
+      background-color: $primaryColor;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+    }
+    &::after{
+      background-color: rgba(255, 0, 84, 0.66);
+      clip-path: polygon(0 0, 100% 0, 100% 70%, 0 82%);
+    }
+  }
+
+  @media screen and (min-width: $wwNormal){
+    .blockHeader{
+      padding: 40px 0 60px;
+    }
+  }
+}
+
+
+.row31{
+  @extend %mainWidth;
+  @media screen and (min-width: $wwNormal){
+    margin: 0 auto;display: flex;
+  
+    .events{
+      flex: 1 1 calc(75% - 40px); width: calc(75% - 40px); margin-right: 40px; padding-top: 80px;
+    }
+    .services{margin-top: 50px; flex: 0 0 25%;}
+
+  }
+}
+.row13{
+  // outline: 1px solid red;
+  @extend %mainWidth;
+  @media screen and (min-width: $wwNormal){
+    margin: 0 auto;
+    display: flex; align-items: flex-start;
+
+    .cloudEbook{flex: 0 0 25%; margin-top: 50px;}
+    .events{flex: 1 1 calc(75% - 40px); width: calc(75% - 40px); margin-left: 40px; padding-top: 70px;}
+
+  }
+}
