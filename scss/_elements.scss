@@ -244,37 +244,38 @@ a:hover .videoThumb{
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 9;
   text-indent: -20em; overflow: hidden; margin: 0;
 
-  width: 56px; height: 56px; border-radius: 0;
+  width: 40px; height: 64px; border-radius: 0;
   background-color: transparent;
   cursor: pointer; outline: none; border: none; box-shadow: none;
-  transition: .2s;
+  transition: .15s;
   &::before{
     content: ''; position: absolute; width: 24px; height: 24px;
     left: 50%; top: 50%; margin-top: -13px;
     border: 2px solid transparentize($primaryColor, .4); border-top: none; border-right: none;
     transform:rotate(45deg);
+    transition: .2s;
   }
   &.slick-prev{
-    left: 0; 
-    &:hover{ margin-left: -6px;}
-    &::before{ margin-left: -5px; }
+    left: 0;
+    &::before{ margin-left: -4px; }
+    &:hover {
+      &::before{ margin-left: -8px; }
+    }
   }
   &.slick-next{
     right: 0;
-    &:hover{ margin-right: -6px;}
-    &::before{transform: rotate(225deg); margin-left: -18px;}
+    &::before{transform: rotate(225deg); margin-left: -21px;}
+    &:hover{
+      &::before{margin-left: -17px;}
+    }
   }
 
-  &:hover{
+  &:hover, &:focus{
     background-color: transparent;
     &::before{ border-color: $primaryColor;}
   }
   &:focus{
-    background-color: transparent;
-    box-shadow: $primaryColor 0 0 0 2px;
-    &::before{
-      border-color: $primaryColor;
-    }
+    box-shadow: transparentize($primaryColor, .5) 0 0 0 2px inset;
   }
 
   @media screen and (min-width: $wwNormal){

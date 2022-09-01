@@ -25,21 +25,21 @@ $(function(){
 
 
   // 固定版頭 //////////////////////////////
-  // var fixHeadThreshold;
-  // if ( ww >= wwNormal) {
-  //   fixHeadThreshold =  hh - _menu.outerHeight();
-  // } else {
-  //   fixHeadThreshold = 0;
-  // }
+  var fixHeadThreshold;
+  if ( ww >= wwNormal) {
+    fixHeadThreshold =  hh - _menu.outerHeight();
+  } else {
+    fixHeadThreshold = 0;
+  }
 
   _window.scroll(function(){
-    // if (_window.scrollTop() > fixHeadThreshold ) {
-    //   _webHeader.addClass('fixed');
-    //   _body.offset({top: hh});
-    // } else {
-    //   _webHeader.removeClass('fixed');
-    //   _body.removeAttr('style');
-    // }
+    if (_window.scrollTop() > fixHeadThreshold ) {
+      _webHeader.addClass('fixed');
+      _body.offset({top: hh});
+    } else {
+      _webHeader.removeClass('fixed');
+      _body.removeAttr('style');
+    }
 
     // goTop button 顯示、隱藏
     if (_window.scrollTop() > 200) {

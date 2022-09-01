@@ -3,8 +3,8 @@
   display: none;
   
   @media screen and (min-width: $wwNormal){
-    display: block; z-index: 99;
-    position: fixed; right: 0; top: 135px; 
+    display: block; z-index: 15;
+    position: fixed; right: 0; top: 210px; 
     transform: translateX(100%);
     transition: .6s;
     button.ctrlBtn{

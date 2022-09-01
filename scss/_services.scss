@@ -10,12 +10,12 @@
       flex: 0 0 calc(50% - 4px); margin:6px 2px; padding: 0;
       a{
         display: block; position: relative;
-        height: 100%; padding: 14px 5px 13px 54px; border-radius: 4px;
+        height: 100%; padding: 14px 5px 13px 54px; border-radius: 30px;
         font-weight: bold; color: $primaryColor;text-decoration: none;
         transition: .2s;
         &::before{
           content: ''; position: absolute; left: 4px; top: 4px;
-          width: 42px; height: 42px; border-radius: 2px;
+          width: 42px; height: 42px; border-radius: 21px;
           transition: .2s;
         }
         img{ 
@@ -23,7 +23,7 @@
           width: 30px; height: 30px; object-fit: contain;
         }
 
-        &:hover{
+        &:hover, &:focus{
           background-color: $primaryColor; color: $fontInvert;
           &::before{ background-color: $white;}
         }
@@ -39,7 +39,9 @@
 
   @media screen and (min-width: $wwNormal){
     width: auto;box-shadow: rgba(0,0,0,.25) 0 0 40px;
-    .links{display: block}
+    .links{display: block; width: 84%;
+      // outline: 1px solid red;
+    }
   }
 
 }
