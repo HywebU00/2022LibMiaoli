@@ -1,7 +1,6 @@
 // 版頭快速查詢區 //////////////////////////////////////////////////
 .search {
   display: none;
-  // flex-flow: row nowrap; align-items: center; justify-content: center;
   position: absolute;left: 0; top: 64px; z-index: 19;
   width: 100vw; padding:10px 2% 12px;
   background-color:rgba(255,255,255,.88);
@@ -12,12 +11,9 @@
 
   a{ color: $fontColor; }
 
-  // .label{ display: inline-block; margin-right: 5px;}
-
   form{
     flex-flow: row nowrap; align-items: center; justify-content: center;
     position: relative;width: 100%; max-width: 600px;
-    // flex: 1 1 70%;max-width: 500px;
     padding: 2px; margin: 0  auto; overflow: hidden;
     display: flex;
   }
@@ -50,41 +46,16 @@
     &:hover, &:focus{ background-color: $assistant; box-shadow: none;}
   }
 
-  // 熱門關鍵字
-  // .hotKeywords{
-  //   flex: 0 0 auto;display: inline-block; vertical-align: bottom;
-  //   list-style: none; margin: 0 0 0 10px; padding: 0; line-height: 1.1;
-  //   .label {
-  //     display: block;height: 1em; line-height: 1;
-  //     color: $fontInvert;font-size: .8rem;
-  //     }
-  //   ul{ list-style: none; margin:4px 0 0 -2px; padding: 0; overflow: hidden;}
-  //   li{
-  //      margin:0; padding: 2px; float: left;
-  //      &+li{margin-left: 2px;}
-  //      &:nth-child(n+3){display: none;}
-  //     a{ 
-  //       display: block;
-  //       height: 1.8em; line-height: 1.9; padding: 0 .4em; margin: 0; border-radius: 4px;
-  //       text-decoration: none; cursor: pointer;
-  //       background-color: $white;
-  //       &:hover, &:focus{ 
-  //         background-color: $primaryColor; color: $fontInvert;
-  //         box-shadow: $white 0 0 0 2px;
-  //       }
-  //     }
-  //   }
-  // }
+
 
 
   @media screen and (min-width: $wwNormal){
-    left: auto; right: 50px; top: 58px;
     display: flex; 
+    left: auto; right: 40px; top: 58px;
     margin: 0; padding:0; width: auto;
     background: $white;transform: none;
     box-shadow: $shadowColor 0 0 10px;
 
-    // .label{color: $fontColor; padding: 0 12px; border-right: 1px dotted $grayDark;}
     form{max-width: none; padding: 0;}
     select, input[type="text"], input[type="button"], input[type="submit"] {
       height: 2.5em; line-height: 2.5;
@@ -106,31 +77,13 @@
       &:focus{ box-shadow:$assistant 0 0 0 2px; }
     }
 
-    // .hotKeywords{
-    //   margin-top: 3px;
-    //   .label{ 
-    //     display: inline-block;vertical-align: middle; 
-    //     font-size: 1rem; color: $fontColor; line-height: 1.2;
-    //   }
-    //   ul{display: inline-block; vertical-align: middle; margin: 0 -2px 0 0;}
-    //   li{
-    //     &:nth-child(n){display: inline-block;}
-    //     a{ 
-    //       height: 1.7em; line-height: 1.8;
-    //       background-color: $grayLight; transition: .2s;
-    //       &:hover, &:focus{
-    //         box-shadow: $primaryColor 0 0 0 2px;
-    //       }
-    //     }
-    //   }
-    // }
     .linkBtn{
       a{height: 2em; line-height: 2; width: auto;}
     }
   }
 
   @media screen and (min-width: $wwMaximum){
-    // right: calc(50vw - #{$wwMaximum}*.5 + 40px)
+    right: calc(50vw - $wwMaximum*.5 + 40px)
   }
 
 }

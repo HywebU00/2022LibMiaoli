@@ -1,8 +1,8 @@
 body{
   margin: 0 auto; padding: 0; 
-  color: $fontColor;
+  
   font-size: 1em; font-family: Helvetica, Arial,'微軟正黑體', sans-serif;
-  background: #edf0f5 url(../images/body_bg.jpg) repeat-y center -80px; 
+  background: #edf0f5 url(../images/body_bg.jpg) repeat-y center -80px; color: $fontColor;
   background-size: 200% auto;
   
   &.noScroll{ overflow: hidden; overflow-y:hidden; }
@@ -16,13 +16,8 @@ body{
 
   @media screen and (min-width: $wwNormal){
     background-size: 100% auto;
-    max-width: $wwMaximum;
   }
 
-  @media screen and (min-width: $wwMaximum){
-    background-size: $wwMaximum auto;
-    box-shadow: $shadowColor 0 0 24px;
-  }
 }
 
 time{  font-family:'Murecho', Helvetica, Arial, sans-serif;}

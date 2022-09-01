@@ -20,14 +20,13 @@
       margin: 0 auto;
     }
   }
-  .sideLink{display: none;}
 
   @media screen and (min-width: $wwNormal){
     height: auto; 
     background-color: transparent; box-shadow: none;
     h1{
       position: static; width: auto;
-      margin: 0 0 0 50px; padding: 50px 0 38px; height: auto;
+      margin: 0 0 0 40px; padding: 50px 0 38px; height: auto;
       width: 310px;
       transform: none;text-align: left; line-height: 1;
       a{
@@ -45,7 +44,7 @@
   }
 
   @media screen and (min-width: $wwMaximum){
-    max-width: $wwMaximum;
+    h1{ margin-left: calc(50vw - $wwMaximum*.5 + 40px);}
   }
 }
 // -----------------------------------------------------------------
@@ -57,7 +56,7 @@
   display: none;
   @media screen and (min-width: $wwNormal){
     display: block; font-size: .92em;
-    position: absolute; right: 50px; top: 14px;
+    position: absolute; right: 40px; top: 14px;
     ul{
       display: flex;
       list-style: none; margin: 0; padding: 0; line-height: 1.2;
@@ -92,6 +91,10 @@
 
       }
     }
+  }
+
+  @media screen and (min-width: $wwMaximum){
+    right: calc(50vw - $wwMaximum*.5 + 40px);
   }
 
 }
@@ -261,7 +264,9 @@
     }
 
   
-    @media screen and (min-width: $wwMaximum){      
+    @media screen and (min-width: $wwMaximum){
+      width: auto;
+
       &>ul{max-width: $wwMaximum;}
     }
   }
