@@ -23,7 +23,7 @@
   }
 
   .informatiom{
-    line-height: 1.5;
+    line-height: 1.5; padding-top: 1em;
     p{
       position: relative;
       margin: 0 0 .9em; padding: 3px 0;
@@ -54,10 +54,84 @@
     }
   }
 
-  .calendar{
-    width: 300px; height: 400px; 
-    background-color: #fff;
-     color: $fontColor;
+  .eventCalendar{
+    padding: 0; margin: 30px auto 10px;
+    max-width: 360px;
+    color: $fontColor;
+
+    --weekend: #cf1680;
+    --closed:#eceeee;
+    --closedFont:#abb1b1;
+
+    .pignose-calendar{
+      width: 100%; max-width: none; box-shadow: none; border:none;
+      .pignose-calendar-top{
+        padding: 12px 0;
+        background: $grayLight;
+        border:none; box-shadow: none;
+      }
+      // 月、年
+      .pignose-calendar-top-date{
+        padding: 16px 0 0;
+        span{ display: inline-block; }
+        .pignose-calendar-top-year{ margin-left: .8em; color: $fontColor;}
+      }
+      // 左右箭頭
+      .pignose-calendar-top-nav{
+        box-sizing: content-box; padding: 6px; border-radius: 50%;
+        transition: .2s;
+        .pignose-calendar-top-icon::before{text-align: center; transition: .2s;line-height: 1.05;}
+        &:hover, &:focus{
+          background: $primaryColor;
+          .pignose-calendar-top-icon::before{color: $white;}
+        }
+      }
+      .pignose-calendar-week-sat, 
+      .pignose-calendar-week-sun {color: var(--weekend);}
+      .pignose-calendar-unit{
+        a, &>div{ color: $fontColor;}
+        &.pignose-calendar-unit-sat,
+        &.pignose-calendar-unit-sun{
+          a, &>div{ color: var(--weekend);}
+          &.pignose-calendar-unit-disabled {
+            a, &>div{color: var(--closedFont);}
+          }
+        }
+
+        // 有活動
+        &.event a, &.event>div{ background-color: $primaryColor; color: $fontInvert;}
+      }
+      .pignose-calendar-unit-disabled {
+        a{
+          opacity: 1;
+          background-color: var(--closed); color: var(--closedFont);
+        }
+      }
+      .pignose-calendar-unit-active a{ background: none; box-shadow: none; font-weight: normal;}
+
+      .pignose-calendar-button-schedule-container{
+        position: absolute;
+        &>*{width: 0;height: 0;}
+      }
+    }
+
+    // 圖例
+    .remark{
+      background-color: $white;
+      border-top: 1px solid $borderColorLight;
+      padding: 12px 1.2em;
+      ul{ list-style: none; margin: 0; padding: 0; line-height: 1.4;}
+      li{
+        display: inline-block; position: relative;
+        &+li{ margin-left: 1.2em;}
+        &::before{
+          display: inline-block; vertical-align: top; text-align: center;
+          content: ''; width: 1.2em; height: 1.2em; border-radius: 50%; margin-right: 4px;
+        }
+        &.closeDay::before{ background-color: var(--closed);}
+        &.eventDay::before{ background-color: $primaryColor;}
+      }
+    }
   }
 
   .more{
@@ -65,8 +139,8 @@
     a{
       text-align: center;
       box-shadow: $white 0 0 0 1px; color: $fontInvert;
-      &:hover, &:focus{ box-shadow: $white 0 0 0 3px;}
-      &:focus{ background-color: $assistant; }
+      &:hover, &:focus{ box-shadow: $white 0 0 0 2px;}
+      &:focus{ background-color: $white; color: $primaryColor;}
     }
   }
 
@@ -75,7 +149,7 @@
     background-color: transparent; 
     &::before{
       content: ''; position: absolute; right: 0; top: 0; 
-      width: 56%; height: 43vw;
+      width: 56%; height: 43vw; min-height: 34em;
       background: url(../images/basicInfo_bg.jpg) no-repeat 0 0;
       background-size: cover;
     }
@@ -92,10 +166,13 @@
       padding: 110px 4.5vw 20px 10vw;
     }
 
-    .calendar{
+    .eventCalendar{
       position: relative;z-index: 8;
-      margin-left: 60%;
-      box-shadow: $shadowColor 0 0 30px;
+      margin-left: 58%;
+      box-shadow: $shadowColor 0 0 30px 3px;max-width: 340px;
+      .pignose-calendar-header{ margin-top: .5em;}
+      .pignose-calendar-body{ padding-top: .2em;}
+      .pignose-calendar-unit{height: 2.8em;}
     }
 
   }

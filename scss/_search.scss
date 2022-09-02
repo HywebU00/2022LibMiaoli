@@ -46,12 +46,9 @@
     &:hover, &:focus{ background-color: $assistant; box-shadow: none;}
   }
 
-
-
-
   @media screen and (min-width: $wwNormal){
     display: flex; 
-    left: auto; right: 40px; top: 58px;
+    left: auto; right: 40px; top: 55px;
     margin: 0; padding:0; width: auto;
     background: $white;transform: none;
     box-shadow: $shadowColor 0 0 10px;

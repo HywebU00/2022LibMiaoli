@@ -8,10 +8,12 @@
   <link rel="shortcut icon" href="images/fav_ico.png" type="image/vnd.microsoft.icon" />
 
   <link rel="stylesheet" href="slick/slick.css"/><!-- slick 套件 -->
+  <link rel="stylesheet" href="pg_calendar/css/pignose.calendar.min.css"><!-- 月曆套件 -->
   <link rel="stylesheet" href="css/style2022.css">
 
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="slick/slick.min.js"></script><!-- slick 套件 -->
+  <script src="pg_calendar/js/pignose.calendar.full.min.js"></script><!-- 月曆套件 -->
   <script src="js/uieffect.js"></script>
 
 </head>
@@ -53,7 +55,7 @@
     <!-- 主選單 -->
     <nav class="menu">
       <ul>
-        <li><a href="#">本館介紹</a>
+        <li><a href="np.html">本館介紹</a>
           <ul>
             <li><a href="#">本館政策</a></li>
             <li><a href="#">關於本館</a></li>
@@ -64,7 +66,7 @@
             <li><a href="#">網站資料開放宣告</a></li>
           </ul>
         </li>
-        <li><a href="#">活動訊息</a>
+        <li><a href="np.html">活動訊息</a>
           <ul>
             <li><a href="#">最新活動</a></li>
             <li><a href="#">公告</a></li>
@@ -753,15 +755,59 @@
         <div class="more"><a href="#">更多資訊</a></div>
       </article>
 
-      <section class="calendar">
-        八月 2022
+      <section class="eventCalendar">
+        <div class="calendar"></div><!-- 月曆套件 -->
+        <div class="remark">
+          <ul>
+            <li class="closeDay">休館日</li>
+            <li class="eventDay">活動日</li>
+          </ul>
+        </div>
       </section>
+      <!-- 月曆套件參數設定 -->
+      <script>     
+        $(function() {
+
+          $('.calendar').pignoseCalendar({
+            lang: 'ch',
+            format: 'YYYY-MM-DD',
+            week: 0,
+            weeks: ['日','一','二','三','四','五','六'],
+            initialize: false,
+            disabledDates: [ // 休館日，逐日設定
+              '2022-09-10',
+              '2022-09-30'
+            ],
+            disabledWeekdays: [// 休館日，每週重複。
+              1, // 星期一休館
+            ],
+            scheduleOptions: {
+              colors: {
+                event: '#fff',
+              }
+            },
+            schedules: [ // 有活動的日期
+              {
+                name: 'event',
+                date: '2022-09-15'
+              }, {
+                name: 'event',
+                date: '2022-09-21'
+              }
+            ], 
+          });
+
+          // GUI 測試：有活動的日期樣式
+          $('.pignose-calendar-button-schedule-pin-event').parents('.pignose-calendar-unit').addClass('event');
+
+        });
+      </script>
 
     </section>
 
 
     <section class="mapEmbed">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.6729066144067!2d120.8203986!3d24.565963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469ac0ebd46a37b%3A0xd41ea187e2cd16a3!2zMzYw6IuX5qCX57ij6IuX5qCX5biC6Ieq5rK76LevNTDomZ8!5e0!3m2!1szh-TW!2stw!4v1661943920560!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.6729066144067!2d120.8203986!3d24.565963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469ac0ebd46a37b%3A0xd41ea187e2cd16a3!2zMzYw6IuX5qCX57ij6IuX5qCX5biC6Ieq5rK76LevNTDomZ8!5e0!3m2!1szh-TW!2stw!4v1661943920560!5m2!1szh-TW!2stw" width="800" height="600" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
 

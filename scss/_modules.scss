@@ -30,16 +30,15 @@
   h2{padding: 0; margin: 0;}
   .subheading{font-size: .8em;}
 
-  @extend %mainWidth;
 }
 
 // 列印、分享、返回 等功能圖示 //
 .funcBar{
-  @extend %mainWidth;
   position: relative; z-index: 99;
   font-size: 1rem;
   ul{ list-style: none; margin: 0;padding: 0; text-align: center;}
-  &>ul{display: flex; flex-flow: row wrap; justify-content: flex-end;
+  &>ul{
+    display: flex; flex-flow: row wrap; justify-content: flex-end;
     &>li{
       position: relative; margin:3px;padding: 0; 
       &>a, &>button{
@@ -95,16 +94,6 @@
     &::after{content: '+';}
   }
 }
-
-
-
-// 列表上方的文字 //
-// .preface{
-//   padding:1em 2em; margin: 2em auto; line-height: 2;
-//   background: #fff; border-radius: 16px;
-//   box-shadow: rgba(0,0,0,.15) 0 0 20px;
-// }
-
 
 // 檔案下載 ////////////////////////////
 // 檔案類型圖示 //

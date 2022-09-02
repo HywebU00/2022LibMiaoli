@@ -20,15 +20,17 @@
         background-color: rgba(255,255,255,.4);
         transition: .2s;
         &::before{
-          content: ''; position: absolute; top: 1.25em; left: 12px; width: 3px; height: 13px;
+          content: ''; position: absolute; top: 0; left: -1px; bottom: 0; width: 4px;
           background-color: $primaryColor;
-          transition: .2s;
+          transition: .4s;
         }
         &:hover, &:focus{
           z-index: 9;border-color: $primaryColor;
           padding-left: 32px; padding-right: 6px;
           &::before{
-            width: 13px; background-color: $assistant;
+            width: 15px; 
+            clip-path: polygon(0 0, 2px 0, 100% 50%, 2px 100%, 0 100%);
+            // background-color: $assistant;
           }
         }
         &:hover{ 
