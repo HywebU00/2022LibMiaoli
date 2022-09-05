@@ -60,11 +60,11 @@
 
 
 // 表格 table 條列 /////////////////////////////////////////////////
-// 注意：表格樣式非小螢幕優先 ( mobile first )
+// 注意：表格樣式非小螢幕優先 ( not mobile first )
 .list{
   &>table{
     border-collapse: collapse; line-height: 1.5; 
-    width: calc(100% - 8px); margin:4px;
+    width: calc(100% - 30px); margin:8px auto;
     border-top: 3px solid $borderColor; 
     border-bottom: 3px solid $borderColor;
     thead{
@@ -115,6 +115,7 @@
   }
 
   @media screen and (max-width: calc($wwMedium - 1px)){
+    &>table{width: 96%;}
     &>table.rwdTable{
       thead{display: none;}
       tr, th, td{ display: block;}

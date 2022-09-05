@@ -1,6 +1,6 @@
 // 資料大類 ////////////////////////////////////////////////////
 .category{
-  @extend %mainWidth; padding: 8px 0 0;
+  @extend %mainWidth; padding: 8px 0 12px;
   ul{
     list-style: none; margin: 0; padding: 0; line-height: 1.2;
     &::after{ content: ''; display: block; clear: both;}
