@@ -178,7 +178,7 @@ $(function(){
       
           _this.addClass('here'); // 為已展開的次選單上層li加樣式
   
-          _thisSubMenu.stop(true, false).slideDown(speed, function(){
+          _thisSubMenu.stop().slideDown(speed, function(){
             y2 = _thisSubMenu.outerHeight() + _thisSubMenu.offset().top;
             const itemHeight = parseInt(_thisSubMenu.find('li:first-child').outerHeight());
   
@@ -244,7 +244,7 @@ $(function(){
         },
         function(){
           _this.removeClass('here').find('button').remove();
-          _thisSubMenu.stop(true, false).fadeOut(speed, function(){
+          _thisSubMenu.stop().fadeOut(speed, function(){
             _thisSubMenu.removeAttr('style');
             _this.removeClass('turn');
           });

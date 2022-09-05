@@ -3,8 +3,8 @@
   @extend %mainWidth;
   position: relative; padding: 10px 0 40px;
 
-  ul{list-style: none; margin: 0; padding: 0;}
-  &>ul{
+  ul, ol{list-style: none; margin: 0; padding: 0;}
+  .listItems{
     &>li{
       margin: 0 0 16px;
       &>a{
@@ -19,20 +19,20 @@
       img{ display: block; width: 100%; margin: 0 0 1em; }
       
       // 影片縮圖
-      .videoThumb{ 
-        width: calc(100% + 10px); height: $mobileWidth*.56 ; margin: -5px -5px 12px;
-        background: $black;
-        img{ width: 100%; height: 100%; max-height: none; object-fit: cover;}
-      }
+      // .videoThumb{ 
+      //   width: calc(100% + 10px); height: $mobileWidth*.56 ; margin: -5px -5px 12px;
+      //   background: $black;
+      //   img{ width: 100%; height: 100%; max-height: none; object-fit: cover;}
+      // }
 
       .info{
         margin: 15px 12px 0;line-height: 1.6;
         h3{
-          margin: 0; 
-          font-size: 1.125rem; font-weight: normal;line-height: 1.4;
+          margin: 0;
+          white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+          font-size: 1.15rem; font-weight: normal;line-height: 1.4;
           color: $fontColorDark;
-          display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;
-          overflow: hidden;
+          // display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;
         }
         p{ 
           margin: 0; line-height: 1.5;
@@ -44,73 +44,160 @@
         time + p, time + h3,
         p + time, h3 + time { margin-top: .6rem;}
       }
+      .counts{
+        margin-top: 1em; padding-top: .6em;
+        font-size: .9rem;
+        border-top: 1px dotted $borderColor;
+        display: flex; justify-content: space-between;
+        li{
+          &::before{ content:attr(title)'：'; color: $fontColorLight;}
+        }
+
+      }
 
     }
   }
+  
+  // 相簿
+  &.album{
+  }
+
+  // 書籍
+  &.books{
+  }
 
 
-  @media screen and (min-width: calc($wwSlim + 50px)){
-    &>ul{
-      display: flex; flex-flow: row wrap; justify-content: flex-start;
-      &>li{
-        flex: 0 0 calc(50% - 8px); margin-right: 16px;
-        &:nth-child(2n){ margin-right: 0;}
-        img{height: calc(#{$mobileWidth}/2 - 18px); object-fit: contain;}
-        p{
-          display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
-          overflow: hidden;
+  @media screen and (min-width: calc($wwSlim + 30px)){
+    &.books{
+      .listItems{
+        display: flex; flex-flow: row wrap; justify-content: flex-start;
+        &>li{
+          // 書籍排兩行
+          flex: 0 0 calc(50% - 8px); width: calc(50% - 8px); margin-right: 16px;
+          &:nth-child(2n){ margin-right: 0;}
+          img{height: calc(#{$mobileWidth}/2 - 8px); object-fit: contain;}
+          // w:h = 1:1
+          p{
+            display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+            overflow: hidden;
+          }
+          
+          // 影片縮圖
+          // .videoThumb{ height:calc((#{$mobileWidth}/2 - 8px)*.56);}
         }
-        
-        // 影片縮圖
-        .videoThumb{ height:calc((#{$mobileWidth}/2 - 8px)*.56);}
       }
     }
+
+
   }
 
   @media screen and (min-width: $wwMedium){
-    &>ul{
+    .listItems{
+      display: flex; flex-flow: row wrap;
       &>li{
-        flex: 0 0 32%; margin-right: 0;
-        &:nth-child(n){ margin-left: 0;}
-        &:nth-child(3n-1){ margin-left: 2%; margin-right: 2%;}
-        img{height: $mobileWidth*.32;}
+        // 排兩行
+        flex: 0 0 49%; width: 49%; margin-right: 2%;
+        &:nth-child(2n){ margin-right: 0;}
+        img{object-fit: cover;}
+      }
+    }
+
+    // 相簿
+    &.album{
+      .listItems{
+        &>li{
+        }
+      }
+    }
+
+    // 書籍
+    &.books{
+      .listItems{
+        &>li{
+          // 書籍排三行
+          flex: 0 0 32%; width: 32%; margin-right: 0;
+          &:nth-child(n){ margin-left: 0; margin-right: 0;}
+          &:nth-child(3n-1){ margin-left: 2%; margin-right: 2%;}
+          img{height: $mobileWidth*.32; object-fit: contain;}
+        }
       }
     }
   }
 
   @media screen and (min-width: $wwNormal){
-    &>ul{ 
-      &>li{ 
-        flex-basis: 23.5%; margin-bottom: 22px;
+    .listItems{ 
+      &>li{
+        // 三行
+        flex-basis: 32%; width: 32%; margin-bottom: 22px;
         &:nth-child(n){margin-left: 1%; margin-right: 1%;}
-        &:nth-child(4n){margin-right: 0;}
-        &:nth-child(4n+1){margin-left: 0;}
+        &:nth-child(3n){margin-right: 0;}
+        &:nth-child(3n+1){margin-left: 0;}
         &>a {
-          &:hover, &:focus {
-            transform: translateY(-4px);
-            p, h3 { text-decoration: underline; color: $fontColorDark; }
-          }
+          &:hover, &:focus { transform: translateY(-4px); }
           &:hover{ box-shadow:$primaryColor 0 0 0 1px, $borderColor 0 0 20px;}
           &:focus{box-shadow: $primaryColor 0 0 0 2px, rgba(0, 0, 0, 0.4) 0 4px 16px;}
         }
-        img{ height: $wwNormal*.9*.235; } // .2115 = 90% * 23.5%
-
+        img{ height: 90vw*.23; }
+  
         // 影片縮圖
-        .videoThumb{ height: calc(#{$normalWidth}*.14 - 6px );}
+        // .videoThumb{ height: calc(#{$normalWidth}*.14 - 6px );}
+
+      }
+    }
+
+    &.books{
+      .listItems{
+        &>li{
+          // 書籍排四行
+          flex-basis: 23.5%; width: 23.5%; margin-bottom: 22px;
+          &:nth-child(n){margin-left: 1%; margin-right: 1%;}
+          &:nth-child(4n){margin-right: 0;}
+          &:nth-child(4n+1){margin-left: 0;}
+          img{ height: 90vw*.235; }
+        }
+      }
+    }
+
+    &.album{
+      .listItems{
+        &>li{
+          img{ height: 90vw*.32*.75; }
+        }
       }
     }
   }
 
   @media screen and (min-width: $wwMaximum){
-    &>ul{ 
+    .listItems{
       &>li{
-        img{ height: calc( #{$wwMaximum}*.2115 );}
-        .videoThumb{height: calc( #{$wwMaximum}*.1232 - 6px);}
+        img{ height: $wwMaximum*.9*.32; }
       }
     }
+
+    &.album{
+      .listItems{
+        &>li{
+          img{ height: $wwMaximum*.9*.32*.75; }
+          // 21.6vw = 90vw * 32% * (3/4)
+        }
+      }
+    }
+
+    &.books{
+      .listItems{ 
+        &>li{
+          flex-basis: 23.5%; width: 23.5%;
+          img{ height: calc( #{$wwMaximum}*.2115 );}
+          // .videoThumb{height: calc( #{$wwMaximum}*.1232 - 6px);}
+        }
+      }
+    }
+
   }
 
 }
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
 // -----------------------------------------------------------------
 
 
@@ -121,7 +208,7 @@
 
   ul{ list-style: none; margin: 0; padding: 0;}
 
-  &>ul{
+  .listItems{
     &>li{
       margin: 0 0 16px; clear: both; 
       &>a{
