@@ -1,13 +1,18 @@
 // 表格形式內容頁 //////////////////////////////////////////////////
 .cpMeta{
-  @extend %mainWidth;margin-bottom: 100px;padding:40px 25px; 
-  box-shadow: rgba(0,0,0,.2) 0 0 16px;border-radius: 12px;
+  @extend %mainWidth;margin-bottom: 100px;padding:35px 0; 
+  box-shadow: rgba(0,0,0,.2) 0 0 16px;background-color: $white;
 
+  &>button{float: right; font-size: 1rem; margin-right: 30px;
+    &+table>caption{ margin-top: -2.5rem; margin-right: 6.5rem; clear: none;}
+  }
   &>table{
-    border-collapse: collapse; margin: 0 auto; width: 100%;
+    clear: both;
+    border-collapse: collapse; margin: 0 auto; width: calc(100% - 60px);
     line-height: 1.8;
     border-top: 2px solid $borderColorDark;
     border-bottom: 2px solid $borderColorDark;
+    caption{ font-size: 1.3em; text-align: left; padding-bottom: .3em;}
     td, th {
       padding: .7em .8em .6em;
       border-bottom: 1px solid $borderColor;
@@ -36,8 +41,8 @@
   }
 
   @media screen and (max-width: $wwNormal - 1px){
-    margin-bottom: 50px;padding:25px 3vw; 
-    border-radius: 6px;
+    margin-bottom: 50px;
+    &>table{ width: calc(100% - 6vw);}
   }
 
   @media screen and (max-width: $wwMedium - 1px){

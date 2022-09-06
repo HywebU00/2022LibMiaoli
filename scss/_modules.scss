@@ -34,25 +34,63 @@
 
 // 列印、分享、返回 等功能圖示 //
 .funcBar{
-  position: relative; z-index: 99;
-  font-size: 1rem;
+  @extend %mainWidth; 
+  font-size: .82rem; z-index: 99; position: relative;
   ul{ list-style: none; margin: 0;padding: 0; text-align: center;}
-  &>ul{
-    display: flex; flex-flow: row wrap; justify-content: flex-end;
+  &>ul{display: flex; flex-flow: row wrap; justify-content: flex-end;
     &>li{
-      position: relative; margin:3px;padding: 0; 
+      position: relative; margin:4px;padding: 0; 
       &>a, &>button{
-        position: relative; display: block; margin: 0; 
-        padding: 0 16px;line-height: 2.5; height: 2.4em; 
-        background-color:$primaryColor; color: $fontInvert;
-        border: none; text-decoration: none; box-shadow: none; border-radius: 0;
-        cursor: pointer;white-space: nowrap;
+        position: relative; display: block;width: 44px; margin: 0; 
+        padding: 0 0 44px;line-height: 1.5; height: 1em; 
+        background-color:transparent; border: none; text-decoration: none;
+        box-shadow: none;
+        color: transparent;cursor: pointer;white-space: nowrap;
         transition: .2s;
+        &::before{
+          content: '';position: absolute; left: 0; bottom: 0; 
+          width: 100%; height: 44px;border-radius: 50%;
+          background-color: $primaryColor; background-repeat: no-repeat;
+          background-position: center center;
+          transition: .2s;
+        }
         &:hover, &:focus{
-          background-color: $assistant; color: $fontInvert;
+          padding-bottom: 66px; margin-top: -22px; color: $fontColor;
+          &::before{background-color: $primaryColor;}
+        }
+        &:hover{
+          color: $fontColor;
+          &::before{box-shadow: $primaryColor 0 0 0 2px;}
         }
         &:focus{
-          box-shadow: $white 0 0 0 1px inset, $assistant 0 0 0 2px;
+          &::before{
+            box-shadow:$white 0 0 0 1px, $primaryColor 0 0 0 4px;
+          }
+        }
+      }
+      &.back>a::before{
+        background-image: url(../images/icon_back.png);
+        background-size: 36px;
+      }
+      &.print>a::before, &.print>button::before{
+        background-image: url(../images/icon_print.png);
+        background-size: 24px;
+      }
+      &.forward>a::before, &.forward>button::before{
+        background-image: url(../images/icon_mail.png);
+        background-size: 40px;
+      }
+      &.openLbSearch>button::before{
+        background-image: url(../images/icon_search_w.svg);
+        background-size: 24px;
+      }
+      &.share{
+        &>button::before{
+          background-image: url(../images/icon_share.png);
+          background-size: 24px;
+        }
+        li{
+          &>a{ background-color: transparent;}
         }
       }
 

@@ -1,12 +1,12 @@
 // 項目 ul, li 條列 ////////////////////////////////////////////////
 .list{
   @extend %mainWidth;
-  position: relative; padding: 20px 0; margin-top:20px; margin-bottom: 20px;
-  background-color: $white;
-  box-shadow: $shadowColor 0 0 16px;
-
+  position: relative; padding:35px 0; margin-top:20px; margin-bottom: 20px;
+  background-color: $white;box-shadow: $shadowColor 0 0 16px;
   &>ul{
-    list-style: none; margin: 0; padding: 0; line-height: 1.6;
+    list-style: none; margin: 0 3vw; padding: 0; line-height: 1.6;
+    border-top: 3px solid $borderColor; 
+    border-bottom: 3px solid $borderColor;
     &>li{
       margin:0; padding: 0;
       border-bottom: 1px solid $borderColorLight;
@@ -63,12 +63,12 @@
 // 注意：表格樣式非小螢幕優先 ( not mobile first )
 .list{
   &>table{
+    width: calc(100% - 40px); margin:0 auto;
     border-collapse: collapse; line-height: 1.5; 
-    width: calc(100% - 30px); margin:8px auto;
     border-top: 3px solid $borderColor; 
     border-bottom: 3px solid $borderColor;
     thead{
-      tr{ border-bottom-color: $borderColor; }
+      tr{ border-bottom:2px solid $borderColor; }
     }
     tbody tr:last-child{ border-bottom: none; }
     tr{ border-bottom: 1px solid $borderColor; }
@@ -83,7 +83,6 @@
         &::after{background-color: transparent;}
       }
     }
-
     td{
       text-align: center;
       &.aLeft{ text-align: left;}
@@ -100,22 +99,25 @@
       }
       &>a{
         display: block;
-        color: $fontColorDark; text-decoration:none; 
+        color: $linkColor;  text-decoration: underline;
         transition: .2s;
         &::before{
           content: ''; position: absolute; left: 3px; right: 3px; bottom: 3px;top: 3px;
-          border-radius: 4px; transition: .2s;
+          transition: .2s;
         }
         &:hover, &:focus{
-         &::before{ z-index: 0;box-shadow: $hiLight 0 0 0 2px inset; }
+          text-decoration:none;
+          &::before{ z-index: 0;box-shadow: $linkColor 0 0 0 2px inset; }
         }
       }
-      time{ display: inline-block; white-space: nowrap;}
+      time{ display: inline-block; min-width: 6em;}
+
+      button{ display: inline-block; white-space: nowrap; position: relative;}
     }
   }
 
   @media screen and (max-width: calc($wwMedium - 1px)){
-    &>table{width: 96%;}
+    &>table{width: calc(100% - 6vw);}
     &>table.rwdTable{
       thead{display: none;}
       tr, th, td{ display: block;}
@@ -151,9 +153,6 @@
     }
   }
 }
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
 // -----------------------------------------------------------------
 
 
