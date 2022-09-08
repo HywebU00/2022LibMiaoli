@@ -1,4 +1,4 @@
-// 書籍、照片、影片縮圖瀏覽 //////////////////////////////////////////////
+// 書籍、照片 縮圖瀏覽（矩陣模式）//////////////////////////////////////////////
 .thumbnail{
   @extend %mainWidth;
   position: relative; padding: 10px 0 40px;
@@ -8,7 +8,7 @@
     &>li{
       margin: 0 0 16px;
       &>a{
-        position: relative; display: block;height: 100%;padding: 0 0 16px;
+        position: relative; display: block; height: 100%;padding: 0 0 16px;
         background: $white;  color: $fontColor; text-decoration: none;
         box-shadow: $borderColor 0 2px 8px -3px;
         transition: .3s;
@@ -103,12 +103,12 @@
     }
 
     // 相簿
-    &.album{
-      .listItems{
-        &>li{
-        }
-      }
-    }
+    // &.album{
+    //   .listItems{
+    //     &>li{
+    //     }
+    //   }
+    // }
 
     // 書籍
     &.books{
@@ -197,55 +197,3 @@
 
 }
 // -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-
-
-.stack{
-  // outline: 1px solid red;
-  @extend %mainWidth;
-  position: relative; padding: 10px 0 40px;
-
-  ul{ list-style: none; margin: 0; padding: 0;}
-
-  .listItems{
-    &>li{
-      margin: 0 0 16px; clear: both; 
-      &>a{
-        position: relative; display: block;height: 100%; overflow: hidden;
-        background: $white;  color: $fontColor; text-decoration: none;
-        box-shadow: $shadowColor 0 2px 8px -3px;
-        transition: .3s;
-        &:hover{ box-shadow: $primaryColor 0 0 0 1px, rgba(0, 0, 0, 0.4) 0 4px 16px;}
-        &:focus{box-shadow: $primaryColor 0 0 0 2px, rgba(0, 0, 0, 0.4) 0 4px 16px;}
-      }
-
-      img {
-        float: left; margin: 0; padding: 8px;
-        width: 45%;height: $mobileWidth*.45; object-fit: contain;
-        max-width: 240px; max-height: 240px;
-      }
-
-      .info{
-        margin: 0; padding:20px 12px 12px;
-        line-height: 1.6;
-        h3{
-          margin: 0; 
-          font-size: 1.125rem; font-weight: normal;line-height: 1.4;
-          color: $fontColorDark;
-          display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;
-          overflow: hidden;
-        }
-        p{ 
-          margin: 0; line-height: 1.5;
-          color: $fontColorDark;
-          display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;
-          overflow: hidden;
-        }
-        time{ display: block;}
-        time + p, time + h3,
-        p + time, h3 + time { margin-top: .6rem;}
-      }
-    }
-  }
-}
