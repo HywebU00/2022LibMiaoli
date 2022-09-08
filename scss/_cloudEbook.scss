@@ -4,14 +4,16 @@
   .links{
     margin: 0 auto; width: 80vw; max-width: 320px;
     li{
-      margin: 40px 0;
+      margin: 30px 0;
       a{
         display: block;
         box-shadow: rgba(0,0,0,.4) 0 1px 3px;
+        transition: .2s;
+        &:hover {box-shadow:transparent 0 0 0, rgba(0,0,0,.3) 0 6px 16px -4px;}
+        &:focus{box-shadow:$primaryColor 0 0 0 2px, rgba(0,0,0,.5) 0 6px 8px -4px;}
       }
       img{
         display: block; width: 100%; height: auto;
-        // width: 180px; height: 60px;
       }
     }
   }
@@ -25,14 +27,12 @@
     }
   }
 
-  @media screen and (min-width: $wwMedium){
-  }
 
   @media screen and (min-width: $wwNormal){
     .links{
       display: block; width: auto; margin: 0 18px;
       li{
-        margin: 30px 0;
+        margin: 25px 0;
       }
     }
   }

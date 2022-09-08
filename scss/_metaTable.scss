@@ -4,7 +4,7 @@
   box-shadow: rgba(0,0,0,.2) 0 0 16px;background-color: $white;
 
   &>button{float: right; font-size: 1rem; margin-right: 30px;
-    &+table>caption{ margin-top: -2.5rem; margin-right: 6.5rem; clear: none;}
+    &+table>caption{ margin-top: -2.5rem; margin-right: 7rem; clear: none;}
   }
   &>table{
     clear: both;
@@ -37,7 +37,17 @@
         &+ul, &+ol{margin-top: 1.5em;}
       }
       li+li{margin-top: .8em;}
+
+      figure{
+        margin: 0; padding: 0;
+        img{display: block; margin: 0; width: 100%;}
+        figcaption{
+          display: block; margin: .5em 0 0; line-height: 1.6;
+        }
+      }
     }
+
+
   }
 
   @media screen and (max-width: $wwNormal - 1px){

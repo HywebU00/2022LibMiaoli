@@ -335,8 +335,8 @@ $(function(){
     arrows: true,
     dots: true,
     fade: false,
-    infinite: true,
-    // mobileFirst: true
+    // accessibility: false,
+    infinite: true
   });
 
   // 小廣告

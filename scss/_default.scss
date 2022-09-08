@@ -27,7 +27,7 @@ time{font-family: Georgia, 'Times New Roman', Times, serif; display: inline-bloc
   position: relative;padding-bottom: 1px; margin: 0 auto -1px;
 
   @media screen and (min-width: $wwNormal){
-    width: 100%;max-width: $wwMaximum;
+    // width: 100%; max-width: $wwMaximum;
   }
   @media screen and (min-width: $wwMaximum){
     // box-shadow: $shadowColor 0 0 30px;
