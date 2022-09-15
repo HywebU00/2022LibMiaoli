@@ -1,2 +1,36 @@
 {
+    "liveSassCompile.settings.formats": [
+        // 需了解查看備註區之Live Sass compiler設定
+        // This is Default.
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css"
+        },
+        //TT AEM 使用
+        // {
+        //     "format": "nested",
+        //     "extensionName": ".css",
+        //     "savePath": "/src/css",
+        //     "liveSassCompile.settings.generateMap": false,
+        // }
+        // You can add more
+        // {
+        //     "format": "compressed",
+        //     "extensionName": ".min.css",
+        //     "savePath": "/css"
+        // }
+        // 一般專案使用
+        // {
+        //    "format": "compressed",
+        //    "extensionName": ".css",
+        //    "savePath": "css"
+        // }
+        // More Complex
+    ],
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ],
 }
