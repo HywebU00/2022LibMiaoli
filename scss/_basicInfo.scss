@@ -18,7 +18,7 @@
       background: url(../images/icon_fb0.png) no-repeat center bottom;
       background-size:44px auto;
       &:hover{ transform: scale(1.1);}
-      &:focus{ box-shadow:$primaryColor 0 0 0 1px, rgba(255,255,255,.65) 0 0 0 3px;}
+      &:focus{ box-shadow:$primaryColor 0 0 0 1px, $white 0 0 0 4px;}
     }
   }
 
@@ -49,7 +49,7 @@
         margin: -4px 0 0 4px;
         transition: .2s;
         img{display: block; width: 30px; height: 30px;}
-        &:hover{ box-shadow: $white 0 0 0 2px;}
+        &:hover, &:focus { box-shadow: $white 0 0 0 2px;}
       }
     }
   }
@@ -100,6 +100,11 @@
 
         // 有活動
         &.event a, &.event>div{ background-color: $primaryColor; color: $fontInvert;}
+      }
+      .pignose-calendar-unit-date{
+        a{
+          &:focus{ box-shadow: $linkColor 0 0 0 2px;}
+        }
       }
       .pignose-calendar-unit-disabled {
         a{
