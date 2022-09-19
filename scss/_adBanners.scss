@@ -1,49 +1,37 @@
 // 小廣告輪播
-<<<<<<< HEAD
-.adBanners{
-  padding: 30px 0;
-  .links{
-    margin: 0 auto; width: calc(100% - 128px);
-    .banner{
-      margin: 5px;
-      a{
-        display: block; width: 100%;
-        &:hover, &:focus{ box-shadow: $linkColor 0 0 0 2px;}
-      }
-      img{height: 60px; width: 100%; object-fit: contain;}
-=======
+// .main>*:not(.adBanners){display:none}
+
 .adBanners {
-    padding: 30px 0;
-    .links {
-        margin: 0 auto;
-        width: calc(100% - 128px);
-        .banner {
-            margin: 5px;
-            a {
-                display: block;
-                width: 100%;
-                &:focus {
-                    box-shadow: 0 0px 0px 3px #004180 inset;
-                }
-            }
-            img {
-                height: 60px;
-                width: 100%;
-                object-fit: contain;
-            }
-        }
-    }
-    .slick-arrow {
-        &.slick-prev {
-            left: -60px;
-        }
-        &.slick-next {
-            right: -60px;
-        }
-    }
-    @media screen and (min-width: $wwMedium) {
-        width: 90%;
-        margin: 10px auto;
->>>>>>> 3f63066c7de50dedda6f326ac130a48e781bd92f
-    }
+	padding: 30px 0; margin: 0 auto;
+	.links {
+		margin: 0 auto;width: calc(100% - 128px);
+
+		.banner {
+			margin: 5px;
+			a {
+				display: block;width: 100%;
+				height: 60px; max-width: 100%;
+				&:hover,&:focus {
+					img{box-shadow: $linkColor 0 0 0 2px;}
+				}
+			}
+			img {display: block; margin: 0 auto; height: 60px;max-width: 100%;object-fit: contain;}
+		}
+
+		.slick-arrow {
+			&.slick-prev {left: -60px;}
+			&.slick-next {right: -60px;}
+		}
+	}
+
+	@media screen and (min-width: $wwMedium){
+	}
+	
+	@media screen and (min-width: $wwNormal){
+		width: calc(84% + 128px); margin: 10px auto;
+	}
+
+	@media screen and (min-width: $wwMaximum){
+		width:$wwMaximum*.9 + 128px;
+	}
 }
