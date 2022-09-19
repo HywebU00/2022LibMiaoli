@@ -286,17 +286,19 @@ $(function() {
 
     // 向上捲動箭頭 //////////////////////////////
     _goTop.click(function() {
-        _html.stop(true, false).animate({ scrollTop: 0 }, 800);
+        _html.stop(true, false).animate({ scrollTop: 0 }, 800, function(){
+            $('.goCenter').focus();
+        });
     });
     $('.webHeader .accesskey').focus(function() {
         _html.stop(true, false).animate({ scrollTop: 0 }, 800);
     })
 
-    _goTop.keydown(function(e) {
-        $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
-        _body.find('a.goCenter').focus();
-        e.preventDefault();
-    });
+    // _goTop.keydown(function(e) {
+    //     $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
+    //     _body.find('a.goCenter').focus();
+    //     e.preventDefault();
+    // });
     // --end of-- 向上捲動箭頭 //////////////////////////////
 
 
