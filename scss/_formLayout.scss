@@ -12,7 +12,7 @@ table.formLayout {
     }
     &:nth-child(even) {
       padding-right: 0;
-      p{margin:6px 3px; font-size: .9rem; line-height: 1.5; color: $fontColorLight;}
+      p:not(.error){margin:6px 3px; font-size: .9rem; line-height: 1.5; color: $fontColorLight;}
     
     }
   }
@@ -106,15 +106,14 @@ table.formLayout {
 // 驗證碼，captcha //////////////////////////////////////////
 .captchaSet{
   display: flex; flex-flow: row wrap; align-items: center;
-  margin: 10px 0;
-  input.inputCaptcha {
-    flex: 1 1 calc(100% - 180px);
-    min-width: 6em; margin-top: 5px;
+  input[type="text"] {
+    flex: 1 1 calc(100% - 180px);min-width: 6em; max-width: 16em;
+    &+img{ margin-right: 6px;}
   }
 
-  .captchaImage{
-    img{ display: block; height: 50px; width: 160px;}
-  }
+  // .captchaImage{
+  //   img{ display: block; height: 50px; width: 160px;}
+  // }
 
   // 重新產生、語音播放
   button, input[type="button"]{
@@ -123,14 +122,14 @@ table.formLayout {
     padding: 0 .9em 0 48px; margin: 12px 4px 3px;
     height: 44px; line-height: 45px; 
     border: none; border-radius: 24px;
-    background-color: $btnBg1; color: $fontInvert; box-shadow:none;
-    transition: .2s;
-    &:hover, &:focus{background-color: $btnBg2;}
-    &:focus{box-shadow: lighten($btnBg2, 30%) 0 0 0 1px, $btnBg2 0 0 0 4px;}
+    // background-color: $btnBg1; color: $fontInvert; box-shadow:none;
+    // transition: .2s;
+    // &:hover, &:focus{background-color: $btnBg2;}
+    // &:focus{box-shadow: lighten($btnBg2, 30%) 0 0 0 1px, $btnBg2 0 0 0 4px;}
   }
   // -- 使用 input 元件
   input[type="button"]{
-    background-image:url(../images/icons_captcha.png);
+    background-image:url(../images/icon_captcha.png);
     background-repeat: no-repeat;
     background-size: 44px;
 
@@ -139,18 +138,25 @@ table.formLayout {
   }
   // -- 使用 button 元件
   button{
+    margin: 3px;
     &::before{
       content: '';
       position: absolute; top: 2px; left: 2px;
       width: 40px; height: 40px; border-radius: 50%;
-      background-image: url(../images/icons_captcha.png);
+      background-image: url(../images/icon_captcha.png);
       background-color: rgba(100,210,255,.4);
       background-repeat: no-repeat;
       background-size: 44px auto;
       transition: .1s;
     }
     &.voice::before{ background-position: center -2px;}
-    &.newCode::before{background-position: center -52px;}
+    &.refresh::before{background-position: center -52px;}
+  }
+
+  // -- 使用 a 元件
+  .button.captchaText {
+    margin: 3px;
+    a{ height: 44px; line-height: 45px; }
   }
 
   @media screen and (min-width: $wwMedium){
@@ -196,7 +202,7 @@ table.formLayout {
 .formA{
   @extend %mainWidth; padding: 20px 3vw 40px; margin-bottom: 50px;
   box-shadow: rgba(0,0,0,.2) 0 0 16px;
-  border-radius: 12px;
+  background-color: rgba(255,255,255,.6);
   h3{
     margin: 10px 0 2rem; font-size: 1.4rem;
     border-bottom: 3px solid $borderColor;
@@ -229,7 +235,7 @@ table.formLayout {
 }
 .hint{
   &::before{
-    background-color: #0a97cb;
+    background-color: #69838d;
     background-position: center -78px;
   }
 }

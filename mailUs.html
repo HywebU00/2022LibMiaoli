@@ -5,7 +5,7 @@
   <meta name="robots" content="noindex"><!-- 防搜尋用，套版時請移除 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>問卷調查 - 苗栗縣立圖書館</title>
+  <title>意見信箱 - 苗栗縣立圖書館</title>
   <link rel="shortcut icon" href="images/fav_ico.png" type="image/vnd.microsoft.icon" />
 
   <link rel="stylesheet" href="slick/slick.css"/><!-- slick 套件 -->
@@ -206,7 +206,7 @@
 
 
     <div class="pageHeader">
-      <h2>問卷調查</h2>
+      <h2>意見信箱</h2>
       
       <section class="funcBar">
         <ul>
@@ -225,75 +225,63 @@
     </div>
 
 
-    <section class="questionnaire">
-      <section class="description">
-        <time title="開放填寫日期">2022-01-01～2022-12-31</time>
-        <h3 class="subject">讀者滿意度調查表</h3>
-        <p>親愛的讀者您好，本問卷旨要用於未來規劃本館服務之參考，您的寶貴意見對本館而言彌足珍貴，衷心感謝您撥空填寫本問卷。</p>
-      </section>
-
-      <form>
-        <ol class="questions">
-          <li><span class="numb">1</span>
-            <p class="q">服務人員態度是否優良( 5 分最滿意，1 分最不滿意)</ㄣ>
-            <div class="optionPool">
-              <label><input name="aaa" id="" type="radio" value="">5</label>
-              <label><input name="aaa" id="" type="radio" value="">4</label>
-              <label><input name="aaa" id="" type="radio" value="">3</label>
-              <label><input name="aaa" id="" type="radio" value="">2</label>
-              <label><input name="aaa" id="" type="radio" value="">1</label>
-              <label><input name="aaa" id="" type="radio" value="">未曾使用</label>
-            </div>
-          </li>
-
-          <li><span class="numb">2</span>
-            <p class="q">請問您對本館承辦人員的專業知識，您覺得：</p>
-            <div class="optionPool">
-              <label><input name="bbb" id="" type="radio" value="">很滿意</label>
-              <label><input name="bbb" id="" type="radio" value="">滿意</label>
-              <label><input name="bbb" id="" type="radio" value="">普通</label>
-              <label><input name="bbb" id="" type="radio" value="">不滿意</label>
-              <label><input name="bbb" id="" type="radio" value="">非常不滿意</label>
-            </div>
-          </li>
-          <li><span class="numb">3</span>
-            <p class="q">的上我中學人一；要點沒，者心類那多候生美良以口工平校間人晚線環隨到怎文其山在院變而紅</p>
-            <div class="optionPool">
-              <label><input name="ccc" id="" type="radio" value="">馬親的義輕不</label>
-              <label><input name="ccc" id="" type="radio" value="">個的動教年子嚴組原其</label>
-              <label><input name="ccc" id="" type="radio" value="">於消他以長喜輕工有產</label>
-              <label><input name="ccc" id="" type="radio" value="">們也山修陸模口服</label>
-              <label><input name="ccc" id="" type="radio" value="">可草我中會全於高立公組場器</label>
-            </div>
-          </li>
-          <li><span class="numb">4</span>
-            <p class="q">走不古本綠運標書成因進速，之最我跟容中的以北受父本受最家工線養參新</p>
-            <div class="optionPool">
-              <label><input name="ddd" id="" type="checkbox" value="">果學河黨一登發</label>
-              <label><input name="ddd" id="" type="checkbox" value="">者起心話的</label>
-              <label><input name="ddd" id="" type="checkbox" value="">非全開</label>
-              <label><input name="ddd" id="" type="checkbox" value="">用年如</label>
-              <label><input name="ddd" id="" type="checkbox" value="">其他</label>
-              <input type="text" name="" id="">
-            </div>
-          </li>
-          <li><span class="numb">5</span>
-           <p class="q"> 話不決前財她結用向城如的金能不心極，氣廣而們大需出好開德成看國備知器卻口，一事處知？</p>
-            <div class="optionPool">
-              <label><input name="eee" id="" type="radio" value="">低這品著</label>
-              <label><input name="eee" id="" type="radio" value="">約來最球</label>
-              <label><input name="eee" id="" type="radio" value="">流得的間</label>
-              <label><input name="eee" id="" type="radio" value="">其他</label>
-              <input type="text" name="" id="">
-            </div>
-          </li>
-        </ol>
+    <section class="formA">
+      <p class="note">註：<abbr title="必填欄位標註符號" class="required">*</abbr>為必填（選）欄位。</p>
+      <form action="">
+        <table class="formLayout">
+          <tr>
+            <td><label for="AAA"><abbr title="必填欄位" class="required">*</abbr>姓名</label></td>
+            <td>
+              <input class="fullWidth" name="" id="AAA" type="text" placeholder="請輸入您的姓名" required="required">
+              <!-- <p class="warning">此為必填欄位，不能留空</p> -->
+            </td>
+          </tr>
+          <tr>
+            <td><label for="BBB"><abbr title="必填欄位" class="required">*</abbr>電話</label></td>
+            <td><input class="fullWidth" name="" id="BBB" type="tel" placeholder="請輸入聯絡電話" required="required">
+              <p class="hint">例如：(03)8888888 或 0920123456</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="MMM"><abbr title="必填欄位" class="required">*</abbr>Email</label></td>
+            <td>
+              <input class="fullWidth" name="" id="MMM" type="email" placeholder="請輸入您的 email" required="required">
+              <p class="warning"> 這似乎不是一個正常的email格式 </p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="SSS"><abbr title="必填欄位" class="required">*</abbr>主旨</label></td>
+            <td>
+              <input class="fullWidth" name="" id="SSS" type="text" placeholder="請輸入信件主旨" required="required">
+              <p class="hint">主旨輸入請於50個中文字以內</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="CCC"><abbr title="必填欄位" class="required">*</abbr>內容</label></td>
+            <td>
+              <textarea name="" id="CCC" placeholder="請輸入內容" required="required"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr>驗證碼</td>
+            <td>
+              <div class="captchaSet">
+                <input type="text" id="captchaCode" name="captchaCode" required="required"> 
+                <img src="images/bufferImg.jpg" alt="驗證碼">
+                <button class="refresh" type="button">更新驗證碼</button>          
+                <span class="button captchaText"><a href="xxx" title="文字驗證碼(另開視窗)" target="_blank">文字驗證碼</a></span>
+              </div>
+              <p class="error">您輸入的驗證碼錯誤</p>
+            </td>
+          </tr>
+        </table>
         <div class="btnDv">
-          <input name="" type="submit" value="送出">
+          <input type="submit" value="送出">
+          <input type="reset" value="清除">
         </div>
       </form>
-      </section>
-      <!-- end of class="polling" -->
+
+    </section>
 
 
   </main>

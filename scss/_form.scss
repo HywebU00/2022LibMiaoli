@@ -104,6 +104,8 @@ input[type="submit"], input[type="button"] , input[type="reset"]{
   }
 }
 
+.button>a{ border-radius: 2em;}
+
 input[type="reset"]{
   background-color: $inputBg; color: $btnBg1;
   box-shadow: $btnBg1 0 0 0 2px inset;
