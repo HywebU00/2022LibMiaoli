@@ -1,7 +1,7 @@
 // 表格形式內容頁 //////////////////////////////////////////////////
 .cpMeta{
   @extend %mainWidth;margin-bottom: 100px;padding:35px 0; 
-  box-shadow: rgba(0,0,0,.2) 0 0 16px;background-color: $white;
+  box-shadow: $shadowColor 0 0 16px;background-color: $white;
 
   &>button{float: right; font-size: 1rem; margin-right: 30px;
     &+table>caption{ margin-top: -2.5rem; margin-right: 7rem; clear: none;}

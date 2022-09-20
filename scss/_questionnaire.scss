@@ -1,0 +1,45 @@
+// 問卷調查
+.questionnaire{
+  @extend %mainWidth; padding: 30px 3vw; margin-bottom: 100px;
+  background-color: $white;
+
+  // 調查主題與說明文字
+  .description{
+    border-bottom: 2px solid $borderColor;
+    line-height: 1.6;padding: 0 0 1em;
+    time{
+      display: block;
+      &::before{content: attr(title)"："; font-family: Arial, Helvetica, sans-serif;}
+    }
+  }
+
+  // 問題
+  .questions{
+    list-style: none; margin:3em 0; padding: 0;
+    line-height: 1.6;
+    &>li{
+      position: relative; padding:0 0 1em 3.2em;
+      margin: 1.5em 0 0;
+      border-bottom: 1px dotted $borderColor;
+
+      .numb{
+        position: absolute; width: 2.5em; left: 0; top: 0;
+        text-align: right;
+        &::after{content: '.';}
+      }
+
+      .q{ margin: 0 0 .6em; }
+
+      input[type="text"]{ display: inline-block; width: 16em; vertical-align: middle; margin: 0;}
+      .optionPool{
+        label:last-of-type{ margin-right: 0;}
+      }
+    }
+
+  }
+
+  @media screen and (min-width: $wwMedium){
+    padding: 40px 20px 60px;
+    box-shadow: $shadowColor 0 0 16px;
+  }
+}

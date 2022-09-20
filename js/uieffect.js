@@ -284,116 +284,118 @@ $(function() {
 
 
 
-    // 向上捲動箭頭 //////////////////////////////
-    _goTop.click(function() {
-        _html.stop(true, false).animate({ scrollTop: 0 }, 800, function(){
-            $('.goCenter').focus();
-        });
-    });
-    $('.webHeader .accesskey').focus(function() {
-        _html.stop(true, false).animate({ scrollTop: 0 }, 800);
-    })
+  // 向上捲動箭頭 //////////////////////////////
+	_goTop.click(function () {
+		_html.stop(true, false).animate({ scrollTop: 0 }, 800, function () {
+			$('.goCenter').focus();
+		});
+	});
+	$('.webHeader .accesskey').focus(function () {
+		_html.stop(true, false).animate({ scrollTop: 0 }, 800);
+	})
 
-    // _goTop.keydown(function(e) {
-    //     $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
-    //     _body.find('a.goCenter').focus();
-    //     e.preventDefault();
-    // });
-    // --end of-- 向上捲動箭頭 //////////////////////////////
-
-
+	// _goTop.keydown(function(e) {
+	//     $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
+	//     _body.find('a.goCenter').focus();
+	//     e.preventDefault();
+	// });
+	// --end of-- 向上捲動箭頭 //////////////////////////////
 
 
-    ////////////////////////////////////////////////////////
-    // 外掛套件 slick 參數設定 ////////////////////////////
-    // 首頁 「新書展示」、「熱門排行榜」
-    $('.bookList').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 600,
-        autoplay: false,
-        arrows: true,
-        dots: false,
-        fade: false,
-        infinite: true,
-        mobileFirst: true,
-        responsive: [{
-                breakpoint: wwMedium,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: wwNormal,
-                settings: {
-                    slidesToShow: 4
-                }
-            }
-        ]
-    });
+
+
+	////////////////////////////////////////////////////////
+	// 外掛套件 slick 參數設定 ////////////////////////////
+	// 首頁 「新書展示」、「熱門排行榜」
+	$('.bookList').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		speed: 600,
+		autoplay: false,
+		arrows: true,
+		dots: false,
+		fade: false,
+		infinite: true,
+		mobileFirst: true,
+		responsive: [
+			{
+				breakpoint: wwMedium,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: wwNormal,
+				settings: {
+					slidesToShow: 4
+				}
+			}
+		]
+	});
 
     // 大圖輪播
-    $('.bigBanners').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplaySpeed: 5000,
-        speed: 600,
-        autoplay: true,
-        arrows: true,
-        dots: true,
-        fade: false,
-        // accessibility: false,
-        infinite: true,
-        customPaging: function(slider, i) {
-            var title = $(slider.$slides[i]).find('img').attr('alt').trim();
-            return $('<button type="button" aria-label="' + title + '"/>').text(title);
-        }
-    });
+		$('.bigBanners').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplaySpeed: 5000,
+			speed: 600,
+			autoplay: true,
+			arrows: true,
+			dots: true,
+			fade: false,
+			// accessibility: false,
+			infinite: true,
+			customPaging: function (slider, i) {
+				var title = $(slider.$slides[i]).find('img').attr('alt').trim();
+				return $('<button type="button" aria-label="' + title + '"/>').text(title);
+			}
+		});
 
-    // 小廣告
-    $('.adBanners .links').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplaySpeed: 5000,
-        speed: 600,
-        autoplay: true,
-        arrows: true,
-        dots: false,
-        fade: false,
-        infinite: true,
-        mobileFirst: true,
-        responsive: [{
-                breakpoint: wwMedium,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: wwNormal,
-                settings: {
-                    slidesToShow: 4
-                }
-            }
-        ]
-    });
+  // 小廣告
+	$('.adBanners .links').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplaySpeed: 5000,
+		speed: 600,
+		autoplay: true,
+		arrows: true,
+		dots: false,
+		fade: false,
+		infinite: true,
+		mobileFirst: true,
+		responsive: [
+			{
+				breakpoint: wwMedium,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: wwNormal,
+				settings: {
+					slidesToShow: 4
+				}
+			}
+		]
+	});
 
 
 
-    // 首頁讀者登入
-    var _loginHere = $('.loginHere');
-    var _loginCtrl = _loginHere.find('.ctrlBtn');
-    var _login = _loginHere.find('.login');
-    _loginCtrl.click(function() {
-        if (_loginHere.hasClass('reveal')) {
-            _loginHere.removeClass('reveal');
-            setTimeout(() => {
-                _login.hide();
-            }, 1000)
-        } else {
-            _login.show();
-            _loginHere.addClass('reveal');
-        }
-    });
+	// 首頁讀者登入
+	var _loginHere = $('.loginHere');
+	var _loginCtrl = _loginHere.find('.ctrlBtn');
+	var _login = _loginHere.find('.login');
+	_loginCtrl.click(function() {
+			if (_loginHere.hasClass('reveal')) {
+					_loginHere.removeClass('reveal');
+					setTimeout(() => {
+							_login.hide();
+					}, 1000)
+			} else {
+					_login.show();
+					_loginHere.addClass('reveal');
+			}
+	});
 
 
 

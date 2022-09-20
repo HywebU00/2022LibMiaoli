@@ -113,6 +113,12 @@
       time{ display: inline-block; min-width: 6em;}
 
       button{ display: inline-block; white-space: nowrap; position: relative;}
+
+      p, h3, .subject{ text-align: left;}
+      .subject{
+        margin: 0;
+        &+p{ margin-top: .6em;}
+      }
     }
   }
 
