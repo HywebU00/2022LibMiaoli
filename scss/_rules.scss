@@ -1,0 +1,15 @@
+// 使用規範
+.rules{
+  @extend %mainWidth;
+  margin-bottom: 100px; padding: 30px 4vw;
+  line-height: 1.8;
+  background-color: $white;box-shadow: $shadowColor 0 0 16px;
+
+  li+li{ margin-top: 1em;}
+
+  .strong{ color: $notice;}
+
+  @media screen and (min-width: $wwNormal){
+    padding: 40px 40px 60px;
+  }
+}

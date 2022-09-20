@@ -34,7 +34,7 @@
 
 // 列印、分享、返回 等功能圖示 //
 .funcBar{
-  @extend %mainWidth; 
+  // @extend %mainWidth; 
   font-size: .82rem; z-index: 99; position: relative;
   ul{ list-style: none; margin: 0;padding: 0; text-align: center;}
   &>ul{display: flex; flex-flow: row wrap; justify-content: flex-end;
