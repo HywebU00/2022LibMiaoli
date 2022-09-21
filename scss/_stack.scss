@@ -109,3 +109,26 @@
   }
 
 }
+
+
+
+.ebook{
+  @extend %mainWidth;
+  line-height: 1.8; padding: 40px 3vw; margin-bottom: 100px;
+  background-color: $white;box-shadow: $shadowColor 0 0 16px;
+  h3{ font-size: 1.5em; line-height: 1.5; margin: 0 0 1em;}
+
+  .bookCover{
+    width: 100%; margin: 1rem 0;
+    img{display: block;width: 100%;}
+    a{
+      display: block; transition: .2s;
+      &:hover, &:focus{ box-shadow: $linkColor 0 0 0 3px;}
+    }
+  }
+
+  @media screen and (min-width: $wwMedium){
+    overflow: hidden;
+    .bookCover{ float: left; width: 50%; margin:0 20px 10px 0;}
+  }
+}
