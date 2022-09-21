@@ -245,8 +245,9 @@ a:hover, a:focus {
 
 // cp 頁的瀏覽人次與發布日期容器
 .pubInfo{ 
-  @extend %mainWidth; padding: .7em 3vw .7em; margin-bottom: 16px;
-  border: 1px solid $borderColorLight; border-radius: 6px;
+  @extend %mainWidth; padding: 1em 3px .5em; margin-bottom: 20px;
+  border-bottom: 3px solid $white;
+  // background-color: transparentize($white, .6);
 
   dl{
     line-height: 1.5; margin: 0; padding: 0;
@@ -254,6 +255,9 @@ a:hover, a:focus {
     &>div{
       flex: 1 1 auto;
       &+div { margin-left: 15px;}
+      &:nth-child(n+2){text-align: center;}
+      &:last-child{ text-align: right;}
+
     }
 
     dt, dd{ display: inline-block; margin: 0;}
@@ -263,15 +267,9 @@ a:hover, a:focus {
     }
   }
 
-  @media screen and (min-width: $wwNormal){
-    margin-bottom: 20px;border-radius: 12px;
-    padding-left: 25px; padding-right: 25px;
-    dl{
-      &>div{
-        &:nth-child(n+2){text-align: center;}
-        &:last-child{ text-align: right;}
-      }
-    }
-  }
+  // @media screen and (min-width: $wwNormal){
+  //   margin-bottom: 20px;
+  //   padding-left: 25px; padding-right: 25px;
+  // }
 
 }

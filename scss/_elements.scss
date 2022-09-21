@@ -291,7 +291,7 @@ a:hover .videoThumb{
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 9;
   width: 42px; height: 42px; border-radius: 50%;
   text-indent: -20em; overflow: hidden; margin: 0;
-  background-color: $primaryColor;
+  background-color: rgba(0,0,0,.6);
   cursor: pointer; outline: none; border: none; transition: .2s;
   &::before{
     content: ''; position: absolute; width: 8px; height: 8px;
@@ -305,16 +305,15 @@ a:hover .videoThumb{
   }
   &.next{
     right: 0;
-      &::before{transform: rotate(225deg); margin-left: -7px;}
+    &::before{transform: rotate(225deg); margin-left: -7px;}
   }
 
-  &:hover{
-    box-shadow: $primaryColor 0 0 0 2px;
-    background-color: $primaryColor;
+  &:hover, &:focus{
+    background-color: $assistant;
+    box-shadow:$assistant 0 0 0 2px;
   }
   &:focus{
-    box-shadow:$assistant 0 0 0 1px, $primaryColor 0 0 0 4px;
-    background-color: $primaryColor;
+    box-shadow: $white 0 0 0 1px, $assistant 0 0 0 4px;
   }
 }
 // -----------------------------------------------------------------

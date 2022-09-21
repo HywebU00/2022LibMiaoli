@@ -1,7 +1,8 @@
 // 文章形式的 cp 頁 ////////////////////////////////////////////////////
 .cpArticle{
-  @extend %mainWidth;padding-bottom: 100px;
-  line-height: 1.8;
+  @extend %mainWidth;
+  padding:30px 3vw 40px; margin-bottom: 60px; line-height: 1.8;
+  background-color: $white;box-shadow: $shadowColor 0 0 16px;
 
   a{color: $linkColor;
     &:hover, &:focus{text-decoration: none;}
@@ -26,6 +27,7 @@
       display: block; margin: .5em 0 0;
       line-height: 1.6; font-size: .875em;
     }
+
   }
 
   table{
@@ -53,11 +55,22 @@
       img{ max-height: none; }
 
       &+p{margin-top: 0;}
+
+      &.center{
+        float: none; margin: 0 auto 30px;
+        width: 100%; max-width: none;
+      }
     }
   }
 
   @media screen and (min-width: $wwNormal){
-    figure{max-width: 460px;}
+    padding: 40px 30px 60px;
+    figure{
+      max-width: 460px;
+      &.center{ max-width: 900px;
+        img{ max-height: 900px; object-fit: contain}
+      }
+    }
   }
 
 }
@@ -67,6 +80,8 @@
 // 附件下載, 相關連結, 相關圖檔 ////////////////////////////////////////////////////
 .fileDownload, .seeAlso{
   @extend %mainWidth; margin-bottom: 50px;
+  
+  &>ul, &>ol{background: transparentize($white, .4);}
   
   h3{font-size: 1.4em; margin: 0 0 .5em; line-height: 1.1;}
   ul, ol{margin: 0; padding: 0; list-style: none; line-height: 1.8;}
@@ -90,7 +105,7 @@
       transition: .2s;
       &::before{
         content: '';
-        position: absolute; left: 2px; top: 1.25em; width: 0; height: 0;
+        position: absolute; left: 0; top: 1.25em; width: 0; height: 0;
         border-style: solid; 
         border-width: 6px 0 6px 3px; border-color: $primaryColor;
         transition:border-left-width .15s;
@@ -119,7 +134,7 @@
     border-top: 3px solid $borderColor;
     border-bottom: 2px solid $borderColor;
     &>li{
-      margin: 0; padding: 0 0 0 3px;
+      margin: 0; padding: 0 0 0 14px;
       border-bottom: 1px solid $borderColor;
       display: flex; flex-flow: row wrap;
       align-items: center; justify-content: flex-end;

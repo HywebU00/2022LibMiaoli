@@ -13,6 +13,7 @@
 
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="slick/slick.min.js"></script><!-- slick 套件 -->
+  <script src="js/jquery.touchSwipe.min.js"></script><!-- jq Touch and Swipe 套件 -->
   <script src="js/uieffect.js"></script>
 
 </head>
@@ -22,202 +23,176 @@
   <header class="webHeader">
     <a class="accesskey" href="#aU" id="aU" accesskey="U" title="上方功能區塊" >:::</a>
     <h1>
-      <a href="mp.html"><img src="publicData/h1_logo.png" alt="新北市政府警察局 NEW TAIPEI CITY POLICE DEPARTMENT"></a>
+      <a href="mp.html"><img src="publicData/h1_logo.png" alt="苗栗縣立圖書館 The Public Library of Miaoli County"></a>
     </h1>
 
     <nav class="topLinks">
       <ul>
-        <li><a href="#">回⾸⾴</a></li>
         <li><a href="#">網站導覽</a></li>
-        <li><a href="#">局⻑信箱</a></li>
-        <li><a href="#">RSS</a></li>
-        <li><a href="#">English</a></li>
+        <li><a href="#">國資圖一證通</a></li>
+        <li><a href="#">苗栗縣政府</a></li>
+        <li><a href="#">苗栗縣教育入口網</a></li>
+        <li><a href="#">書香苗栗閱讀網</a></li>
+        <li><a href="#">全站檢索  </a></li>
       </ul>
     </nav>
 
 
     <button class="searchCtrl" type="button">查詢區開關</button><!-- 查詢區開關 -->
+    <!-- 館藏查詢 -->
     <section class="search">
       <form action="">
-        <input type="text" placeholder="請輸入查詢關鍵字" aria-label="查詢關鍵字" accesskey="S">
+        <select name="" id="">
+          <option value="">館藏查詢</option>
+          <option value="">... ...</option>
+        </select>
+        <input type="text" placeholder="請輸入查詢詞" aria-label="請輸入查詢詞" accesskey="S">
         <input type="button" value="查詢">
       </form>
-      <div class="hotKeywords">
-        <span class="label">熱⾨搜尋</span>
-        <ul>
-          <li><a href="#">良⺠證</a></li>
-          <li><a href="#">遺失物</a></li>
-          <li><a href="#">交通事故</a></li>
-        </ul>
-      </div>
     </section>
 
 
+    <!-- 主選單 -->
     <nav class="menu">
       <ul>
-        <li><a href="#">關於我們</a>
+        <li><a href="np.html">本館介紹</a>
           <ul>
-            <li><a href="#">本局簡介</a>
-              <ul>
-                <li><a href="#">本局簡介</a></li>
-                <li><a href="#">首長介紹</a></li>
-                <li><a href="#">組織沿革</a></li>
-                <li><a href="#">組織編制</a></li>
-                <li><a href="#">聽語障礙報案電話</a></li>
-                <li><a href="#">歷任局長</a></li>
-              </ul>
-            </li>
-            <li><a href="#">所屬機關</a></li>
-            <li><a href="#">榮耀事蹟</a></li>
-            <li><a href="#">好人好事</a></li>
-            <li><a href="#">施政計畫</a></li>
-            <li><a href="#">興建廳舍</a></li>
-            <li><a href="#">其他特色</a>
-              <ul>
-                <li><a href="#">警察樂隊活動剪影</a></li>
-                <li><a href="#">銀駒奔騰-騎警隊</a></li>
-                <li><a href="#">騎警隊活動訊息</a></li>
-                <li><a href="#">鐵馬驛站</a></li>
-              </ul>
-            </li>
+            <li><a href="#">本館政策</a></li>
+            <li><a href="#">關於本館</a></li>
+            <li><a href="#">聯絡通訊</a></li>
+            <li><a href="#">交通資訊</a></li>
+            <li><a href="#">開放時間</a></li>
+            <li><a href="#">館區平面圖及導覽</a></li>
+            <li><a href="#">網站資料開放宣告</a></li>
           </ul>
         </li>
-        <li><a href="#">為民服務</a>
+        <li><a href="np.html">活動訊息</a>
           <ul>
-            <li><a href="#">警察刑事紀錄證明</a></li>
-            <li><a href="#">雲端櫃檯</a></li>
-            <li><a href="#">資料查詢</a></li>
-            <li><a href="#">相關文刊</a></li>
-            <li><a href="#">在地社區治安</a>
-              <ul>
-                <li><a href="#">社區警政治安「e話」電子報</a></li>
-                <li><a href="#">線上居家防竊安全檢測</a></li>
-                <li><a href="#">社區安全之建立</a></li>
-                <li><a href="#">住宅防竊安全檢測表</a></li>
-              </ul>
-            </li>
-            <li><a href="#">弱勢關懷</a>
-              <ul>
-                <li><a href="#">辦理自願捺印指紋作業</a></li>
-                <li><a href="#">身心障礙者申請良民證</a></li>
-                <li><a href="#">系統化運用DNA鑑定技術協尋身分不明者</a></li>
-                </ul>
-            </li>
-            <li><a href="#">聽語障礙報案電話</a></li>
-            <li><a href="#">防空疏散避難專區</a></li>
+            <li><a href="#">最新活動</a></li>
+            <li><a href="#">公告</a></li>
+            <li><a href="#">新聞稿</a></li>
+            <li><a href="#">轉知訊息</a></li>
+            <li><a href="#">活動行事曆</a></li>
+            <li><a href="#">館員行事曆</a></li>
           </ul>
         </li>
-        <li><a href="#">訊息公告</a>
+        <li><a href="#">線上申辦</a>
           <ul>
-            <li><a href="#">最新消息</a></li>
-            <li><a href="#">人事動態</a></li>
-            <li><a href="#">陽光法案</a></li>
-            <li><a href="#">警政統計</a></li>
-            <li><a href="#">資訊公開</a></li>
-            <li><a href="#">流程說明</a></li>
-            <li><a href="#">行政中立</a>
-              <ul>
-                <li><a href="#">宣導動畫</a></li>
-                <li><a href="#">告示說明</a></li>
-                <li><a href="#">關鍵知識報你知</a></li>
-              </ul>
-            </li>
+            <li><a href="#">館藏查詢</a></li>
+            <li><a href="#">苗栗文學電子書</a></li>
+            <li><a href="#">期刊訂閱一覽表</a></li>
+            <li><a href="#">報紙訂閱一覽表</a></li>
+            <li><a href="#">數位資源</a></li>
           </ul>
         </li>
-        <li><a href="#">預防宣導</a>
+        <li><a href="#">便民服務</a>
           <ul>
-            <li><a href="#">抗旱專區</a></li>
-            <li><a href="#">犯罪防治</a></li>
-            <li><a href="#">交通安全</a></li>
-            <li><a href="#">婦幼安全</a></li>
-            <li><a href="#">保防宣導</a></li>
-            <li><a href="#">失蹤協尋</a></li>
-            <li><a href="#">案例分享</a></li>
-            <li><a href="#">影音專區</a></li>
-            <li><a href="#">防制人口販運專區</a>
-              <ul>
-                <li><a href="#">執行概況</a></li>
-                <li><a href="#">歷年成效報告</a></li>
-                <li><a href="#">歷年破獲案件</a></li>
-                <li><a href="#">認識人口販運</a></li>
-                <li><a href="#">被害人保護</a></li>
-                <li><a href="#">政策法規</a></li>
-                <li><a href="#">各式宣導出版品</a></li>
-                <li><a href="#">相關連結資源</a></li>
-                <li><a href="#">我國與各國簽洽合作備忘錄</a></li>
-                <li><a href="#">通報方式</a></li>
-                <li><a href="#">人口販運Q&A</a></li>
-                <li><a href="#">協尋持志集團被害人專區</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">互動回饋</a>
-          <ul>
-            <li><a href="#">聯絡管道</a></li>
-            <li><a href="#">常見問答</a></li>
-            <li><a href="#">為民服務</a></li>
-          </ul>
-        </li>
-        <li><a href="#">小小波麗體驗營</a>
-          <ul>
-            <li><a href="#">活動說明</a></li>
-            <li><a href="#">活動花絮</a></li>
-            <li><a href="#">訊息公告</a></li>
-          </ul>
-        </li>
-        <li><a href="#">相關連結</a>
-          <ul>
-            <li><a href="#">重大政策</a></li>
-            <li><a href="#">本市機關</a></li>
-            <li><a href="#">警政機關</a></li>
-            <li><a href="#">官方社群</a></li>
-            <li><a href="#">其他網站</a></li>
-            <li><a href="#">警政統計資料庫</a></li>
-            <li><a href="#">警政統計視覺化查詢專區</a></li>
-          </ul>
-        </li>
-        <li><a href="#">性別主流化專區</a>
-          <ul>
-            <li><a href="#">關於我們</a></li>
-            <li><a href="#">專案小組</a>
+            <li><a href="#">常見問題</a></li>
+            <li><a href="#">借閱說明</a></li>
+            <li><a href="#">通閱說明</a></li>
+            <li><a href="#">圖書推薦</a></li>
+            <li><a href="#">使用規定</a></li>
+            <li><a href="#">班訪業務</a></li>
+            <li><a href="#">一證通</a></li>
+            <li><a href="#">分區資源中心</a>
               <ul>
                 <li><a href="#">簡介</a></li>
-                <li><a href="#">成立計畫</a></li>
-                <li><a href="#">委員名單</a></li>
-                <li><a href="#">會議紀錄</a></li>
-                <li><a href="#">推動性別主流化成果報告</a></li>
-              </ul>
+                <li><a href="#">公共圖書館區域資源中心</a></li>
+                <li><a href="#">公共圖書館圖書資源共享服務平台</a></li>
+                <li><a href="#">分區資源中心成果</a></li>
+              </ul>    
             </li>
-            <li><a href="#">實施計畫</a></li>
-            <li><a href="#">性別意識培力</a></li>
-            <li><a href="#">性別影響評估</a></li>
-            <li><a href="#">性別統計分析</a>
+            <li><a href="#">線上服務</a></li>
+          </ul>
+        </li>
+        <li><a href="#">書香苗栗</a>
+          <ul>
+            <li><a href="#">夢花文學獎</a>
               <ul>
-                <li><a href="#">性別統計通報</a></li>
-                <li><a href="#">性別統計指標</a></li>
-                <li><a href="#">性別統計分析</a></li>
-                <li><a href="#">性別圖像</a></li>
-                <li><a href="#">性別分析</a></li>
-                <li><a href="#">性別統計資料庫</a></li>
+                <li><a href="#">簡章</a></li>
+                <li><a href="#">歷年成果</a></li>
               </ul>
             </li>
-            <li><a href="#">性別預算</a></li>
-            <li><a href="#">性別宣導</a></li>
-            <li><a href="#">性別歧視防治、申訴及調查處理</a></li>
-            <li><a href="#">重要連結</a></li>
+            <li><a href="#">苗栗文學集</a>
+              <ul>
+                <li><a href="#">簡章</a></li>
+                <li><a href="#">歷年成果</a></li>
+              </ul>
+            </li>
+            <li><a href="#">獎勵閱讀計畫</a></li>
+            <li><a href="#">閱讀起步走</a></li>
+            <li><a href="#">輔導鄉鎮</a></li>
+            <li><a href="#">聽故事活動</a></li>
+            <li><a href="#">閱讀推廣與館藏充實</a></li>
+            <li><a href="#">閱讀環境與設備升級</a></li>
+            <li><a href="#">公共圖書館分齡分眾服務網</a></li>
+          </ul>
+        </li>
+        <li><a href="#">國民中小學閱讀</a>
+          <ul>
+            <li><a href="#">文狀元</a></li>
+            <li><a href="#">閱讀磐石獎</a></li>
+            <li><a href="#">閱讀空間改善</a></li>
+            <li><a href="#">學校閱讀推廣</a></li>
+            <li><a href="#">充實學校館藏</a></li>
+          </ul>
+        </li>
+        <li><a href="#">志工專區</a>
+          <ul>
+            <li><a href="#">志工專區</a></li>
+            <li><a href="#">公告資訊</a></li>
           </ul>
         </li>
       </ul>
     </nav>
 
-    
+
+    <!-- 讀者登入 -->
+    <div class="loginHere">
+      <button class="ctrlBtn" type="button">讀者登入</button>
+      <div class="login">
+        <form>
+          <table>
+            <tr>
+              <td><label for="account">證號</label></td>
+              <td><input name="account" id="account" type="text" required="required"></td>
+            </tr>
+            <tr>
+              <td><label for="passwd">密碼</label></td>
+              <td><input name="passwd" id="passwd" type="password" placeholder="請輸入密碼" required="required"></td>
+            </tr>
+            <tr>
+              <td><label for="captchaCode">驗證碼</label></td>
+              <td>
+                <div class="captcha">
+                  <img src="images/bufferImg.jpg" alt="驗證碼">
+                  <a class="captchaText" href="xxx" title="文字驗證碼(另開視窗)" target="_blank">文字驗證碼</a>            
+                  <input type="text" id="captchaCode" name="captcha" required="required"> 
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="misce">
+            <label><input type="checkbox" id="">記住帳號</label>
+            <a class="forget" href="#" target="_blank" title="忘記密碼(另開新視窗)">忘記密碼</a>
+          </div>
+          <div class="btnDv">
+            <input type="button" name="btn_sub" id="btn_sub" value="登入" class="txtbtn">
+          </div>
+        </form>
+      </div>
+    </div>
+
+
     <button class="sidebarCtrl" type="button">行動版側欄開關</button>
   </header>
   
   <!-- 行動版側欄選單容器 -->
   <aside class="sidebar">
   </aside>
+  
+  <!-- 版頭大圖 -->
+  <div class="headBanner"><img src="images/headBanner.jpg" alt=""></div>
   
 
   <main class="main">
@@ -252,14 +227,20 @@
 
     <section class="pubInfo">
       <dl>
-        <div><dt>發布日期</dt><dd><time>111-08-02</time></dd></div>
-        <div><dt>更新日期</dt><dd><time>111-08-05</time></dd></div>
-        <div><dt>發布單位</dt><dd>新北市政府警察局</dd></div>
+        <div><dt>資料來源</dt><dd>苗栗縣立圖書館</dd></div>
+        <div><dt>發布日期</dt><dd><time>2022/09/20</time></dd></div>
+        <!-- <div><dt>更新日期</dt><dd><time>2022/09/20</time></dd></div> -->
       </dl>
     </section>
 
 
     <article class="cpArticle">
+
+      <figure class="image center">
+        <img src="publicData/ph05.jpg" alt="替代文字">
+        <figcaption>理共媽他一身上地的海的是，是滿力老重而何樂去使病較了起意些河片開過過去畫一了難</figcaption>
+      </figure>
+
       <figure class="image">
         <img src="publicData/ph01.jpg" alt="替代文字">
         <figcaption>理共媽他一身上地的海的是，是滿力老重而何樂去使病較了起意些河片開過過去畫一了難</figcaption>
@@ -392,141 +373,107 @@
   <footer class="webFooter">
     <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁腳區">:::</a>
 
-    <button type="button" class="fatFootCtrl" data-altText="開啟">收合</button>
+    <button type="button" class="fatFootCtrl" data-altText="open">close</button>
     <section class="fatFooter">
       <nav class="siteTree">
         <ul>
-          <li><a href="#">關於我們</a>
+          <li><a href="#">認識本館</a>
             <ul>
-              <li><a href="#">本局簡介</a></li>
-              <li><a href="#">所屬機關</a></li>
-              <li><a href="#">榮耀事蹟</a></li>
-              <li><a href="#">好人好事</a></li>
-              <li><a href="#">施政計畫</a></li>
-              <li><a href="#">興建廳舍</a></li>
-              <li><a href="#">其他特色</a></li>
+              <li><a href="#">本館政策</a></li>
+              <li><a href="#">關於本館</a></li>
+              <li><a href="#">聯絡通訊</a></li>
+              <li><a href="#">交通資訊</a></li>
+              <li><a href="#">開放時間</a></li>
+              <li><a href="#">館區平面圖及導覽</a></li>
+              <li><a href="#">網站資料開放宣告</a></li>
+              <li><a href="#">志工專區</a></li>
             </ul>
           </li>
-          <li><a href="#">為民服務</a>
+          <li><a href="#">館藏資源</a>
             <ul>
-              <li><a href="#">警察刑事紀錄證明</a></li>
-              <li><a href="#">雲端櫃檯</a></li>
-              <li><a href="#">資料查詢</a></li>
-              <li><a href="#">相關文刊</a></li>
-              <li><a href="#">在地社區治安</a></li>
-              <li><a href="#">弱勢關懷</a></li>
-              <li><a href="#">聽語障礙報案電話</a></li>
-              <li><a href="#">防空疏散避難專區</a></li>
+              <li><a href="#">館藏查詢</a></li>
+              <li><a href="#">苗栗文學電子書</a></li>
+              <li><a href="#">期刊訂閱一覽表</a></li>
+              <li><a href="#">報紙訂閱一覽表</a></li>
+              <li><a href="#">數位資源</a></li>
             </ul>
           </li>
-          <li><a href="#">訊息公告</a>
+          <li><a href="#">活動訊息</a>
             <ul>
-              <li><a href="#">最新消息</a></li>
-              <li><a href="#">人事動態</a></li>
-              <li><a href="#">陽光法案</a></li>
-              <li><a href="#">警政統計</a></li>
-              <li><a href="#">資訊公開</a></li>
-              <li><a href="#">流程說明</a></li>
-              <li><a href="#">行政中立</a></li>
+              <li><a href="#">最新活動</a></li>
+              <li><a href="#">公告</a></li>
+              <li><a href="#">新聞稿</a></li>
+              <li><a href="#">活動行事曆</a></li>
+              <li><a href="#">轉知訊息</a></li>
+              <li><a href="#">館員行事曆</a></li>
             </ul>
           </li>
-          <li><a href="#">預防宣導</a>
+          <li><a href="#">讀者服務</a>
             <ul>
-              <li><a href="#">抗旱專區</a></li>
-              <li><a href="#">犯罪防治</a></li>
-              <li><a href="#">交通安全</a></li>
-              <li><a href="#">婦幼安全</a></li>
-              <li><a href="#">保防宣導</a></li>
-              <li><a href="#">失蹤協尋</a></li>
-              <li><a href="#">案例分享</a></li>
-              <li><a href="#">影音專區</a></li>
-              <li><a href="#">防制人口販運專區</a></li>
+              <li><a href="#">常見問題</a></li>
+              <li><a href="#">借閱說明</a></li>
+              <li><a href="#">通閱說明</a></li>
+              <li><a href="#">圖書推薦</a></li>
+              <li><a href="#">使用規定</a></li>
+              <li><a href="#">班訪業務</a></li>
+              <li><a href="#">一證通</a></li>
+              <li><a href="#">分區資源中心</a></li>
+              <li><a href="#">線上服務</a></li>
             </ul>
           </li>
-          <li><a href="#">互動回饋</a>
+          <li><a href="#">書香苗栗</a>
             <ul>
-              <li><a href="#">聯絡管道</a></li>
-              <li><a href="#">常見問答</a></li>
-              <li><a href="#">為民服務</a></li>
+              <li><a href="#">夢花文學獎</a></li>
+              <li><a href="#">苗栗文學集</a></li>
+              <li><a href="#">獎勵閱讀計畫</a></li>
+              <li><a href="#">閱讀起步走</a></li>
+              <li><a href="#">輔導鄉鎮</a></li>
+              <li><a href="#">聽故事活動</a></li>
+              <li><a href="#">閱讀推廣與館藏充實</a></li>
+              <li><a href="#">閱讀環境與設備升級</a></li>
+              <li><a href="#">國民中小學閱讀</a></li>
+              <li><a href="#">文狀元</a></li>
+              <li><a href="#">閱讀磐石獎</a></li>
+              <li><a href="#">閱讀空間改善</a></li>
+              <li><a href="#">學校閱讀推廣</a></li>
+              <li><a href="#">充實學校館藏</a></li>
             </ul>
           </li>
-          <li><a href="#">小小波麗體驗營</a>
+          <li><a href="#">國民中小學閱讀</a>
             <ul>
-              <li><a href="#">活動說明</a></li>
-              <li><a href="#">活動花絮</a></li>
-              <li><a href="#">訊息公告</a></li>
+              <li><a href="#">文狀元</a></li>
+              <li><a href="#">閱讀磐石獎</a></li>
+              <li><a href="#">閱讀空間改善</a></li>
+              <li><a href="#">學校閱讀推廣</a></li>
+              <li><a href="#">充實學校館藏</a></li>
             </ul>
           </li>
-          <li><a href="#">相關連結</a>
-            <ul>
-              <li><a href="#">重大政策</a></li>
-              <li><a href="#">本市機關</a></li>
-              <li><a href="#">警政機關</a></li>
-              <li><a href="#">官方社群</a></li>
-              <li><a href="#">其他網站</a></li>
-              <li><a href="#">警政統計資料庫</a></li>
-              <li><a href="#">警政統計視覺化查詢專區</a></li>
-            </ul>
-          </li>
-          <li><a href="#">性別主流化專區</a>
-            <ul>
-              <li><a href="#">關於我們</a></li>
-              <li><a href="#">專案小組</a></li>
-              <li><a href="#">實施計畫</a></li>
-              <li><a href="#">性別意識培力</a></li>
-              <li><a href="#">性別影響評估</a></li>
-              <li><a href="#">性別統計分析</a></li>
-              <li><a href="#">性別預算</a></li>
-              <li><a href="#">性別宣導</a></li>
-              <li><a href="#">性別歧視防治、申訴及調查處理</a></li>
-              <li><a href="#">重要連結</a></li>
-            </ul>
-          </li>
-        </ul>
+        </ul>  
       </nav>
     </section>
 
     <section class="base">
-      <div class="logo"><img src="images/footer_logo.png" alt="新北市政府警察局 logo"></div>
+      <div class="logo"><img src="images/h1_logo.png" alt="苗栗縣立圖書館 logo"></div>
 
       <div class="contactInfo">
-        <ul>
-          <li>
-            <span class="dt">電話</span>
-            <span class="dd">(02)8072-5454（保您妻兒 無事無事）、0972039968或 1999（新北市境內）按9由專人為您服務（本局總機電話僅能撥入、不能撥出，請小心詐騙）</span>
-          </li>
-          <li>
-            <span class="dt">傳真</span>
-            <span class="dd">(02)2966-8310、(02)2966-8312</span>
-          </li>
-          <li>
-            <span class="dt">緊急報案</span>
-            <span class="dd">110</span>
-          </li>
-          <li>
-            <span class="dt">勤務指揮中心電話</span>
-            <span class="dd">(02)29660251、(02)29660252 、(02)29660253 本局各外勤單位24小時為您服務 / 內勤單位週一至週五上午8時至下午5時30分（警察刑事紀錄證明書受理時間為上午8時30分至下午5時，每周三延長受理至晚上8時）</span>
-          </li>
-          <li>
-            <span class="dt">地址</span>
-            <span class="dd">220238新北市板橋區府中路32號 <span class="map"><a href="https://goo.gl/maps/rbnJKe3q1sewkasn6" target="_blank"></a></span></span>
-          </li>
-        </ul>
+        <span>地址：36045  苗栗縣苗栗市自治路50號</span>
+        <span>電話：037-559001、037-559002</span>
       </div>
-      
+      <div class="update">
+        <span>瀏覽人次：<em>2,679,905</em></span>
+        <span>更新日期：<em>2022/04/20</em></span>
+      </div>
+
+      <div class="aaBadge"><a href="#" target="_blank" title="另開新視窗"><img src="publicData/aBadge.png" alt="無障礙標章2.1，檢測等級 A"></a></div>
+
       <div class="declaration">
         <ul>
-          <li><a href="#">網站安全宣告</a></li>
+          <li><a href="#">隱私權政策</a></li>
+          <li><a href="#">網站安全政策</a></li>
           <li><a href="#">政府網站資料開放宣告</a></li>
         </ul>
       </div>
-
-      <div class="update">
-        <span>更新日期：<em>111-05-12</em></span>
-        <span>瀏覽次數：<em>14789131</em></span>
-      </div>
-
-      <div class="aaBadge"><a href="#" target="_blank" title="另開新視窗"><img src="publicData/aaBadge.png" alt="本站通過AA檢測等級無障礙網頁檢測"></a></div>
+      <p class="copyright">苗栗縣立圖書館   版權所有 ©2022 All Rights Reserved</p>
 
     </section>
 
