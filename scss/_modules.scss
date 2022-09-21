@@ -45,7 +45,7 @@
         padding: 0 0 44px;line-height: 1.5; height: 1em; 
         background-color:transparent; border: none; text-decoration: none;
         box-shadow: none;
-        color: transparent;cursor: pointer;white-space: nowrap;
+        color: transparent;cursor: pointer; white-space: nowrap;
         transition: .2s;
         &::before{
           content: '';position: absolute; left: 0; bottom: 0; 

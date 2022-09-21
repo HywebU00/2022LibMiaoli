@@ -73,6 +73,15 @@ input[type="week"] {
   &.halfWidth{width: calc(50% - 3px);}
 }
 
+// 帶入的資料
+
+.known{
+  @extend %textInput; 
+  border-color: transparent; background-color: transparent;
+  color: $fontColorDark;
+  &:hover, &:focus{ border-color: transparent}
+}
+
 
 // 下拉選單 ////////////////////////////
 select {
@@ -89,7 +98,7 @@ input[type="submit"], input[type="button"] , input[type="reset"]{
   border: none;
 
   height: 2.6em; line-height: 2.6em;
-  padding: 0 1em; margin: 3px; border-radius: 4px;
+  padding: 0 1em; margin: 3px; border-radius: 1.5em;
   vertical-align: middle;
   cursor: pointer; transition: .15s;
 }
@@ -110,9 +119,9 @@ input[type="reset"]{
   background-color: $inputBg; color: $btnBg1;
   box-shadow: $btnBg1 0 0 0 2px inset;
   &:hover, &:focus{
-    box-shadow: $btnBg2 0 0 0 2px inset;
+    box-shadow: $btnBg2 0 0 0 2px inset; color: $btnBg2;
   }
-  &:focus{box-shadow: transparent 0 0 0 2px inset, $btnBg2 0 0 0 4px; }
+  &:focus{box-shadow: transparent 0 0 0 2px inset, $btnBg2 0 0 0 3px; }
 }
 
 .button{
@@ -182,12 +191,14 @@ input[disabled]:focus {
 textarea[readonly],
 textarea[readonly]:hover,
 textarea[readonly]:focus,
-input[readonly],
-input[readonly]:hover,
-input[readonly]:focus {
-  background-color: $gray;
+input[type="text"][readonly],
+input[type="text"][readonly]:hover,
+input[type="text"][readonly]:focus {
+  background-color: rgba(255,255,255, .7);
+  border-style: dashed;
   border-color: $borderColorLight;
   box-shadow: none;
+  cursor: default;
 }
 select[disabled],
 input[disabled] {

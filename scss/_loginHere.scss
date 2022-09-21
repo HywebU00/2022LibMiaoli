@@ -86,10 +86,10 @@
       }
 
       .btnDv{
-        background: #eee;
+        // background: #eee;
         text-align: center; margin: 15px -20px 0;
         button, input{
-          margin: 0; height: 3.5em;
+          margin: 0; height: 3.5em; border-radius: 0;
           &:only-child{width: 100%;}
           &:focus{
             box-shadow: $primaryColor 0 0 0 2px inset, $white 0 0 0 3px inset;
