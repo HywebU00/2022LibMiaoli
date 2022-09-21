@@ -243,18 +243,27 @@ a:hover .videoThumb{
 .slick-arrow{
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 9;
   text-indent: -20em; overflow: hidden; margin: 0;
-
   width: 40px; height: 64px; border-radius: 0;
-  background-color: transparent;
+  background-color: transparentize($white, .5);
   cursor: pointer; outline: none; border: none; box-shadow: none;
   transition: .15s;
   &::before{
     content: ''; position: absolute; width: 24px; height: 24px;
     left: 50%; top: 50%; margin-top: -13px;
-    border: 2px solid transparentize($primaryColor, .4); border-top: none; border-right: none;
+    border: 2px solid $primaryColor; border-top: none; border-right: none;
     transform:rotate(45deg);
     transition: .2s;
   }
+  &:hover {
+    background-color: transparentize($white, .2);
+  }
+  &:focus{ 
+    background-color: $primaryColor; box-shadow: none;
+    &::before{ border-color: $white;}
+  
+  }
+
+
   &.slick-prev{
     left: 0;
     &::before{ margin-left: -4px; }
@@ -270,13 +279,6 @@ a:hover .videoThumb{
     }
   }
 
-  &:hover, &:focus{
-    background-color: transparent;
-    &::before{ border-color: $primaryColor;}
-  }
-  &:focus{
-    box-shadow: transparentize($primaryColor, .5) 0 0 0 2px inset;
-  }
 
   @media screen and (min-width: $wwNormal){
     transform: translateY(-50%) scale(1.5);
