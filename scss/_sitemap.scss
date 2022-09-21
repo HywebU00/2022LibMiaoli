@@ -4,18 +4,18 @@
   line-height: 1.8;
   .accesskeyDefine{
     padding: 1.5em 1em 1.2em 2.5em; margin: 1.5em 0;
-    background-color: $grayLight; border-radius: 6px;
+    background-color: $white; border-radius: 6px;
   }
   li+li{margin-top: .5em;}
   
   .cascading{
-    margin: 3em auto 2em;
+    margin: 6em auto 2em;
     ul{
       line-height: 1.5;
       list-style: none; margin: 0; padding: 0;
       a{
         text-decoration: none;display: block; color: $fontColor;
-        border-bottom: 1px solid $borderColor;
+        // border-bottom: 1px solid $borderColor;
         padding: .6em 2px 0; margin: 0;
         &:hover, &:focus{border-bottom-color: $primaryColor; color: $fontColorDark;}
         &:focus{ box-shadow:$fontColor 0 0 0 1px inset ;}
