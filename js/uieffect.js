@@ -66,6 +66,20 @@ $(function () {
 	})
 	// --end of-- 查詢區 //////////////////////////////
 
+	
+  // 按 altKey + s 要 focus 查詢 input 元件 //////////////////////////////
+  _window.keydown( function(e){
+    if (e.which == 83 && e.altKey ) {
+      if (_window.scrollTop() > hh) {
+        _html.stop(true,false).animate({scrollTop: 0}, 400, function(){
+          _search.find('input[type="text"]').focus();
+        });
+      }
+    }
+  })
+  // --end of--  altKey + s ///////////////////////////////////////////////
+
+
 
 	// window resize
 	var winResizeTimer0;
@@ -575,20 +589,6 @@ $(function () {
 		_showLightbox.focus();
 	})
 
-
-	// 開啟查詢燈箱 //////////////
-	// var _openLbSearch = $('.openLbSearch>button');
-	// var _lbSearch = $('.lbSearch');
-	// _openLbSearch.click(function () {
-	// 	_lbSearch.stop(true, false).fadeIn(200);
-	// 	_cover.stop(true, false).fadeIn(200);
-	// 	_hideLightbox.focus();
-	// 	_body.addClass('noScroll');
-	// });
-	// _lbSearch.find(_hideLightbox).click(function () {
-	// 	_openLbSearch.focus();
-	// })
-	///////////////////////////////////////////////
 
 
 
