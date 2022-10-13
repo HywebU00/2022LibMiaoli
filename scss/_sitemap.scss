@@ -1,72 +1,128 @@
 // 網站導覽 ////////////////////////////////////////////////////
-.sitemap{ 
-  @extend %mainWidth; 
-  line-height: 1.8;
-  .accesskeyDefine{
-    padding: 1.5em 1em 1.2em 2.5em; margin: 1.5em 0;
-    background-color: $white; border-radius: 6px;
-  }
-  li+li{margin-top: .5em;}
-  
-  .cascading{
-    margin: 6em auto 2em;
-    ul{
-      line-height: 1.5;
-      list-style: none; margin: 0; padding: 0;
-      a{
-        text-decoration: none;display: block; color: $fontColor;
-        // border-bottom: 1px solid $borderColor;
-        padding: .6em 2px 0; margin: 0;
-        &:hover, &:focus{border-bottom-color: $primaryColor; color: $fontColorDark;}
-        &:focus{ box-shadow:$fontColor 0 0 0 1px inset ;}
-      }
+.sitemap {
+    @extend %mainWidth;
+    line-height: 1.8;
+    .accesskeyDefine {
+        padding: 1.5em 1em 1.2em 2.5em;
+        margin: 1.5em 0;
+        background-color: $white;
+        border-radius: 6px;
     }
-    &>ul{
-      display: flex; flex-flow: row wrap;
-      &>li{
-        flex: 0 0 48%; margin: 0 0 2em;
-        &:nth-child(2n){margin-left: 4%;}
-        &>a{ 
-          font-size: 1.1em; font-weight: bold;
-          border-bottom: 3px solid $assistant;
-        }
-        li{margin:2px 0 2px;}
-        &>ul{
-          margin-top: .3em;
-          a{
-            position: relative; padding-left: 14px;
-            &::before, &::after{content: ''; position: absolute; transition: .1s;}
-            &::before{width: 4px; height: 4px; background-color: $grayDark; left: 4px; top: 1.2em;}
-            &::after{content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;}
-            &:hover, &:focus{
-              &::before{box-shadow: $primaryColor 0 0 0 1px;background-color: $primaryColor;}
-              &::after{background-color: $primaryColor; }
+    li+li {
+        margin-top: .5em;
+    }
+    .cascading {
+        margin: 6em auto 0;
+        ul {
+            line-height: 1.5;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            a {
+                text-decoration: none;
+                display: block;
+                color: $fontColor;
+                // border-bottom: 1px solid $borderColor;
+                padding: .6em 2px 0;
+                margin: 0;
+                &:hover,
+                &:focus {
+                    border-bottom-color: $primaryColor;
+                    color: $fontColorDark;
+                }
+                &:focus {
+                    box-shadow: $fontColor 0 0 0 1px inset;
+                }
             }
-          }
-          ul{margin-left: 1em; margin-bottom: .8em;}
         }
-      }
+        &>ul {
+            display: flex;
+            flex-flow: row wrap;
+            &>li {
+                flex: 0 0 48%;
+                margin: 0 0 2em;
+                &:nth-child(2n) {
+                    margin-left: 4%;
+                }
+                &>a {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                    border-bottom: 3px solid $assistant;
+                }
+                li {
+                    margin: 2px 0 2px;
+                }
+                &>ul {
+                    margin-top: .3em;
+                    a {
+                        position: relative;
+                        padding-left: 14px;
+                        &::before,
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            transition: .1s;
+                        }
+                        &::before {
+                            width: 4px;
+                            height: 4px;
+                            background-color: $grayDark;
+                            left: 4px;
+                            top: 1.2em;
+                        }
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            height: 1px;
+                        }
+                        &:hover,
+                        &:focus {
+                            &::before {
+                                box-shadow: $primaryColor 0 0 0 1px;
+                                background-color: $primaryColor;
+                            }
+                            &::after {
+                                background-color: $primaryColor;
+                            }
+                        }
+                    }
+                    ul {
+                        margin-left: 1em;
+                        margin-bottom: .8em;
+                    }
+                }
+            }
+        }
     }
-  }
-
-  @media screen and (min-width: $wwMedium){
-    .cascading{
-      &>ul>li{
-        flex-basis:31%;
-        &:nth-child(n){ margin-left: 3.5%;}
-        &:nth-child(3n + 1){margin-left: 0;}
-      }
+    @media screen and (min-width: $wwMedium) {
+        .cascading {
+            &>ul>li {
+                flex-basis: 31%;
+                &:nth-child(n) {
+                    margin-left: 3.5%;
+                }
+                &:nth-child(3n + 1) {
+                    margin-left: 0;
+                }
+            }
+        }
     }
-  }
-
-  @media screen and (min-width: $wwNormal){
-    .cascading{
-      &>ul>li{
-        flex-basis: 22%; 
-        &:nth-child(n){margin-left: 4%;}
-        &:nth-child(4n + 1){margin-left: 0;}
-      }
+    @media screen and (min-width: $wwNormal) {
+        .cascading {
+            &>ul>li {
+                flex-basis: 22%;
+                &:nth-child(n) {
+                    margin-left: 4%;
+                }
+                &:nth-child(4n + 1) {
+                    margin-left: 0;
+                }
+            }
+        }
     }
-  }
 }
+
 // -----------------------------------------------------------------

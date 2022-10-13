@@ -52,7 +52,7 @@ time {
 
 .main {
   position: relative;
-  padding-bottom: 1px;
+  padding-bottom: 4em;
   margin: 0 auto -1px;
 }
 .main.small_size {
@@ -3739,15 +3739,17 @@ a:hover .fileType.other, a:focus .fileType.other {
 }
 
 .pagination {
-  padding: 10px 0 4em;
+  padding: 10px 0 0;
   text-align: center;
   font-size: 1em;
   line-height: 1.5;
+  margin-bottom: 1em;
 }
 .pagination form {
   display: inline-block;
 }
-.pagination input, .pagination select {
+.pagination input,
+.pagination select {
   font-size: inherit;
   height: 2.4em;
   line-height: 2.4;
@@ -3774,7 +3776,7 @@ a:hover .fileType.other, a:focus .fileType.other {
   color: #000;
   height: 1.7em;
   line-height: 1.75;
-  margin: 0 1px;
+  margin: 0 3px;
   padding: 0 6px;
   -webkit-box-shadow: #bdc1c2 0 0 0 1px;
           box-shadow: #bdc1c2 0 0 0 1px;
@@ -4264,7 +4266,9 @@ table.formLayout + .btnDv {
   table.formLayout tbody {
     display: block;
   }
-  table.formLayout tr, table.formLayout td, table.formLayout th {
+  table.formLayout tr,
+table.formLayout td,
+table.formLayout th {
     display: block;
     width: 100%;
   }
@@ -4284,7 +4288,8 @@ table.formLayout + .btnDv {
   text-align: center;
   margin: 0 auto;
 }
-.btnDv input, .btnDv button {
+.btnDv input,
+.btnDv button {
   min-width: 10em;
   height: 3em;
   line-height: 3;
@@ -4404,7 +4409,8 @@ table.formLayout + .btnDv {
 .captchaSet input[type=text] + img {
   margin-right: 6px;
 }
-.captchaSet button, .captchaSet input[type=button] {
+.captchaSet button,
+.captchaSet input[type=button] {
   position: relative;
   white-space: nowrap;
   -webkit-box-flex: 0;
@@ -4465,7 +4471,8 @@ table.formLayout + .btnDv {
             flex: 1 1 auto;
     min-width: 8em;
   }
-  .captchaSet button, .captchaSet input[type=button] {
+  .captchaSet button,
+.captchaSet input[type=button] {
     margin-top: 3px;
     padding-right: 1em;
   }
@@ -4533,7 +4540,7 @@ table.formLayout + .btnDv {
 
 .formA {
   padding: 20px 3vw 40px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 16px;
           box-shadow: rgba(0, 0, 0, 0.2) 0 0 16px;
   background-color: rgba(255, 255, 255, 0.6);
@@ -4557,16 +4564,20 @@ table.formLayout + .btnDv {
 @media screen and (min-width: 1000px) {
   .formA {
     padding: 30px 30px 50px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
 }
 
-.hint, .warning, .error {
+.hint,
+.warning,
+.error {
   position: relative;
   padding-left: 24px;
   line-height: 1.6;
 }
-.hint::before, .warning::before, .error::before {
+.hint::before,
+.warning::before,
+.error::before {
   content: "";
   position: absolute;
   left: 0;
@@ -4684,7 +4695,7 @@ td:nth-child(even) p.error {
 
 .np {
   font-size: 1.125em;
-  padding: 0 0 4em;
+  padding: 0;
 }
 .np ul {
   list-style: none;
@@ -5559,7 +5570,8 @@ td:nth-child(even) p.error {
   -webkit-box-shadow: transparent 0 0 0 1px, rgba(0, 0, 0, 0.4) 0 4px 16px;
           box-shadow: transparent 0 0 0 1px, rgba(0, 0, 0, 0.4) 0 4px 16px;
 }
-.stack .listItems > li > a:hover h3, .stack .listItems > li > a:hover p {
+.stack .listItems > li > a:hover h3,
+.stack .listItems > li > a:hover p {
   text-decoration: underline;
 }
 .stack .listItems > li > a:focus {
@@ -5641,7 +5653,7 @@ td:nth-child(even) p.error {
 .ebook {
   line-height: 1.8;
   padding: 40px 3vw;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   background-color: #fff;
   -webkit-box-shadow: rgba(53, 60, 66, 0.3) 0 0 16px;
           box-shadow: rgba(53, 60, 66, 0.3) 0 0 16px;
@@ -5680,7 +5692,7 @@ td:nth-child(even) p.error {
 }
 
 .cpMeta {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   padding: 35px 0;
   -webkit-box-shadow: rgba(53, 60, 66, 0.3) 0 0 16px;
           box-shadow: rgba(53, 60, 66, 0.3) 0 0 16px;
@@ -5710,7 +5722,8 @@ td:nth-child(even) p.error {
   text-align: left;
   padding-bottom: 0.3em;
 }
-.cpMeta > table td, .cpMeta > table th {
+.cpMeta > table td,
+.cpMeta > table th {
   padding: 0.7em 0.8em 0.6em;
   border-bottom: 1px solid #bdc1c2;
 }
@@ -5736,10 +5749,13 @@ td:nth-child(even) p.error {
   padding-right: 3px;
   text-align: left;
 }
-.cpMeta > table td ul, .cpMeta > table td ol {
+.cpMeta > table td ul,
+.cpMeta > table td ol {
   margin: 0;
 }
-.cpMeta > table td ul + ul, .cpMeta > table td ul + ol, .cpMeta > table td ol + ul, .cpMeta > table td ol + ol {
+.cpMeta > table td ul + ul, .cpMeta > table td ul + ol,
+.cpMeta > table td ol + ul,
+.cpMeta > table td ol + ol {
   margin-top: 1.5em;
 }
 .cpMeta > table td li + li {
@@ -5761,7 +5777,7 @@ td:nth-child(even) p.error {
 }
 @media screen and (max-width: 999px) {
   .cpMeta {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   .cpMeta > table {
     width: calc(100% - 6vw);
@@ -5781,7 +5797,8 @@ td:nth-child(even) p.error {
   .cpMeta > table tr:last-child {
     border-bottom: none;
   }
-  .cpMeta > table th, .cpMeta > table td {
+  .cpMeta > table th,
+.cpMeta > table td {
     padding: 0;
   }
   .cpMeta > table th {
@@ -5804,7 +5821,7 @@ td:nth-child(even) p.error {
 
 .questionnaire {
   padding: 30px 3vw;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   background-color: #fff;
 }
 .questionnaire .description {
@@ -5886,7 +5903,8 @@ td:nth-child(even) p.error {
   text-align: center;
   border: none;
 }
-.questionnaire.chart .fix_th_table th, .questionnaire.chart .fix_th_table td {
+.questionnaire.chart .fix_th_table th,
+.questionnaire.chart .fix_th_table td {
   border: 1px solid #bdc1c2;
   padding: 0.4em 0.7em;
 }
@@ -5903,7 +5921,7 @@ td:nth-child(even) p.error {
 }
 
 .rules {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   padding: 30px 4vw;
   line-height: 1.8;
   background-color: #fff;
@@ -6192,7 +6210,7 @@ td:nth-child(even) p.error {
   margin-top: 0.5em;
 }
 .sitemap .cascading {
-  margin: 6em auto 2em;
+  margin: 6em auto 0;
 }
 .sitemap .cascading ul {
   line-height: 1.5;

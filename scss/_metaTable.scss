@@ -1,77 +1,127 @@
 // 表格形式內容頁 //////////////////////////////////////////////////
-.cpMeta{
-  @extend %mainWidth;margin-bottom: 100px;padding:35px 0; 
-  box-shadow: $shadowColor 0 0 16px;background-color: $white;
-
-  &>button{float: right; font-size: 1rem; margin-right: 30px;
-    &+table>caption{ margin-top: -2.5rem; margin-right: 7rem; clear: none;}
-  }
-  &>table{
-    clear: both;
-    border-collapse: collapse; margin: 0 auto; width: calc(100% - 60px);
-    line-height: 1.8;
-    border-top: 2px solid $borderColorDark;
-    border-bottom: 2px solid $borderColorDark;
-    caption{ font-size: 1.3em; text-align: left; padding-bottom: .3em;}
-    td, th {
-      padding: .7em .8em .6em;
-      border-bottom: 1px solid $borderColor;
-    }
-
-    th{
-      position: relative; 
-      padding-left: 3px; width: 15%; text-align: left;
-      vertical-align: top; 
-      font-weight: bold; color: $fontColorDark;
-      &::after{
-        content: ''; 
-        position: absolute; right: 0; top: 3px; bottom: 3px;
-        width: 3px;
-        background-color: $borderColorLight;
-      }
-    }
-    td{
-      padding-right: 3px; text-align: left;
-      ul, ol{
-        margin: 0;
-        &+ul, &+ol{margin-top: 1.5em;}
-      }
-      li+li{margin-top: .8em;}
-
-      figure{
-        margin: 0; padding: 0;
-        img{display: block; margin: 0; width: 100%;}
-        figcaption{
-          display: block; margin: .5em 0 0; line-height: 1.6;
+.cpMeta {
+    @extend %mainWidth;
+    margin-bottom: 40px;
+    padding: 35px 0;
+    box-shadow: $shadowColor 0 0 16px;
+    background-color: $white;
+    &>button {
+        float: right;
+        font-size: 1rem;
+        margin-right: 30px;
+        &+table>caption {
+            margin-top: -2.5rem;
+            margin-right: 7rem;
+            clear: none;
         }
-      }
     }
-
-
-  }
-
-  @media screen and (max-width: $wwNormal - 1px){
-    margin-bottom: 50px;
-    &>table{ width: calc(100% - 6vw);}
-  }
-
-  @media screen and (max-width: $wwMedium - 1px){
-    &>table{
-      border-width: 1px;
-      tr{
-        display: block; overflow: hidden; clear: both;
-        padding:.7em .3px .6em;
-        border-bottom: 1px solid $borderColor;
-        &:last-child{border-bottom: none;}
-      }
-      th, td{ padding: 0;}
-      th{
-        float: left;
-        width: auto; border: none; padding-right: .5em;
-        &::after{content: '：'; background: none; position: static; display: inline;}
-      }
-      td{border: none;display: inline-block;}
+    &>table {
+        clear: both;
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: calc(100% - 60px);
+        line-height: 1.8;
+        border-top: 2px solid $borderColorDark;
+        border-bottom: 2px solid $borderColorDark;
+        caption {
+            font-size: 1.3em;
+            text-align: left;
+            padding-bottom: .3em;
+        }
+        td,
+        th {
+            padding: .7em .8em .6em;
+            border-bottom: 1px solid $borderColor;
+        }
+        th {
+            position: relative;
+            padding-left: 3px;
+            width: 15%;
+            text-align: left;
+            vertical-align: top;
+            font-weight: bold;
+            color: $fontColorDark;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 3px;
+                bottom: 3px;
+                width: 3px;
+                background-color: $borderColorLight;
+            }
+        }
+        td {
+            padding-right: 3px;
+            text-align: left;
+            ul,
+            ol {
+                margin: 0;
+                &+ul,
+                &+ol {
+                    margin-top: 1.5em;
+                }
+            }
+            li+li {
+                margin-top: .8em;
+            }
+            figure {
+                margin: 0;
+                padding: 0;
+                img {
+                    display: block;
+                    margin: 0;
+                    width: 100%;
+                }
+                figcaption {
+                    display: block;
+                    margin: .5em 0 0;
+                    line-height: 1.6;
+                }
+            }
+        }
     }
-  }
+    @media screen and (max-width: $wwNormal - 1px) {
+        margin-bottom: 40px;
+        &>table {
+            width: calc(100% - 6vw);
+        }
+    }
+    @media screen and (max-width: $wwMedium - 1px) {
+        &>table {
+            border-width: 1px;
+            tr {
+                display: block;
+                overflow: hidden;
+                clear: both;
+                padding: .7em .3px .6em;
+                border-bottom: 1px solid $borderColor;
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+            th,
+            td {
+                padding: 0;
+            }
+            th {
+                float: left;
+                width: auto;
+                border: none;
+                padding-right: .5em;
+                &::after {
+                    content: '：';
+                    background: none;
+                    position: static;
+                    display: inline;
+                }
+            }
+            td {
+                border: none;
+                display: inline-block;
+            }
+        }
+    }
 }
+
 // -----------------------------------------------------------------
