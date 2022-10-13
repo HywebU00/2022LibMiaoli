@@ -1,87 +1,139 @@
 // 版頭快速查詢區 //////////////////////////////////////////////////
 .search {
-  display: none;
-  position: absolute;left: 0; top: 64px; z-index: 19;
-  width: 100vw; padding:10px 2% 12px;
-  background-color:rgba(255,255,255,.88);
-  transform: translateX(100%);
-  transition:transform .5s;
-
-  &.reveal{transform: translateX(0); box-shadow: $shadowColor 0 4px 5px -3px;}
-
-  a{ color: $fontColor; }
-
-  form{
-    flex-flow: row nowrap; align-items: center; justify-content: center;
-    position: relative;width: 100%; max-width: 600px;
-    padding: 2px; margin: 0  auto; overflow: hidden;
-    display: flex;
-  }
-  select {
-    flex: 1 0 6em;
-    margin: 0 -2px 0 0;height: 2.8em;line-height: 2.8;
-    border: none; box-shadow: $borderColor 0 0 0 1px inset;
-    &:focus{
-      box-shadow: $primaryColor 0 0 0 2px inset;
-    position: relative;
+    display: none;
+    z-index: 19;
+    width: 100vw;
+    padding: 10px 2% 12px;
+    background-color: rgba(255, 255, 255, .88);
+    transform: translateX(100%);
+    transition: transform .5s;
+    &.reveal {
+        transform: translateX(0);
+        box-shadow: $shadowColor 0 4px 5px -3px;
     }
-  }
-  input[type="text"],
-  input[type="button"], input[type="submit"] {
-    font-size: 1rem; height: 2.8em; line-height: 2.8;
-    margin: 0; border: none;  outline: none;
-  }
-  input[type="text"]{
-    flex: 1 1 80%; 
-    padding: 0 .5em;
-    box-shadow: $borderColor 0 0 0 1px inset;
-    background-color: $white;
-    &:focus{box-shadow: $primaryColor 0 0 0 2px inset;}
-
-  }
-  input[type="button"], input[type="submit"] {
-    flex: 0 0 3em; margin-left: -2px;
-    box-shadow: none; border-radius: 0;
-    background-color: $primaryColor; color: $fontInvert; 
-    &:hover, &:focus{ background-color: $assistant; box-shadow: none;}
-  }
-
-  @media screen and (min-width: $wwNormal){
-    display: flex; 
-    left: auto; right: 40px; top: 55px;
-    margin: 0; padding:0; width: auto;
-    background: $white;transform: none;
-    box-shadow: $shadowColor 0 0 10px;
-
-    form{max-width: none; padding: 0;}
-    select, input[type="text"], input[type="button"], input[type="submit"] {
-      height: 2.5em; line-height: 2.5;
+    a {
+        color: $fontColor;
     }
-    select{
-      position: relative;box-shadow: none; margin-right: 0;
-      border-right: 1px dotted $borderColorDark;
+    form {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        padding: 2px;
+        margin: 0 auto;
+        overflow: hidden;
+        display: flex;
     }
-    input[type="text"]{
-      width: 16em;
-      background-color: transparent; box-shadow: none;
-      &:hover,  &:focus{ box-shadow:$primaryColor 0 0 0 1px inset, $primaryColor 0 0 0 1px; }
+    select {
+        flex: 1 0 6em;
+        margin: 0 -2px 0 0;
+        height: 2.8em;
+        line-height: 2.8;
+        border: none;
+        box-shadow: $borderColor 0 0 0 1px inset;
+        &:focus {
+            box-shadow: $primaryColor 0 0 0 2px inset;
+            position: relative;
+        }
     }
-    select, input[type="text"]{
-      &:hover{ box-shadow:$primaryColor 0 0 0 1px inset; }
-      &:focus{ box-shadow:$primaryColor 0 0 0 2px inset; }
+    input[type="text"],
+    input[type="button"],
+    input[type="submit"] {
+        font-size: 1rem;
+        height: 2.8em;
+        line-height: 2.8;
+        margin: 0;
+        border: none;
+        outline: none;
     }
-    input[type="button"], input[type="submit"]{
-      &:focus{ box-shadow:$assistant 0 0 0 2px; }
+    input[type="text"] {
+        flex: 1 1 80%;
+        padding: 0 .5em;
+        box-shadow: $borderColor 0 0 0 1px inset;
+        background-color: $white;
+        &:focus {
+            box-shadow: $primaryColor 0 0 0 2px inset;
+        }
     }
-
-    .linkBtn{
-      a{height: 2em; line-height: 2; width: auto;}
+    input[type="button"],
+    input[type="submit"] {
+        flex: 0 0 3em;
+        margin-left: -2px;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: $primaryColor;
+        color: $fontInvert;
+        &:hover,
+        &:focus {
+            background-color: $assistant;
+            box-shadow: none;
+        }
     }
-  }
-
-  @media screen and (min-width: $wwMaximum){
-    right: calc(50vw - $wwMaximum*.5 + 40px)
-  }
-
+    @media screen and (min-width: $wwNormal) {
+        display: flex;
+        left: auto;
+        right: 40px;
+        top: 55px;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        background: $white;
+        transform: none;
+        box-shadow: $shadowColor 0 0 10px;
+        form {
+            max-width: none;
+            padding: 0;
+        }
+        select,
+        input[type="text"],
+        input[type="button"],
+        input[type="submit"] {
+            height: 2.5em;
+            line-height: 2.5;
+        }
+        select {
+            position: relative;
+            box-shadow: none;
+            margin-right: 0;
+            border-right: 1px dotted $borderColorDark;
+        }
+        input[type="text"] {
+            width: 16em;
+            background-color: transparent;
+            box-shadow: none;
+            &:hover,
+            &:focus {
+                box-shadow: $primaryColor 0 0 0 1px inset, $primaryColor 0 0 0 1px;
+            }
+        }
+        select,
+        input[type="text"] {
+            &:hover {
+                box-shadow: $primaryColor 0 0 0 1px inset;
+            }
+            &:focus {
+                box-shadow: $primaryColor 0 0 0 2px inset;
+            }
+        }
+        input[type="button"],
+        input[type="submit"] {
+            &:focus {
+                box-shadow: $assistant 0 0 0 2px;
+            }
+        }
+        .linkBtn {
+            a {
+                height: 2em;
+                line-height: 2;
+                width: auto;
+            }
+        }
+    }
+    @media screen and (min-width: $wwMaximum) {
+        right: calc(50vw - $wwMaximum*.5 + 40px)
+    }
 }
+
 // -----------------------------------------------------------------

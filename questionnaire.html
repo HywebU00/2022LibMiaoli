@@ -1,416 +1,445 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="robots" content="noindex"><!-- 防搜尋用，套版時請移除 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>問卷調查 - 苗栗縣立圖書館</title>
-  <link rel="shortcut icon" href="images/fav_ico.png" type="image/vnd.microsoft.icon" />
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <!-- 防搜尋用，套版時請移除 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問卷調查 - 苗栗縣立圖書館</title>
+    <link rel="shortcut icon" href="images/fav_ico.png" type="image/vnd.microsoft.icon" />
 
-  <link rel="stylesheet" href="slick/slick.css"/><!-- slick 套件 -->
-  <link rel="stylesheet" href="css/style2022.css">
+    <link rel="stylesheet" href="slick/slick.css" />
+    <!-- slick 套件 -->
+    <link rel="stylesheet" href="css/style2022.css">
 
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="slick/slick.min.js"></script><!-- slick 套件 -->
-  <script src="js/uieffect.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <!-- slick 套件 -->
+    <script src="js/uieffect.js"></script>
 
 </head>
+
 <body>
-  <a class="goCenter" href="#aC" tabindex="0">跳至內容區</a>
+    <a class="goCenter" href="#aC" tabindex="0">跳至內容區</a>
 
-  <header class="webHeader">
-    <a class="accesskey" href="#aU" id="aU" accesskey="U" title="上方功能區塊" >:::</a>
-    <h1>
-      <a href="mp.html"><img src="publicData/h1_logo.png" alt="苗栗縣立圖書館 The Public Library of Miaoli County"></a>
-    </h1>
+    <header class="webHeader">
+        <a class="accesskey" href="#aU" id="aU" accesskey="U" title="上方功能區塊">:::</a>
+        <h1>
+            <a href="mp.html"><img src="publicData/h1_logo.png" alt="苗栗縣立圖書館 The Public Library of Miaoli County"></a>
+        </h1>
 
-    <nav class="topLinks">
-      <ul>
-        <li><a href="#">網站導覽</a></li>
-        <li><a href="#">國資圖一證通</a></li>
-        <li><a href="#">苗栗縣政府</a></li>
-        <li><a href="#">苗栗縣教育入口網</a></li>
-        <li><a href="#">書香苗栗閱讀網</a></li>
-        <li><a href="#">全站檢索  </a></li>
-      </ul>
-    </nav>
-
-
-    <button class="searchCtrl" type="button">查詢區開關</button><!-- 查詢區開關 -->
-    <!-- 館藏查詢 -->
-    <section class="search">
-      <form action="">
-        <select name="" id="">
-          <option value="">館藏查詢</option>
-          <option value="">... ...</option>
-        </select>
-        <input type="text" placeholder="請輸入查詢詞" aria-label="請輸入查詢詞" accesskey="S">
-        <input type="button" value="查詢">
-      </form>
-    </section>
-
-
-    <!-- 主選單 -->
-    <nav class="menu">
-      <ul>
-        <li><a href="np.html">本館介紹</a>
-          <ul>
-            <li><a href="#">本館政策</a></li>
-            <li><a href="#">關於本館</a></li>
-            <li><a href="#">聯絡通訊</a></li>
-            <li><a href="#">交通資訊</a></li>
-            <li><a href="#">開放時間</a></li>
-            <li><a href="#">館區平面圖及導覽</a></li>
-            <li><a href="#">網站資料開放宣告</a></li>
-          </ul>
-        </li>
-        <li><a href="np.html">活動訊息</a>
-          <ul>
-            <li><a href="#">最新活動</a></li>
-            <li><a href="#">公告</a></li>
-            <li><a href="#">新聞稿</a></li>
-            <li><a href="#">轉知訊息</a></li>
-            <li><a href="#">活動行事曆</a></li>
-            <li><a href="#">館員行事曆</a></li>
-          </ul>
-        </li>
-        <li><a href="#">線上申辦</a>
-          <ul>
-            <li><a href="#">館藏查詢</a></li>
-            <li><a href="#">苗栗文學電子書</a></li>
-            <li><a href="#">期刊訂閱一覽表</a></li>
-            <li><a href="#">報紙訂閱一覽表</a></li>
-            <li><a href="#">數位資源</a></li>
-          </ul>
-        </li>
-        <li><a href="#">便民服務</a>
-          <ul>
-            <li><a href="#">常見問題</a></li>
-            <li><a href="#">借閱說明</a></li>
-            <li><a href="#">通閱說明</a></li>
-            <li><a href="#">圖書推薦</a></li>
-            <li><a href="#">使用規定</a></li>
-            <li><a href="#">班訪業務</a></li>
-            <li><a href="#">一證通</a></li>
-            <li><a href="#">分區資源中心</a>
-              <ul>
-                <li><a href="#">簡介</a></li>
-                <li><a href="#">公共圖書館區域資源中心</a></li>
-                <li><a href="#">公共圖書館圖書資源共享服務平台</a></li>
-                <li><a href="#">分區資源中心成果</a></li>
-              </ul>    
-            </li>
-            <li><a href="#">線上服務</a></li>
-          </ul>
-        </li>
-        <li><a href="#">書香苗栗</a>
-          <ul>
-            <li><a href="#">夢花文學獎</a>
-              <ul>
-                <li><a href="#">簡章</a></li>
-                <li><a href="#">歷年成果</a></li>
-              </ul>
-            </li>
-            <li><a href="#">苗栗文學集</a>
-              <ul>
-                <li><a href="#">簡章</a></li>
-                <li><a href="#">歷年成果</a></li>
-              </ul>
-            </li>
-            <li><a href="#">獎勵閱讀計畫</a></li>
-            <li><a href="#">閱讀起步走</a></li>
-            <li><a href="#">輔導鄉鎮</a></li>
-            <li><a href="#">聽故事活動</a></li>
-            <li><a href="#">閱讀推廣與館藏充實</a></li>
-            <li><a href="#">閱讀環境與設備升級</a></li>
-            <li><a href="#">公共圖書館分齡分眾服務網</a></li>
-          </ul>
-        </li>
-        <li><a href="#">國民中小學閱讀</a>
-          <ul>
-            <li><a href="#">文狀元</a></li>
-            <li><a href="#">閱讀磐石獎</a></li>
-            <li><a href="#">閱讀空間改善</a></li>
-            <li><a href="#">學校閱讀推廣</a></li>
-            <li><a href="#">充實學校館藏</a></li>
-          </ul>
-        </li>
-        <li><a href="#">志工專區</a>
-          <ul>
-            <li><a href="#">志工專區</a></li>
-            <li><a href="#">公告資訊</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-
-
-    <!-- 讀者登入 -->
-    <div class="loginHere">
-      <button class="ctrlBtn" type="button">讀者登入</button>
-      <div class="login">
-        <form>
-          <table>
-            <tr>
-              <td><label for="account">證號</label></td>
-              <td><input name="account" id="account" type="text" required="required"></td>
-            </tr>
-            <tr>
-              <td><label for="passwd">密碼</label></td>
-              <td><input name="passwd" id="passwd" type="password" placeholder="請輸入密碼" required="required"></td>
-            </tr>
-            <tr>
-              <td><label for="captchaCode">驗證碼</label></td>
-              <td>
-                <div class="captcha">
-                  <img src="images/bufferImg.jpg" alt="驗證碼">
-                  <a class="captchaText" href="xxx" title="文字驗證碼(另開視窗)" target="_blank">文字驗證碼</a>            
-                  <input type="text" id="captchaCode" name="captcha" required="required"> 
-                </div>
-              </td>
-            </tr>
-          </table>
-          <div class="misce">
-            <label><input type="checkbox" id="">記住帳號</label>
-            <a class="forget" href="#" target="_blank" title="忘記密碼(另開新視窗)">忘記密碼</a>
-          </div>
-          <div class="btnDv">
-            <input type="button" name="btn_sub" id="btn_sub" value="登入" class="txtbtn">
-          </div>
-        </form>
-      </div>
-    </div>
-
-
-    <button class="sidebarCtrl" type="button">行動版側欄開關</button>
-  </header>
-  
-  <!-- 行動版側欄選單容器 -->
-  <aside class="sidebar">
-  </aside>
-  
-  <!-- 版頭大圖 -->
-  <div class="headBanner"><img src="images/headBanner.jpg" alt=""></div>
-
-  <main class="main">
-    <a class="accesskey" href="#aC" id="aC" accesskey="C" title="中央內容區塊">:::</a>
-
-    <div class="breadcrumb" title="現在位置">
-      <ul>
-        <li><a href="mp.html">首頁</a></li>
-        <li><a href="x">節點一</a></li>
-        <li>節點一之一</li>
-      </ul>
-    </div>
-
-
-    <div class="pageHeader">
-      <h2>問卷調查</h2>
-      
-      <section class="funcBar">
-        <ul>
-          <li class="print"><button type="button">列印</button></li>
-          <li class="forward"><a href="javascript:;">轉寄</a></li>
-          <li class="share compound"><button type="button">分享</button>
+        <nav class="topLinks">
             <ul>
-              <li><a target="_blank" title="分享到 Facebook (open new window)" href="https://www.facebook.com/"><img src="images/icon_fb2.png" alt="Facebook"></a></li>
-              <li><a target="_blank" title="分享到 Twitter (open new window)" href="https://twitter.com/"><img src="images/icon_twitter.png" alt="Twitter"></a></li>
-              <li><a target="_blank" title="分享到 LINE (open new window)" href="https://access.line.me/"><img src="images/icon_line.png" alt="LINE"></a></li>
+                <li><a href="#">網站導覽</a></li>
+                <li><a href="#">國資圖一證通</a></li>
+                <li><a href="#">苗栗縣政府</a></li>
+                <li><a href="#">苗栗縣教育入口網</a></li>
+                <li><a href="#">書香苗栗閱讀網</a></li>
+                <li><a href="#">全站檢索  </a></li>
             </ul>
-          </li>
-          <li class="back"><a href="javascript:;">回上一頁</a></li>
-        </ul>
-      </section>
-    </div>
+        </nav>
 
 
-    <section class="questionnaire">
-      <section class="description">
-        <time title="開放填寫日期">2022-01-01～2022-12-31</time>
-        <h3 class="subject">讀者滿意度調查表</h3>
-        <p>親愛的讀者您好，本問卷旨要用於未來規劃本館服務之參考，您的寶貴意見對本館而言彌足珍貴，衷心感謝您撥空填寫本問卷。</p>
-      </section>
-
-      <form>
-        <ol class="questions">
-          <li><span class="numb">1</span>
-            <p class="q">服務人員態度是否優良( 5 分最滿意，1 分最不滿意)</ㄣ>
-            <div class="optionPool">
-              <label><input name="aaa" id="" type="radio" value="">5</label>
-              <label><input name="aaa" id="" type="radio" value="">4</label>
-              <label><input name="aaa" id="" type="radio" value="">3</label>
-              <label><input name="aaa" id="" type="radio" value="">2</label>
-              <label><input name="aaa" id="" type="radio" value="">1</label>
-              <label><input name="aaa" id="" type="radio" value="">未曾使用</label>
+        <button class="searchCtrl" type="button">查詢區開關</button>
+        <!-- 查詢區開關 -->
+        <!-- 功能區 -->
+        <div class="function_block">
+            <!-- 館藏查詢 -->
+            <section class="search">
+                <form action="">
+                    <select name="" id="">
+                <option value="">館藏查詢</option>
+                 <option value="">... ...</option>
+            </select>
+                    <input type="text" placeholder="請輸入查詢詞" aria-label="請輸入查詢詞" accesskey="S">
+                    <input type="button" value="查詢">
+                </form>
+            </section>
+            <!-- font_size -->
+            <div class="font_size">
+                <span>字型大小：</span>
+                <!-- 英文用<span>font-size：</span> -->
+                <ul>
+                    <li><a href="#" class="small">小</a></li>
+                    <li><a href="#" class="medium">中</a></li>
+                    <li><a href="#" class="large">大</a></li>
+                </ul>
             </div>
-          </li>
-
-          <li><span class="numb">2</span>
-            <p class="q">請問您對本館承辦人員的專業知識，您覺得：</p>
-            <div class="optionPool">
-              <label><input name="bbb" id="" type="radio" value="">很滿意</label>
-              <label><input name="bbb" id="" type="radio" value="">滿意</label>
-              <label><input name="bbb" id="" type="radio" value="">普通</label>
-              <label><input name="bbb" id="" type="radio" value="">不滿意</label>
-              <label><input name="bbb" id="" type="radio" value="">非常不滿意</label>
-            </div>
-          </li>
-          <li><span class="numb">3</span>
-            <p class="q">的上我中學人一；要點沒，者心類那多候生美良以口工平校間人晚線環隨到怎文其山在院變而紅</p>
-            <div class="optionPool">
-              <label><input name="ccc" id="" type="radio" value="">馬親的義輕不</label>
-              <label><input name="ccc" id="" type="radio" value="">個的動教年子嚴組原其</label>
-              <label><input name="ccc" id="" type="radio" value="">於消他以長喜輕工有產</label>
-              <label><input name="ccc" id="" type="radio" value="">們也山修陸模口服</label>
-              <label><input name="ccc" id="" type="radio" value="">可草我中會全於高立公組場器</label>
-            </div>
-          </li>
-          <li><span class="numb">4</span>
-            <p class="q">走不古本綠運標書成因進速，之最我跟容中的以北受父本受最家工線養參新</p>
-            <div class="optionPool">
-              <label><input name="ddd" id="" type="checkbox" value="">果學河黨一登發</label>
-              <label><input name="ddd" id="" type="checkbox" value="">者起心話的</label>
-              <label><input name="ddd" id="" type="checkbox" value="">非全開</label>
-              <label><input name="ddd" id="" type="checkbox" value="">用年如</label>
-              <label><input name="ddd" id="" type="checkbox" value="">其他</label>
-              <input type="text" name="" id="">
-            </div>
-          </li>
-          <li><span class="numb">5</span>
-           <p class="q"> 話不決前財她結用向城如的金能不心極，氣廣而們大需出好開德成看國備知器卻口，一事處知？</p>
-            <div class="optionPool">
-              <label><input name="eee" id="" type="radio" value="">低這品著</label>
-              <label><input name="eee" id="" type="radio" value="">約來最球</label>
-              <label><input name="eee" id="" type="radio" value="">流得的間</label>
-              <label><input name="eee" id="" type="radio" value="">其他</label>
-              <input type="text" name="" id="">
-            </div>
-          </li>
-        </ol>
-        <div class="btnDv">
-          <input name="" type="submit" value="送出">
         </div>
-      </form>
-      </section>
-      <!-- end of class="polling" -->
-
-
-  </main>
-
-
-
-
-  <footer class="webFooter">
-    <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁腳區">:::</a>
-
-    <button type="button" class="fatFootCtrl" data-altText="open">close</button>
-    <section class="fatFooter">
-      <nav class="siteTree">
-        <ul>
-          <li><a href="#">認識本館</a>
+        <!-- 主選單 -->
+        <nav class="menu">
             <ul>
-              <li><a href="#">本館政策</a></li>
-              <li><a href="#">關於本館</a></li>
-              <li><a href="#">聯絡通訊</a></li>
-              <li><a href="#">交通資訊</a></li>
-              <li><a href="#">開放時間</a></li>
-              <li><a href="#">館區平面圖及導覽</a></li>
-              <li><a href="#">網站資料開放宣告</a></li>
-              <li><a href="#">志工專區</a></li>
+                <li><a href="np.html">本館介紹</a>
+                    <ul>
+                        <li><a href="#">本館政策</a></li>
+                        <li><a href="#">關於本館</a></li>
+                        <li><a href="#">聯絡通訊</a></li>
+                        <li><a href="#">交通資訊</a></li>
+                        <li><a href="#">開放時間</a></li>
+                        <li><a href="#">館區平面圖及導覽</a></li>
+                        <li><a href="#">網站資料開放宣告</a></li>
+                    </ul>
+                </li>
+                <li><a href="np.html">活動訊息</a>
+                    <ul>
+                        <li><a href="#">最新活動</a></li>
+                        <li><a href="#">公告</a></li>
+                        <li><a href="#">新聞稿</a></li>
+                        <li><a href="#">轉知訊息</a></li>
+                        <li><a href="#">活動行事曆</a></li>
+                        <li><a href="#">館員行事曆</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">線上申辦</a>
+                    <ul>
+                        <li><a href="#">館藏查詢</a></li>
+                        <li><a href="#">苗栗文學電子書</a></li>
+                        <li><a href="#">期刊訂閱一覽表</a></li>
+                        <li><a href="#">報紙訂閱一覽表</a></li>
+                        <li><a href="#">數位資源</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">便民服務</a>
+                    <ul>
+                        <li><a href="#">常見問題</a></li>
+                        <li><a href="#">借閱說明</a></li>
+                        <li><a href="#">通閱說明</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">使用規定</a></li>
+                        <li><a href="#">班訪業務</a></li>
+                        <li><a href="#">一證通</a></li>
+                        <li><a href="#">分區資源中心</a>
+                            <ul>
+                                <li><a href="#">簡介</a></li>
+                                <li><a href="#">公共圖書館區域資源中心</a></li>
+                                <li><a href="#">公共圖書館圖書資源共享服務平台</a></li>
+                                <li><a href="#">分區資源中心成果</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">線上服務</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">書香苗栗</a>
+                    <ul>
+                        <li><a href="#">夢花文學獎</a>
+                            <ul>
+                                <li><a href="#">簡章</a></li>
+                                <li><a href="#">歷年成果</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">苗栗文學集</a>
+                            <ul>
+                                <li><a href="#">簡章</a></li>
+                                <li><a href="#">歷年成果</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">獎勵閱讀計畫</a></li>
+                        <li><a href="#">閱讀起步走</a></li>
+                        <li><a href="#">輔導鄉鎮</a></li>
+                        <li><a href="#">聽故事活動</a></li>
+                        <li><a href="#">閱讀推廣與館藏充實</a></li>
+                        <li><a href="#">閱讀環境與設備升級</a></li>
+                        <li><a href="#">公共圖書館分齡分眾服務網</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">國民中小學閱讀</a>
+                    <ul>
+                        <li><a href="#">文狀元</a></li>
+                        <li><a href="#">閱讀磐石獎</a></li>
+                        <li><a href="#">閱讀空間改善</a></li>
+                        <li><a href="#">學校閱讀推廣</a></li>
+                        <li><a href="#">充實學校館藏</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">志工專區</a>
+                    <ul>
+                        <li><a href="#">志工專區</a></li>
+                        <li><a href="#">公告資訊</a></li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-          <li><a href="#">館藏資源</a>
+        </nav>
+
+
+        <!-- 讀者登入 -->
+        <div class="loginHere">
+            <button class="ctrlBtn" type="button">讀者登入</button>
+            <div class="login">
+                <form>
+                    <table>
+                        <tr>
+                            <td><label for="account">證號</label></td>
+                            <td><input name="account" id="account" type="text" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="passwd">密碼</label></td>
+                            <td><input name="passwd" id="passwd" type="password" placeholder="請輸入密碼" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="captchaCode">驗證碼</label></td>
+                            <td>
+                                <div class="captcha">
+                                    <img src="images/bufferImg.jpg" alt="驗證碼">
+                                    <a class="captchaText" href="xxx" title="文字驗證碼(另開視窗)" target="_blank">文字驗證碼</a>
+                                    <input type="text" id="captchaCode" name="captcha" required="required">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="misce">
+                        <label><input type="checkbox" id="">記住帳號</label>
+                        <a class="forget" href="#" target="_blank" title="忘記密碼(另開新視窗)">忘記密碼</a>
+                    </div>
+                    <div class="btnDv">
+                        <input type="button" name="btn_sub" id="btn_sub" value="登入" class="txtbtn">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <button class="sidebarCtrl" type="button">行動版側欄開關</button>
+    </header>
+
+    <!-- 行動版側欄選單容器 -->
+    <aside class="sidebar">
+    </aside>
+
+    <!-- 版頭大圖 -->
+    <div class="headBanner"><img src="images/headBanner.jpg" alt=""></div>
+
+    <main class="main">
+        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="中央內容區塊">:::</a>
+
+        <div class="breadcrumb" title="現在位置">
             <ul>
-              <li><a href="#">館藏查詢</a></li>
-              <li><a href="#">苗栗文學電子書</a></li>
-              <li><a href="#">期刊訂閱一覽表</a></li>
-              <li><a href="#">報紙訂閱一覽表</a></li>
-              <li><a href="#">數位資源</a></li>
+                <li><a href="mp.html">首頁</a></li>
+                <li><a href="x">節點一</a></li>
+                <li>節點一之一</li>
             </ul>
-          </li>
-          <li><a href="#">活動訊息</a>
-            <ul>
-              <li><a href="#">最新活動</a></li>
-              <li><a href="#">公告</a></li>
-              <li><a href="#">新聞稿</a></li>
-              <li><a href="#">活動行事曆</a></li>
-              <li><a href="#">轉知訊息</a></li>
-              <li><a href="#">館員行事曆</a></li>
-            </ul>
-          </li>
-          <li><a href="#">讀者服務</a>
-            <ul>
-              <li><a href="#">常見問題</a></li>
-              <li><a href="#">借閱說明</a></li>
-              <li><a href="#">通閱說明</a></li>
-              <li><a href="#">圖書推薦</a></li>
-              <li><a href="#">使用規定</a></li>
-              <li><a href="#">班訪業務</a></li>
-              <li><a href="#">一證通</a></li>
-              <li><a href="#">分區資源中心</a></li>
-              <li><a href="#">線上服務</a></li>
-            </ul>
-          </li>
-          <li><a href="#">書香苗栗</a>
-            <ul>
-              <li><a href="#">夢花文學獎</a></li>
-              <li><a href="#">苗栗文學集</a></li>
-              <li><a href="#">獎勵閱讀計畫</a></li>
-              <li><a href="#">閱讀起步走</a></li>
-              <li><a href="#">輔導鄉鎮</a></li>
-              <li><a href="#">聽故事活動</a></li>
-              <li><a href="#">閱讀推廣與館藏充實</a></li>
-              <li><a href="#">閱讀環境與設備升級</a></li>
-              <li><a href="#">國民中小學閱讀</a></li>
-              <li><a href="#">文狀元</a></li>
-              <li><a href="#">閱讀磐石獎</a></li>
-              <li><a href="#">閱讀空間改善</a></li>
-              <li><a href="#">學校閱讀推廣</a></li>
-              <li><a href="#">充實學校館藏</a></li>
-            </ul>
-          </li>
-          <li><a href="#">國民中小學閱讀</a>
-            <ul>
-              <li><a href="#">文狀元</a></li>
-              <li><a href="#">閱讀磐石獎</a></li>
-              <li><a href="#">閱讀空間改善</a></li>
-              <li><a href="#">學校閱讀推廣</a></li>
-              <li><a href="#">充實學校館藏</a></li>
-            </ul>
-          </li>
-        </ul>  
-      </nav>
-    </section>
+        </div>
 
-    <section class="base">
-      <div class="logo"><img src="images/h1_logo.png" alt="苗栗縣立圖書館 logo"></div>
 
-      <div class="contactInfo">
-        <span>地址：36045  苗栗縣苗栗市自治路50號</span>
-        <span>電話：037-559001、037-559002</span>
-      </div>
-      <div class="update">
-        <span>瀏覽人次：<em>2,679,905</em></span>
-        <span>更新日期：<em>2022/04/20</em></span>
-      </div>
+        <div class="pageHeader">
+            <h2>問卷調查</h2>
 
-      <div class="aaBadge"><a href="#" target="_blank" title="另開新視窗"><img src="publicData/aBadge.png" alt="無障礙標章2.1，檢測等級 A"></a></div>
+            <section class="funcBar">
+                <ul>
+                    <li class="print"><button type="button">列印</button></li>
+                    <li class="forward"><a href="javascript:;">轉寄</a></li>
+                    <li class="share compound"><button type="button">分享</button>
+                        <ul>
+                            <li>
+                                <a target="_blank" title="分享到 Facebook (open new window)" href="https://www.facebook.com/"><img src="images/icon_fb2.png" alt="Facebook"></a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="分享到 Twitter (open new window)" href="https://twitter.com/"><img src="images/icon_twitter.png" alt="Twitter"></a>
+                            </li>
+                            <li>
+                                <a target="_blank" title="分享到 LINE (open new window)" href="https://access.line.me/"><img src="images/icon_line.png" alt="LINE"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="back"><a href="javascript:;">回上一頁</a></li>
+                </ul>
+            </section>
+        </div>
 
-      <div class="declaration">
-        <ul>
-          <li><a href="#">隱私權政策</a></li>
-          <li><a href="#">網站安全政策</a></li>
-          <li><a href="#">政府網站資料開放宣告</a></li>
-        </ul>
-      </div>
-      <p class="copyright">苗栗縣立圖書館   版權所有 ©2022 All Rights Reserved</p>
 
-    </section>
+        <section class="questionnaire">
+            <section class="description">
+                <time title="開放填寫日期">2022-01-01～2022-12-31</time>
+                <h3 class="subject">讀者滿意度調查表</h3>
+                <p>親愛的讀者您好，本問卷旨要用於未來規劃本館服務之參考，您的寶貴意見對本館而言彌足珍貴，衷心感謝您撥空填寫本問卷。</p>
+            </section>
 
-  </footer>
+            <form>
+                <ol class="questions">
+                    <li><span class="numb">1</span>
+                        <p class="q">服務人員態度是否優良( 5 分最滿意，1 分最不滿意)</ㄣ>
+                            <div class="optionPool">
+                                <label><input name="aaa" id="" type="radio" value="">5</label>
+                                <label><input name="aaa" id="" type="radio" value="">4</label>
+                                <label><input name="aaa" id="" type="radio" value="">3</label>
+                                <label><input name="aaa" id="" type="radio" value="">2</label>
+                                <label><input name="aaa" id="" type="radio" value="">1</label>
+                                <label><input name="aaa" id="" type="radio" value="">未曾使用</label>
+                            </div>
+                    </li>
 
-  <button type="button" class="goTop" title="回頁面最上方">top</button>
+                    <li><span class="numb">2</span>
+                        <p class="q">請問您對本館承辦人員的專業知識，您覺得：</p>
+                        <div class="optionPool">
+                            <label><input name="bbb" id="" type="radio" value="">很滿意</label>
+                            <label><input name="bbb" id="" type="radio" value="">滿意</label>
+                            <label><input name="bbb" id="" type="radio" value="">普通</label>
+                            <label><input name="bbb" id="" type="radio" value="">不滿意</label>
+                            <label><input name="bbb" id="" type="radio" value="">非常不滿意</label>
+                        </div>
+                    </li>
+                    <li><span class="numb">3</span>
+                        <p class="q">的上我中學人一；要點沒，者心類那多候生美良以口工平校間人晚線環隨到怎文其山在院變而紅</p>
+                        <div class="optionPool">
+                            <label><input name="ccc" id="" type="radio" value="">馬親的義輕不</label>
+                            <label><input name="ccc" id="" type="radio" value="">個的動教年子嚴組原其</label>
+                            <label><input name="ccc" id="" type="radio" value="">於消他以長喜輕工有產</label>
+                            <label><input name="ccc" id="" type="radio" value="">們也山修陸模口服</label>
+                            <label><input name="ccc" id="" type="radio" value="">可草我中會全於高立公組場器</label>
+                        </div>
+                    </li>
+                    <li><span class="numb">4</span>
+                        <p class="q">走不古本綠運標書成因進速，之最我跟容中的以北受父本受最家工線養參新</p>
+                        <div class="optionPool">
+                            <label><input name="ddd" id="" type="checkbox" value="">果學河黨一登發</label>
+                            <label><input name="ddd" id="" type="checkbox" value="">者起心話的</label>
+                            <label><input name="ddd" id="" type="checkbox" value="">非全開</label>
+                            <label><input name="ddd" id="" type="checkbox" value="">用年如</label>
+                            <label><input name="ddd" id="" type="checkbox" value="">其他</label>
+                            <input type="text" name="" id="">
+                        </div>
+                    </li>
+                    <li><span class="numb">5</span>
+                        <p class="q"> 話不決前財她結用向城如的金能不心極，氣廣而們大需出好開德成看國備知器卻口，一事處知？</p>
+                        <div class="optionPool">
+                            <label><input name="eee" id="" type="radio" value="">低這品著</label>
+                            <label><input name="eee" id="" type="radio" value="">約來最球</label>
+                            <label><input name="eee" id="" type="radio" value="">流得的間</label>
+                            <label><input name="eee" id="" type="radio" value="">其他</label>
+                            <input type="text" name="" id="">
+                        </div>
+                    </li>
+                </ol>
+                <div class="btnDv">
+                    <input name="" type="submit" value="送出">
+                </div>
+            </form>
+        </section>
+        <!-- end of class="polling" -->
+
+
+    </main>
+
+
+
+
+    <footer class="webFooter">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁腳區">:::</a>
+
+        <button type="button" class="fatFootCtrl" data-altText="open">close</button>
+        <section class="fatFooter">
+            <nav class="siteTree">
+                <ul>
+                    <li><a href="#">認識本館</a>
+                        <ul>
+                            <li><a href="#">本館政策</a></li>
+                            <li><a href="#">關於本館</a></li>
+                            <li><a href="#">聯絡通訊</a></li>
+                            <li><a href="#">交通資訊</a></li>
+                            <li><a href="#">開放時間</a></li>
+                            <li><a href="#">館區平面圖及導覽</a></li>
+                            <li><a href="#">網站資料開放宣告</a></li>
+                            <li><a href="#">志工專區</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">館藏資源</a>
+                        <ul>
+                            <li><a href="#">館藏查詢</a></li>
+                            <li><a href="#">苗栗文學電子書</a></li>
+                            <li><a href="#">期刊訂閱一覽表</a></li>
+                            <li><a href="#">報紙訂閱一覽表</a></li>
+                            <li><a href="#">數位資源</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">活動訊息</a>
+                        <ul>
+                            <li><a href="#">最新活動</a></li>
+                            <li><a href="#">公告</a></li>
+                            <li><a href="#">新聞稿</a></li>
+                            <li><a href="#">活動行事曆</a></li>
+                            <li><a href="#">轉知訊息</a></li>
+                            <li><a href="#">館員行事曆</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">讀者服務</a>
+                        <ul>
+                            <li><a href="#">常見問題</a></li>
+                            <li><a href="#">借閱說明</a></li>
+                            <li><a href="#">通閱說明</a></li>
+                            <li><a href="#">圖書推薦</a></li>
+                            <li><a href="#">使用規定</a></li>
+                            <li><a href="#">班訪業務</a></li>
+                            <li><a href="#">一證通</a></li>
+                            <li><a href="#">分區資源中心</a></li>
+                            <li><a href="#">線上服務</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">書香苗栗</a>
+                        <ul>
+                            <li><a href="#">夢花文學獎</a></li>
+                            <li><a href="#">苗栗文學集</a></li>
+                            <li><a href="#">獎勵閱讀計畫</a></li>
+                            <li><a href="#">閱讀起步走</a></li>
+                            <li><a href="#">輔導鄉鎮</a></li>
+                            <li><a href="#">聽故事活動</a></li>
+                            <li><a href="#">閱讀推廣與館藏充實</a></li>
+                            <li><a href="#">閱讀環境與設備升級</a></li>
+                            <li><a href="#">國民中小學閱讀</a></li>
+                            <li><a href="#">文狀元</a></li>
+                            <li><a href="#">閱讀磐石獎</a></li>
+                            <li><a href="#">閱讀空間改善</a></li>
+                            <li><a href="#">學校閱讀推廣</a></li>
+                            <li><a href="#">充實學校館藏</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">國民中小學閱讀</a>
+                        <ul>
+                            <li><a href="#">文狀元</a></li>
+                            <li><a href="#">閱讀磐石獎</a></li>
+                            <li><a href="#">閱讀空間改善</a></li>
+                            <li><a href="#">學校閱讀推廣</a></li>
+                            <li><a href="#">充實學校館藏</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="base">
+            <div class="leftblock">
+                <div class="logo"><img src="images/h1_logo.png" alt="苗栗縣立圖書館 logo"></div>
+                <div class="contactInfo">
+                    <span>地址：36045 苗栗縣苗栗市自治路50號</span>
+                    <span>電話：037-559001、037-559002</span>
+                </div>
+                <div class="update">
+                    <span>瀏覽人次：<em>2,679,905</em></span>
+                    <span>更新日期：<em>2022/04/20</em></span>
+                </div>
+            </div>
+            <div class="rightblock">
+                <div class="qrcode_block"><span><a href="#"><img src="images/QRCode_1.png" alt="QRcode"></a></span>
+                    <span><a href="#"><img src="images/QRCode_2.png" alt="QRcode"></a></span>
+                </div>
+                <div class="aaBadge">
+                    <a href="#" target="_blank" title="另開新視窗"><img src="publicData/aBadge.png" alt="無障礙標章2.1，檢測等級 A"></a>
+                </div>
+            </div>
+            <div class="declaration">
+                <ul>
+                    <li><a href="#">隱私權政策</a></li>
+                    <li><a href="#">網站安全政策</a></li>
+                    <li><a href="#">政府網站資料開放宣告</a></li>
+                </ul>
+                <p class="copyright">苗栗縣立圖書館 版權所有 ©2022 All Rights Reserved</p>
+            </div>
+        </section>
+
+    </footer>
+
+    <button type="button" class="goTop" title="回頁面最上方">top</button>
 
 </body>
+
 </html>

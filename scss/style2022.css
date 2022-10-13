@@ -1,15 +1,15 @@
 @charset "UTF-8";
-.sitemap, .photoflow, .rules, .questionnaire, .cpMeta, .stack, .thumbnail, .fileDownload, .seeAlso, .cpArticle, .list, .np, .formA, .pagination, .category, .row13, .row31, .libInfo, .pubInfo, .pageHeader, .breadcrumb {
+.sitemap, .photoflow, .rules, .questionnaire, .cpMeta, .ebook, .stack, .thumbnail, .fileDownload, .seeAlso, .cpArticle, .list, .np, .formA, .pagination, .category, .row13, .row31, .libInfo, .pubInfo, .pageHeader, .breadcrumb {
   width: 94vw;
   margin: 0 auto;
 }
 @media screen and (min-width: 1000px) {
-  .sitemap, .photoflow, .rules, .questionnaire, .cpMeta, .stack, .thumbnail, .fileDownload, .seeAlso, .cpArticle, .list, .np, .formA, .pagination, .category, .row13, .row31, .libInfo, .pubInfo, .pageHeader, .breadcrumb {
+  .sitemap, .photoflow, .rules, .questionnaire, .cpMeta, .ebook, .stack, .thumbnail, .fileDownload, .seeAlso, .cpArticle, .list, .np, .formA, .pagination, .category, .row13, .row31, .libInfo, .pubInfo, .pageHeader, .breadcrumb {
     width: 90%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .sitemap, .photoflow, .rules, .questionnaire, .cpMeta, .stack, .thumbnail, .fileDownload, .seeAlso, .cpArticle, .list, .np, .formA, .pagination, .category, .row13, .row31, .libInfo, .pubInfo, .pageHeader, .breadcrumb {
+  .sitemap, .photoflow, .rules, .questionnaire, .cpMeta, .ebook, .stack, .thumbnail, .fileDownload, .seeAlso, .cpArticle, .list, .np, .formA, .pagination, .category, .row13, .row31, .libInfo, .pubInfo, .pageHeader, .breadcrumb {
     width: 1080px;
   }
 }
@@ -19,7 +19,7 @@ body {
   padding: 0;
   font-size: 1em;
   font-family: Helvetica, Arial, "微軟正黑體", sans-serif;
-  background: #edf0f5 url(../images/body_bg.jpg) repeat-y center -80px;
+  background: #edf0f5 url(../images/body_bg.jpg) repeat-y center 1200px;
   color: #333;
   background-size: 200% auto;
 }
@@ -403,7 +403,7 @@ a:hover .videoThumb::before {
   width: 40px;
   height: 64px;
   border-radius: 0;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   outline: none;
   border: none;
@@ -418,11 +418,21 @@ a:hover .videoThumb::before {
   left: 50%;
   top: 50%;
   margin-top: -13px;
-  border: 2px solid rgba(0, 65, 128, 0.6);
+  border: 2px solid #004180;
   border-top: none;
   border-right: none;
   transform: rotate(45deg);
   transition: 0.2s;
+}
+.slick-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.slick-arrow:focus {
+  background-color: #004180;
+  box-shadow: none;
+}
+.slick-arrow:focus::before {
+  border-color: #fff;
 }
 .slick-arrow.slick-prev {
   left: 0;
@@ -442,15 +452,6 @@ a:hover .videoThumb::before {
 }
 .slick-arrow.slick-next:hover::before {
   margin-left: -17px;
-}
-.slick-arrow:hover, .slick-arrow:focus {
-  background-color: transparent;
-}
-.slick-arrow:hover::before, .slick-arrow:focus::before {
-  border-color: #004180;
-}
-.slick-arrow:focus {
-  box-shadow: rgba(0, 65, 128, 0.5) 0 0 0 2px inset;
 }
 @media screen and (min-width: 1000px) {
   .slick-arrow {
@@ -555,7 +556,8 @@ kbd {
   display: block;
   width: 100%;
   height: 42px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin: 0 auto;
 }
 @media screen and (min-width: 1000px) {
@@ -586,7 +588,10 @@ kbd {
     height: auto;
     margin: 0;
   }
-  .webHeader.fixed h1, .webHeader.fixed .topLinks, .webHeader.fixed .search, .webHeader.fixed .goCenter {
+  .webHeader.fixed h1,
+.webHeader.fixed .topLinks,
+.webHeader.fixed .search,
+.webHeader.fixed .goCenter {
     display: none;
   }
 }
@@ -822,7 +827,8 @@ kbd {
     min-width: 8em;
     max-width: 18em;
   }
-  .webHeader .menu button.downward, .webHeader .menu button.upward {
+  .webHeader .menu button.downward,
+.webHeader .menu button.upward {
     position: fixed;
     top: calc(100vh - 36px);
     left: 0;
@@ -838,13 +844,16 @@ kbd {
     border: none;
     cursor: pointer;
   }
-  .webHeader .menu button.downward:hover, .webHeader .menu button.upward:hover {
+  .webHeader .menu button.downward:hover,
+.webHeader .menu button.upward:hover {
     box-shadow: #004180 0 0 0 2px;
   }
-  .webHeader .menu button.downward:focus, .webHeader .menu button.upward:focus {
+  .webHeader .menu button.downward:focus,
+.webHeader .menu button.upward:focus {
     box-shadow: #fff 0 0 0 1px inset, #004180 0 0 0 2px;
   }
-  .webHeader .menu button.downward::before, .webHeader .menu button.upward::before {
+  .webHeader .menu button.downward::before,
+.webHeader .menu button.upward::before {
     content: "";
     position: absolute;
     width: 8px;
@@ -855,19 +864,23 @@ kbd {
     border-left: none;
     border-top: none;
   }
-  .webHeader .menu button.downward[disabled], .webHeader .menu button.upward[disabled] {
+  .webHeader .menu button.downward[disabled],
+.webHeader .menu button.upward[disabled] {
     opacity: 0.2;
     cursor: default;
     background-color: #000;
     box-shadow: none;
   }
-  .webHeader .menu button.downward.downward::before, .webHeader .menu button.upward.downward::before {
+  .webHeader .menu button.downward.downward::before,
+.webHeader .menu button.upward.downward::before {
     transform: translate(-4px, -6px) rotate(45deg);
   }
-  .webHeader .menu button.downward.upward, .webHeader .menu button.upward.upward {
+  .webHeader .menu button.downward.upward,
+.webHeader .menu button.upward.upward {
     top: calc(100vh - 72px);
   }
-  .webHeader .menu button.downward.upward::before, .webHeader .menu button.upward.upward::before {
+  .webHeader .menu button.downward.upward::before,
+.webHeader .menu button.upward.upward::before {
     transform: translate(-4px, -2px) rotate(225deg);
   }
 }
@@ -907,7 +920,8 @@ kbd {
     height: 22px;
     width: 5.05%;
     background-color: rgba(255, 255, 255, 0.6);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 2px);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 2px);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 2px);
   }
   .headBanner img {
     position: relative;
@@ -916,8 +930,10 @@ kbd {
     margin-left: 20%;
     width: 80%;
     height: calc(100% - 20px);
-    object-fit: cover;
-    object-position: 50% 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
     box-shadow: rgba(53, 60, 66, 0.3) 8px 2px 16px;
   }
 }
@@ -928,6 +944,12 @@ kbd {
   .headBanner img {
     height: 184px;
   }
+}
+
+.function_block {
+  display: flex;
+  padding: 20px;
+  margin: 0;
 }
 
 .webFooter {
@@ -1505,10 +1527,6 @@ kbd {
 .bigBanners .slick-arrow {
   top: 18.75vw;
   opacity: 0.5;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.bigBanners .slick-arrow:hover, .bigBanners .slick-arrow:focus {
-  background-color: rgba(255, 255, 255, 0.8);
 }
 .bigBanners .slick-arrow:focus {
   opacity: 1;
@@ -1523,41 +1541,17 @@ kbd {
 }
 @media screen and (min-width: 1200px) {
   .bigBanners {
-    width: auto;
+    width: 1200px;
   }
   .bigBanners .slick-list {
     width: 1200px;
     margin: 0 auto;
-  }
-  .bigBanners .slick-list {
-    overflow: visible;
-  }
-  .bigBanners .slick-list::before, .bigBanners .slick-list:after {
-    content: "";
-    position: absolute;
-    z-index: 99;
-    top: 0;
-    bottom: 0;
-    width: 100vw;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  .bigBanners .slick-list::before {
-    left: -100vw;
-  }
-  .bigBanners .slick-list:after {
-    right: -100vw;
   }
   .bigBanners .banner img {
     height: 450px;
   }
   .bigBanners .slick-arrow {
     top: 225px;
-  }
-  .bigBanners .slick-arrow.slick-prev {
-    left: calc(50vw - 600px);
-  }
-  .bigBanners .slick-arrow.slick-next {
-    right: calc(50vw - 600px);
   }
 }
 
@@ -2288,7 +2282,8 @@ a:hover .fileType.other, a:focus .fileType.other {
   font-size: 1.5rem;
   background-color: #a81663;
   color: #fff;
-  clip-path: polygon(0 0, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, 0% 100%);
+          clip-path: polygon(0 0, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, 0% 100%);
 }
 .newsList li time .year {
   font-size: 0.9rem;
@@ -2364,7 +2359,8 @@ a:hover .fileType.other, a:focus .fileType.other {
   top: 10px;
   width: 30px;
   height: 30px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .services .links li a:hover, .services .links li a:focus {
   background-color: #004180;
@@ -2417,11 +2413,13 @@ a:hover .fileType.other, a:focus .fileType.other {
 }
 .services .blockHeader::before, .cloudEbook .blockHeader::before {
   background-color: #004180;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
 }
 .services .blockHeader::after, .cloudEbook .blockHeader::after {
   background-color: rgba(255, 0, 84, 0.66);
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 84%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 84%);
+          clip-path: polygon(0 0, 100% 0, 100% 70%, 0 84%);
 }
 @media screen and (min-width: 1000px) {
   .services .blockHeader, .cloudEbook .blockHeader {
@@ -2656,7 +2654,8 @@ a:hover .fileType.other, a:focus .fileType.other {
   margin: 0 auto;
   width: 100%;
   height: calc(100vw - 220px);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   background-color: #fff;
   box-shadow: transparent 0 0 0 2px, rgba(0, 0, 0, 0.15) 0 0 24px;
   transition: 0.2s;
@@ -3091,7 +3090,8 @@ a:hover .fileType.other, a:focus .fileType.other {
   margin: 0 auto;
   height: 60px;
   max-width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .adBanners .links .slick-arrow.slick-prev {
   left: -60px;
@@ -3995,6 +3995,11 @@ td:nth-child(even) p.error {
   border: none;
   box-shadow: none;
 }
+.lightbox .bigImg img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
 @media screen and (min-width: 1000px) {
   .lightbox {
     top: 30px;
@@ -4073,7 +4078,8 @@ td:nth-child(even) p.error {
 }
 .np > ul > li > a:hover::before, .np > ul > li > a:focus::before {
   width: 15px;
-  clip-path: polygon(0 0, 2px 0, 100% 50%, 2px 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 2px 0, 100% 50%, 2px 100%, 0 100%);
+          clip-path: polygon(0 0, 2px 0, 100% 50%, 2px 100%, 0 100%);
 }
 .np > ul > li > a:hover {
   transform: translateY(-3px);
@@ -4409,7 +4415,8 @@ td:nth-child(even) p.error {
   display: block;
   width: 100%;
   max-height: 65vh;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .cpArticle figure figcaption {
   display: block;
@@ -4476,7 +4483,8 @@ td:nth-child(even) p.error {
   }
   .cpArticle figure.center img {
     max-height: 900px;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 
@@ -4679,7 +4687,8 @@ td:nth-child(even) p.error {
   }
   .thumbnail.books .listItems > li img {
     height: calc(94vw/2 - 8px);
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .thumbnail.books .listItems > li p {
     display: -webkit-box;
@@ -4702,7 +4711,8 @@ td:nth-child(even) p.error {
     margin-right: 0;
   }
   .thumbnail .listItems > li img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .thumbnail.books .listItems > li {
     flex: 0 0 32%;
@@ -4719,7 +4729,8 @@ td:nth-child(even) p.error {
   }
   .thumbnail.books .listItems > li img {
     height: 30.08vw;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -4826,7 +4837,8 @@ td:nth-child(even) p.error {
   margin: 0 auto;
   width: 100%;
   max-height: 60vh;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .stack .listItems > li .info {
   margin: 0;
@@ -4889,6 +4901,44 @@ td:nth-child(even) p.error {
 @media screen and (min-width: 1000px) {
   .stack .listItems > li .info {
     padding: 24px 15px 15px;
+  }
+}
+
+.ebook {
+  line-height: 1.8;
+  padding: 40px 3vw;
+  margin-bottom: 100px;
+  background-color: #fff;
+  box-shadow: rgba(53, 60, 66, 0.3) 0 0 16px;
+}
+.ebook h3 {
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin: 0 0 1em;
+}
+.ebook .bookCover {
+  width: 100%;
+  margin: 1rem 0;
+}
+.ebook .bookCover img {
+  display: block;
+  width: 100%;
+}
+.ebook .bookCover a {
+  display: block;
+  transition: 0.2s;
+}
+.ebook .bookCover a:hover, .ebook .bookCover a:focus {
+  box-shadow: #0070b1 0 0 0 3px;
+}
+@media screen and (min-width: 700px) {
+  .ebook {
+    overflow: hidden;
+  }
+  .ebook .bookCover {
+    float: left;
+    width: 50%;
+    margin: 0 20px 10px 0;
   }
 }
 
@@ -5065,6 +5115,47 @@ td:nth-child(even) p.error {
 .questionnaire .questions > li .optionPool label:last-of-type {
   margin-right: 0;
 }
+.questionnaire.chart h3 {
+  margin: 3rem auto 1.5rem;
+  padding: 0 0 0.3em;
+  line-height: 1.3;
+  font-size: 1.3em;
+  border-bottom: 3px solid #bdc1c2;
+  text-align: center;
+}
+.questionnaire.chart h3:first-child {
+  margin-top: 1rem;
+}
+.questionnaire.chart .chart_container {
+  margin: 0 auto 3em;
+}
+.questionnaire.chart .chart_container .highcharts-legend {
+  line-height: 2;
+}
+.questionnaire.chart .chart_container .highcharts-legend text {
+  font-size: 0.92rem !important;
+}
+.questionnaire.chart .fix_th_table {
+  font-size: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.8em;
+}
+.questionnaire.chart .fix_th_table table {
+  font-size: inherit;
+  border-collapse: collapse;
+  min-width: 100%;
+  line-height: 1.5;
+  text-align: center;
+  border: none;
+}
+.questionnaire.chart .fix_th_table th, .questionnaire.chart .fix_th_table td {
+  border: 1px solid #bdc1c2;
+  padding: 0.4em 0.7em;
+}
+.questionnaire.chart .fix_th_table th {
+  background-color: #e6edee;
+  white-space: nowrap;
+}
 @media screen and (min-width: 700px) {
   .questionnaire {
     padding: 40px 20px 60px;
@@ -5160,7 +5251,8 @@ td:nth-child(even) p.error {
   display: block;
   width: 100%;
   height: 94vw;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   transition: 0.3s;
 }
 .photoflow .flowList > li p {
@@ -5232,7 +5324,8 @@ td:nth-child(even) p.error {
   }
   .photoflow .flowList > li img {
     height: calc(22.5vw - 9px);
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .photoflow .flowNav {
     margin-left: 0;
@@ -5283,7 +5376,8 @@ td:nth-child(even) p.error {
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .bigPhotos .flowList > li p {
   position: absolute;
@@ -5322,14 +5416,14 @@ td:nth-child(even) p.error {
 .sitemap .accesskeyDefine {
   padding: 1.5em 1em 1.2em 2.5em;
   margin: 1.5em 0;
-  background-color: #e6edee;
+  background-color: #fff;
   border-radius: 6px;
 }
 .sitemap li + li {
   margin-top: 0.5em;
 }
 .sitemap .cascading {
-  margin: 3em auto 2em;
+  margin: 6em auto 2em;
 }
 .sitemap .cascading ul {
   line-height: 1.5;
@@ -5341,7 +5435,6 @@ td:nth-child(even) p.error {
   text-decoration: none;
   display: block;
   color: #333;
-  border-bottom: 1px solid #bdc1c2;
   padding: 0.6em 2px 0;
   margin: 0;
 }

@@ -1,35 +1,52 @@
-body{
-  margin: 0 auto; padding: 0; 
-  
-  font-size: 1em; font-family: Helvetica, Arial,'微軟正黑體', sans-serif;
-  background: #edf0f5 url(../images/body_bg.jpg) repeat-y center 1200px; color: $fontColor;
-  background-size: 200% auto;
-  
-  &.noScroll{ overflow: hidden; overflow-y:hidden; }
-
-  *{box-sizing: border-box;}
-  a{ color: $linkColor;}
-
-  a, button, input{
-    &:focus{outline: none;}
-  }
-
-  @media screen and (min-width: $wwNormal){
-    background-size: 100% auto;
-  }
-
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1em;
+    font-family: Helvetica, Arial, '微軟正黑體', sans-serif;
+    background: #edf0f5 url(../images/body_bg.jpg) repeat-y center 1200px;
+    color: $fontColor;
+    background-size: 200% auto;
+    &.noScroll {
+        overflow: hidden;
+        overflow-y: hidden;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    a {
+        color: $linkColor;
+    }
+    a,
+    button,
+    input {
+        &:focus {
+            outline: none;
+        }
+    }
+    @media screen and (min-width: $wwNormal) {
+        background-size: 100% auto;
+    }
 }
 
-time{font-family: Georgia, 'Times New Roman', Times, serif; display: inline-block;}
+time {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+}
 
-
-.main{
-  position: relative;padding-bottom: 1px; margin: 0 auto -1px;
-
-  @media screen and (min-width: $wwNormal){
-    // width: 100%; max-width: $wwMaximum;
-  }
-  @media screen and (min-width: $wwMaximum){
-    // box-shadow: $shadowColor 0 0 30px;
-  }
+.main {
+    position: relative;
+    padding-bottom: 1px;
+    margin: 0 auto -1px;
+    @media screen and (min-width: $wwNormal) {
+        // width: 100%; max-width: $wwMaximum;
+    }
+    @media screen and (min-width: $wwMaximum) {
+        // box-shadow: $shadowColor 0 0 30px;
+    }
+    &.small_size {
+        font-size: .938em;
+    }
+    &.large_size {
+        font-size: 1.125em;
+    }
 }
