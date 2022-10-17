@@ -1,115 +1,176 @@
 // 讀者登入 ////////////////////////////////////////////////////////
-.loginHere{
-  display: none;
-  
-  @media screen and (min-width: $wwNormal){
-    display: block; z-index: 15;
-    position: fixed; right: 0; top: 210px; 
+.loginHere {
+    display: block;
+    z-index: 15;
+    position: fixed;
+    right: 0;
+    top: 210px;
     transform: translateX(100%);
     transition: .6s;
-    button.ctrlBtn{
-      position: absolute; transform: translateX(-100%);
-      padding: 20px 1em;width: 3em;
-      height: auto;line-height: 1.1;
-      text-decoration: none;border-radius: 0; margin: 0;
-      background-color: $assistant;
-      color: $fontInvert;
-      &::before{
-        content: ''; display: block; width: 25px; height: 25px; margin-left: -5px;
-        background: url(../images/icon_member.png) no-repeat right 0;
-        background-size: 22px;
-        transform: scaleX(-1);
-      }
-      &:focus{
-        box-shadow: $assistant 0 0 0 2px inset, $white 0 0 0 3px inset;
-      }
+    button.ctrlBtn {
+        position: absolute;
+        transform: translateX(-100%);
+        padding: 20px 1em;
+        width: 3em;
+        height: auto;
+        line-height: 1.1;
+        text-decoration: none;
+        border-radius: 0;
+        margin: 0;
+        background-color: $assistant;
+        color: $fontInvert;
+        &::before {
+            content: '';
+            display: block;
+            width: 25px;
+            height: 25px;
+            margin-left: -5px;
+            background: url(../images/icon_member.png) no-repeat right 0;
+            background-size: 22px;
+            transform: scaleX(-1);
+        }
+        &:focus {
+            box-shadow: $assistant 0 0 0 2px inset, $white 0 0 0 3px inset;
+        }
     }
-  
-    .login{
-      display: none;
-      padding:25px 20px 0; 
-      background: #fff; box-shadow: $shadowColor 0 0 50px;
-      form{ margin: 0;padding: 0;
-        &>table{
-          margin: 0 auto; padding: 0;
-          border: none; border-collapse: collapse;
-          line-height: 1.5;
-          td{
-            padding:1px; vertical-align: top;
-            &:nth-child(odd){
-              text-align: right;padding-top: .8em; padding-right: .3em;
-              color: $fontColorDark;
-              label{ display: inline-block;}
+    .login {
+        display: none;
+        padding: 25px 20px 0;
+        background: #fff;
+        box-shadow: $shadowColor 0 0 50px;
+        form {
+            margin: 0;
+            padding: 0;
+            &>table {
+                margin: 0 auto;
+                padding: 0;
+                border: none;
+                border-collapse: collapse;
+                line-height: 1.5;
+                td {
+                    padding: 1px;
+                    vertical-align: top;
+                    &:nth-child(odd) {
+                        text-align: right;
+                        padding-top: .8em;
+                        padding-right: .3em;
+                        color: $fontColorDark;
+                        label {
+                            display: inline-block;
+                        }
+                    }
+                    &:nth-child(even) {
+                        input {
+                            max-width: 100%;
+                        }
+                    }
+                }
             }
-            &:nth-child(even){
-              input{ max-width: 100%;}
+        }
+        .misce {
+            margin: 5px 0 0;
+            padding: 2px;
+            overflow: hidden;
+            &>label {
+                float: left;
+                line-height: 2;
+                height: 1.8;
+                padding: 2px 8px 0 3px;
+                border-radius: 2px;
+                transition: .15s;
+                input {
+                    vertical-align: -15%;
+                }
+                &:hover {
+                    box-shadow: $primaryColor 0 0 0 1px;
+                }
             }
-          }
+            a {
+                float: right;
+            }
         }
-      }
-
-      .misce{
-        margin: 5px 0 0; padding: 2px;
-        overflow: hidden;
-        &>label{ 
-          float: left;line-height: 2; height: 1.8; 
-          padding:2px 8px 0 3px;border-radius: 2px;
-          transition: .15s;
-          input{vertical-align: -15%;}
-          &:hover{box-shadow: $primaryColor 0 0 0 1px;}
+        a.forget {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            padding: 6px 4px 0 25px;
+            line-height: 1.5;
+            margin-left: 1em;
+            border-bottom: 1px solid transparent;
+            overflow: hidden;
+            &::before {
+                content: '?';
+                position: absolute;
+                top: 7px;
+                left: 3px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 22px;
+                color: $fontColor;
+                background-color: $grayLight;
+                transition: .15s;
+            }
+            &:hover,
+            &:focus {
+                border-bottom-color: $primaryColor;
+                &::before {
+                    background-color: $assistant;
+                    color: $fontInvert;
+                }
+            }
+            &:focus {
+                box-shadow: $primaryColor 0 0 0 1px;
+            }
         }
-        a{ float: right;}
-      }
-      a.forget{
-        position: relative;
-        display: inline-block; text-decoration: none; 
-        padding:6px 4px 0 25px; line-height: 1.5; margin-left: 1em;
-        border-bottom: 1px solid transparent; overflow: hidden;
-        &::before{
-          content: '?'; position: absolute; top: 7px; left: 3px; width: 20px; height: 20px;
-          border-radius: 50%; text-align: center; line-height: 22px;
-          color: $fontColor; background-color: $grayLight;
-          transition: .15s;
+        .captcha {
+            padding: 3px;
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 3px 5px 0 1px;
+                height: 35px;
+            }
+            input {
+                margin: 6px 0 3px;
+                display: block;
+                width: 100%;
+            }
+            a {
+                display: inline-block;
+            }
         }
-        &:hover, &:focus{
-          border-bottom-color: $primaryColor;
-          &::before{ background-color: $assistant; color: $fontInvert;}
+        .btnDv {
+            // background: #eee;
+            text-align: center;
+            margin: 15px -20px 0;
+            button,
+            input {
+                margin: 0;
+                height: 3.5em;
+                border-radius: 0;
+                &:only-child {
+                    width: 100%;
+                }
+                &:focus {
+                    box-shadow: $primaryColor 0 0 0 2px inset, $white 0 0 0 3px inset;
+                    background-color: $primaryColor;
+                }
+            }
         }
-        &:focus{box-shadow: $primaryColor 0 0 0 1px;}
-      }
-      .captcha{
-        padding: 3px;
-        img{ display: inline-block; vertical-align: middle; margin:3px 5px 0 1px; height: 35px;}
-        input{ margin:6px 0 3px; display: block;width: 100%; }
-        a{ display: inline-block;}
-
-      }
-
-      .btnDv{
-        // background: #eee;
-        text-align: center; margin: 15px -20px 0;
-        button, input{
-          margin: 0; height: 3.5em; border-radius: 0;
-          &:only-child{width: 100%;}
-          &:focus{
-            box-shadow: $primaryColor 0 0 0 2px inset, $white 0 0 0 3px inset;
-            background-color: $primaryColor;
-          }
-        }
-      }
-
     }
-
-
-  
     &.reveal {
-      transform: translateX(0);
-      
-      button.ctrlBtn{
-        &::before{transform: scaleX(1); background-position: 0 0; margin-left: 0;}
-      }
+        transform: translateX(0);
+        button.ctrlBtn {
+            &::before {
+                transform: scaleX(1);
+                background-position: 0 0;
+                margin-left: 0;
+            }
+        }
     }
-
-  }
+    @media screen and (min-width: $wwMedium) {}
 }
+
 // -----------------------------------------------------------------
