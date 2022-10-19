@@ -826,7 +826,7 @@ kbd {
     text-align: center;
   }
   .webHeader .menu > ul > li > a {
-    padding: 0.7em 0.5em 0.75em;
+    padding: 0.7em 0.2em 0.75em;
     white-space: nowrap;
     -webkit-transition: 0.2s;
     transition: 0.2s;
@@ -1393,9 +1393,9 @@ kbd {
   }
   .webFooter .siteTree > ul > li {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 15.46%;
-            flex: 1 1 15.46%;
-    margin: 1em 0.6% 0;
+        -ms-flex: 1 1 18%;
+            flex: 1 1 18%;
+    margin: 1em 1% 0;
   }
   .webFooter .siteTree > ul > li > a {
     padding: 5px 0 0;
