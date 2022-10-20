@@ -2592,7 +2592,7 @@ a:hover .fileType.other, a:focus .fileType.other {
 }
 
 .libInfo {
-  padding: 50px 0;
+  padding: 0px 0 50px;
 }
 
 .libList {
@@ -2683,7 +2683,7 @@ a:hover .fileType.other, a:focus .fileType.other {
   }
 }
 .events {
-  padding: 50px 0;
+  padding: 50px 0 20px;
 }
 .events .topRow {
   display: -webkit-box;
@@ -2788,7 +2788,8 @@ a:hover .fileType.other, a:focus .fileType.other {
     width: 6.5rem;
     padding-left: 1rem;
   }
-  .newsList li p, .newsList li .from {
+  .newsList li p,
+.newsList li .from {
     margin-left: 7.2rem;
   }
   .newsList li p {
@@ -2815,7 +2816,7 @@ a:hover .fileType.other, a:focus .fileType.other {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(50% - 4px);
           flex: 0 0 calc(50% - 4px);
-  margin: 6px 2px;
+  margin: 6px 2px 0px;
   padding: 0;
 }
 .services .links li a {
@@ -2876,13 +2877,15 @@ a:hover .fileType.other, a:focus .fileType.other {
   }
 }
 
-.services, .cloudEbook {
+.services,
+.cloudEbook {
   padding: 0 0 30px;
   background-color: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px;
           box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px;
 }
-.services .blockHeader, .cloudEbook .blockHeader {
+.services .blockHeader,
+.cloudEbook .blockHeader {
   position: relative;
   padding: 55px 0 100px;
   margin: 0 0 20px;
@@ -2890,11 +2893,14 @@ a:hover .fileType.other, a:focus .fileType.other {
   text-align: center;
   color: #fff;
 }
-.services .blockHeader .hc, .cloudEbook .blockHeader .hc {
+.services .blockHeader .hc,
+.cloudEbook .blockHeader .hc {
   position: relative;
   z-index: 1;
 }
-.services .blockHeader::before, .services .blockHeader:after, .cloudEbook .blockHeader::before, .cloudEbook .blockHeader:after {
+.services .blockHeader::before, .services .blockHeader:after,
+.cloudEbook .blockHeader::before,
+.cloudEbook .blockHeader:after {
   content: "";
   position: absolute;
   left: 0;
@@ -2903,18 +2909,21 @@ a:hover .fileType.other, a:focus .fileType.other {
   bottom: 0;
   z-index: 0;
 }
-.services .blockHeader::before, .cloudEbook .blockHeader::before {
+.services .blockHeader::before,
+.cloudEbook .blockHeader::before {
   background-color: #004180;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
 }
-.services .blockHeader::after, .cloudEbook .blockHeader::after {
+.services .blockHeader::after,
+.cloudEbook .blockHeader::after {
   background-color: rgba(255, 0, 84, 0.66);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 84%);
           clip-path: polygon(0 0, 100% 0, 100% 70%, 0 84%);
 }
 @media screen and (min-width: 1000px) {
-  .services .blockHeader, .cloudEbook .blockHeader {
+  .services .blockHeader,
+.cloudEbook .blockHeader {
     padding: 40px 0 60px;
   }
 }
@@ -3177,7 +3186,7 @@ a:hover .fileType.other, a:focus .fileType.other {
 }
 
 .booksFlow {
-  padding: 50px 0;
+  padding: 30px 0 10px;
 }
 .booksFlow .blockHeader {
   text-align: center;

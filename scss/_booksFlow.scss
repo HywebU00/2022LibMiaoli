@@ -1,93 +1,139 @@
-.booksFlow{
-  padding: 50px 0;
-  .blockHeader{text-align: center;}
-
-  .bookList{
-    width: calc(100vw - 140px);  margin: 0 auto;
-    .book{
-      margin:0; padding: 0;
-      img{
-        display: block; margin: 0 auto;
-        width: 100%;height: calc(100vw - 220px); object-fit: contain;
-        background-color: $white; box-shadow:transparent 0 0 0 2px, rgba(0, 0, 0, .15) 0 0 24px;
-        transition: .2s;
-      }
-      p{ 
-        margin: 1rem auto 0; overflow: hidden; text-align: center;
-        display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
-        font-size: 1.15rem; line-height: 1.4; height: 3em;
-      }
-      a{
-        display: block;width: calc(100vw - 160px); padding:30px 30px 0; margin: 0 auto;
-        text-decoration: none; color: $fontColor; transition: .2s;
-
-        &:hover{
-          p{ text-decoration: underline; color: $fontColorDark;}
+.booksFlow {
+    padding: 30px 0 10px;
+    .blockHeader {
+        text-align: center;
+    }
+    .bookList {
+        width: calc(100vw - 140px);
+        margin: 0 auto;
+        .book {
+            margin: 0;
+            padding: 0;
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                height: calc(100vw - 220px);
+                object-fit: contain;
+                background-color: $white;
+                box-shadow: transparent 0 0 0 2px, rgba(0, 0, 0, .15) 0 0 24px;
+                transition: .2s;
+            }
+            p {
+                margin: 1rem auto 0;
+                overflow: hidden;
+                text-align: center;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                font-size: 1.15rem;
+                line-height: 1.4;
+                height: 3em;
+            }
+            a {
+                display: block;
+                width: calc(100vw - 160px);
+                padding: 30px 30px 0;
+                margin: 0 auto;
+                text-decoration: none;
+                color: $fontColor;
+                transition: .2s;
+                &:hover {
+                    p {
+                        text-decoration: underline;
+                        color: $fontColorDark;
+                    }
+                }
+                &:focus {
+                    img {
+                        box-shadow: $primaryColor 0 0 0 3px, rgba(0, 0, 0, .4) 0 0 24px;
+                    }
+                }
+            }
         }
-        &:focus{
-          img{box-shadow:$primaryColor 0 0 0 3px, rgba(0, 0, 0, .4) 0 0 24px;}
+        .slick-arrow {
+            top: calc(50vw - 80px);
+            &.slick-prev {
+                left: -60px;
+            }
+            &.slick-next {
+                right: -60px;
+            }
         }
-      }
     }
-
-    .slick-arrow{
-      top: calc(50vw - 80px);
-      &.slick-prev{left: -60px;}
-      &.slick-next{right: -60px;}
-    }
-
-  }
-
-  @media screen and (min-width: $wwMedium){
-    .bookList{
-      .book{
-        a{
-          width: calc(50vw - 70px); padding:10px;
-          &:hover{
-            img{box-shadow: rgba(0, 0, 0, .6) 0 10px 12px -10px;}
-          }
-          &:focus{
-            img{box-shadow:$primaryColor 0 0 0 3px;}
-          }
+    @media screen and (min-width: $wwMedium) {
+        .bookList {
+            .book {
+                a {
+                    width: calc(50vw - 70px);
+                    padding: 10px;
+                    &:hover {
+                        img {
+                            box-shadow: rgba(0, 0, 0, .6) 0 10px 12px -10px;
+                        }
+                    }
+                    &:focus {
+                        img {
+                            box-shadow: $primaryColor 0 0 0 3px;
+                        }
+                    }
+                }
+                img {
+                    height: calc(50vw - 90px);
+                    box-shadow: rgba(0, 0, 0, .3) 0 22px 24px -20px;
+                }
+            }
+            .slick-arrow {
+                top: calc(25vw - 35px);
+            }
         }
-        img{ height: calc(50vw - 90px);box-shadow: rgba(0, 0, 0, .3) 0 22px 24px -20px;}
-      }
-
-      .slick-arrow{top:  calc(25vw - 35px);}
     }
-  }
-
-  @media screen and (min-width: $wwNormal){
-    background-image: linear-gradient(180deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,0) 70%);
-    &+&{ background-image: none;}
-    .bookList{
-      width: calc(80% + 16px);
-      .book{
-        a{
-          padding: 10px 8px; width:calc(20vw + 4px);
-          &:hover{
-            img{transform: translateY(5px);}
-          }
+    @media screen and (min-width: $wwNormal) {
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 70%);
+        &+& {
+            background-image: none;
         }
-        img{ height: calc(20vw - 12px);}
-      }
-
-      .slick-arrow{
-        top:  calc(10vw + 4px);
-        &.slick-prev{left: -68px;}
-        &.slick-next{right: -68px;}  
-      }
+        .bookList {
+            width: calc(80% + 16px);
+            .book {
+                a {
+                    padding: 10px 8px;
+                    width: calc(20vw + 4px);
+                    &:hover {
+                        img {
+                            transform: translateY(5px);
+                        }
+                    }
+                }
+                img {
+                    height: calc(20vw - 12px);
+                }
+            }
+            .slick-arrow {
+                top: calc(10vw + 4px);
+                &.slick-prev {
+                    left: -68px;
+                }
+                &.slick-next {
+                    right: -68px;
+                }
+            }
+        }
     }
-  }
-  
-  @media screen and (min-width: $wwMaximum){
-    .bookList{
-      width: calc($wwMaximum*.8 + 16px);
-      .book{
-        a{ width:calc($wwMaximum*.2 + 4px); }
-        img{ height: calc($wwMaximum*.2 - 12px); }
-      }
-      .slick-arrow{top:  calc($wwMaximum*.1 + 4px);}
+    @media screen and (min-width: $wwMaximum) {
+        .bookList {
+            width: calc($wwMaximum*.8 + 16px);
+            .book {
+                a {
+                    width: calc($wwMaximum*.2 + 4px);
+                }
+                img {
+                    height: calc($wwMaximum*.2 - 12px);
+                }
+            }
+            .slick-arrow {
+                top: calc($wwMaximum*.1 + 4px);
+            }
+        }
     }
-  }
 }
