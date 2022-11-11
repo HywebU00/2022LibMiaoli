@@ -120,19 +120,29 @@ $(function() {
     // fatfooter 開合 //////////////////////////////
     var _fatFootCtrl = $('.fatFootCtrl');
     var _footSiteTree = $('.fatFooter').find('.siteTree>ul>li>ul');
-    const text1 = _fatFootCtrl.text();
-    const text2 = _fatFootCtrl.attr('data-altText');
+    // const text1 = _fatFootCtrl.text('close');
+    // const text2 = _fatFootCtrl.attr('data-alttext');
+	const text1 = 'close';
+    const text2 = 'open';
+
+	if (_fatFootCtrl.hasClass('closed')) {
+		_fatFootCtrl.text(text2);
+		_footSiteTree.hide();
+	} else {
+		_fatFootCtrl.text(text1);
+		_footSiteTree.show();
+	}
 
     _fatFootCtrl.click(function() {
-            if (_footSiteTree.is(':visible')) {
-                _footSiteTree.slideUp();
-                $(this).addClass('closed').text(text2);
-            } else {
-                _footSiteTree.slideDown();
-                $(this).removeClass('closed').text(text1);
-            }
-        })
-        // --end of-- fatfooter 開合 //////////////////////////////
+		if (_footSiteTree.is(':visible')) {
+			_footSiteTree.slideUp();
+			$(this).addClass('closed').text(text2);
+		} else {
+			_footSiteTree.slideDown();
+			$(this).removeClass('closed').text(text1);
+		}
+	})
+	// --end of-- fatfooter 開合 //////////////////////////////
 
 
     // -----------------------------------------------------
