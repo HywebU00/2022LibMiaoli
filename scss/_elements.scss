@@ -3,14 +3,15 @@
 @media screen and (min-width: $wwNormal){
   .accesskey{ 
     display: block; z-index: 9; 
-    position: absolute; left: 0; top: 0; padding: 0 3px;
+    position: absolute; left: 0; top: 0; padding: 0 .2rem;
     text-decoration: none; color: $fontColorLight;
     &:focus{ outline:none; box-shadow:$primaryColor 0 0 0 2px inset;}
   }
 }
 
-@media screen and (min-width: $wwMaximum){
-
+@media screen and (min-width: calc($wwMaximum + 3rem)){
+ .webHeader .accesskey,
+ .main .accesskey { left: calc(50vw - $wwMaximum*.5 - 1.5rem ) }
 
 }
 // -----------------------------------------------------------------

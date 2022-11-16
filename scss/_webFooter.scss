@@ -46,34 +46,18 @@
 	}
 	// 宣告連結
 	.declaration {
-		margin: 1.5em auto 0;
-		padding: 1em 0 0;
-		text-align: center;
-		border-top: 1px solid $borderColor;
-		flex: 0 0 auto;
-		flex-basis: 100%;
-		order: 3;
+		margin: 1.5em auto 0;padding: 1em 0 0;flex: 0 0 auto;flex-basis: 100%;order: 3;
+		text-align: center;border-top: 1px solid $borderColor;
 		ul {
-			list-style: none;
-			line-height: 1.1;
-			margin: 4px 0 0;
-			padding: 0;
+			list-style: none;line-height: 1.1;margin: 4px 0 0;padding: 0;
 		}
 		li {
-			display: inline-block;
-			position: relative;
-			margin: .5em 0;
-			padding: 0 .7em 3px 0;
+			display: inline-block;position: relative;margin: .5em 0;padding: 0 .7em 3px 0;
 			&+li {
 				margin-left: .5em;
 			}
 			&::after {
-				content: '';
-				position: absolute;
-				right: 0;
-				top: .1em;
-				width: 1px;
-				height: 1em;
+				content: '';position: absolute;right: 0;top: .1em;width: 1px;height: 1em;
 				background-color: $fontColor;
 			}
 			&:last-child {
@@ -82,11 +66,8 @@
 				}
 			}
 			a {
-				display: block;
-				padding: 0 0 1px;
-				text-decoration: none;
-				color: $fontColor;
-				box-shadow: $borderColor 0 1px 0;
+				display: block;padding: 0 0 1px;
+				text-decoration: none;color: $fontColor;box-shadow: $borderColor 0 1px 0;
 				&:hover,
 				&:focus {
 					box-shadow: $fontColor 0 2px 0;
@@ -236,7 +217,7 @@
 		// 宣告連結
 		.declaration {
 			flex: 1 1 100%;display: flex;justify-content: space-between;
-			margin: 2em 2em 1em 0;padding: 1em 0 0;
+			margin: 2em 0 1em;padding: 1em 0 0;
 			border-top: 1px solid $borderColorDark;
 		}
 		.copyright {
@@ -245,5 +226,6 @@
 	}
 	@media screen and (min-width: $wwMaximum) {
 		width: $wwMaximum;
+		.declaration { margin-right: 0;}
 	}
 }

@@ -44,9 +44,7 @@
         box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 1px;
         color: $fontInvert; text-align: center;
         transition: .2s;
-        &:hover, &:focus{
-          box-shadow:#fff 0 0 0 2px;
-        }
+        &:hover, &:focus{ box-shadow:#fff 0 0 0 2px;}
       }
     }
   }
@@ -65,7 +63,7 @@
       a{ 
         padding: .8em .8em .7em;
         color: $fontInvert;transition: .2s;
-        &:hover{ background-color: darken($primaryColor, 6%);  }
+        &:hover, &:focus{ background-color: darken($primaryColor, 6%);  }
       }
 
       &.hasChild{
@@ -77,7 +75,6 @@
             transform: rotate(45deg); border-left: none; border-top: none;
             transition: .2s;
           }
-
         }
         &.closeIt{
           padding-bottom: 1px;
