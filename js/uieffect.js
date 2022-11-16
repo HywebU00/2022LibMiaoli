@@ -151,6 +151,7 @@ $(function() {
     var _hasChild = _menu.find('.hasChild');
 
     // 複製主選單到 行動版側欄
+    
     _menu.clone().appendTo(_sidebar);
     $('.topLinks').clone().appendTo(_sidebar);
     // 製作側欄選單遮罩
@@ -314,13 +315,6 @@ $(function() {
     $('.webHeader .accesskey').focus(function() {
         _html.stop(true, false).animate({ scrollTop: 0 }, 800);
     })
-
-    // _goTop.keydown(function(e) {
-    //     $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
-    //     _body.find('a.goCenter').focus();
-    //     e.preventDefault();
-    // });
-    // --end of-- 向上捲動箭頭 //////////////////////////////
 
 
 
@@ -1007,24 +1001,29 @@ $(function() {
     ////////////////////////////////////////////////////////////
 
     // .sidebarCtrl 控制行動版側欄開合的元件
-    var _sidebarCtrl = $('.sidebarCtrl')
+    var _sidebarCtrl = $('.sidebarCtrl');
+    console.log(_sidebar);
+
     _sidebarCtrl.click(function() {
+        // 
         if (_sidebar.hasClass('reveal')) {
             _sidebar.removeClass('reveal');
+            setTimeout( function(){ _sidebar.hide(); }, 450);
             _sidebarCtrl.removeClass('closeIt');
             _sidebarMask.fadeOut(400);
             _body.removeClass('noScroll');
         } else {
-            _sidebar.addClass('reveal');
+            _sidebar.show().addClass('reveal');
             _sidebarCtrl.addClass('closeIt');
             _sidebarMask.fadeIn(400);
-            _body.addClass('noScroll')
+            _body.addClass('noScroll');
         }
     })
 
     // 行動版側欄專用遮罩
     _sidebarMask.click(function() {
         _sidebar.removeClass('reveal');
+        setTimeout( function(){ _sidebar.hide(); }, 450);
         _sidebarCtrl.removeClass('closeIt');
         _body.removeClass('noScroll');
         $(this).fadeOut(400);

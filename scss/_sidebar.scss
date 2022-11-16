@@ -9,14 +9,17 @@
 
 // .sidebar 行動版側欄，預設隱藏 ///////////////////////////////////
 .sidebar{
-  position: fixed; top: 64px; bottom: 0; z-index: 990;
-  width: $sideBarWidth; left:$sideBarWidth * (-1);
-  overflow: auto; 
+  // display: none;
+  position: fixed; left: 0; top: 64px; bottom: 0; z-index: 990;
+  width: $sideBarWidth; overflow: auto;
+
+  transform: translateX(-100%);
+   
   background-color: $primaryColor; color: $fontInvert;
-  transition: .45s;
+  transition: .42s;
 
   // 顯示行動版側欄
-  &.reveal{ left:0; }
+  &.reveal{transform: translateX(0);}
 
   @media screen and (min-width: $wwNormal){
     display: none;
