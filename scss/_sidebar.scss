@@ -9,12 +9,9 @@
 
 // .sidebar 行動版側欄，預設隱藏 ///////////////////////////////////
 .sidebar{
-  // display: none;
   position: fixed; left: 0; top: 64px; bottom: 0; z-index: 990;
   width: $sideBarWidth; overflow: auto;
-
   transform: translateX(-100%);
-   
   background-color: $primaryColor; color: $fontInvert;
   transition: .42s;
 
