@@ -3,10 +3,12 @@
   @extend %mainWidth;
   padding: 20px 0 5px; font-size: 1rem;
   ul, li{ list-style: none; margin: 0;padding: 0;}
-  ul{line-height: 1.2; overflow: hidden; }
+  ul{line-height: 1.2; overflow: hidden;padding: 2px; }
   li{float: left; position: relative;color: $fontColor;
-    &:nth-child(n+2){padding-left: 2em;
-      &::before{ content: '';position: absolute; left: 1em; top: .12em; 
+    &:nth-child(n+2){
+      padding-left: 2em;
+      &::before{ 
+        content: '';position: absolute; left: 1em; top: .12em;
         width: 1px; height: 1em;
         background: none; border-left: 1px solid $fontColorLight;
         transform: rotate(20deg);
@@ -14,10 +16,17 @@
     }
     &:first-child{padding-left: 0;}
     a{
-      display: block; text-decoration: none; color: $fontColorLight;
-      border-bottom: 1px solid transparent;
-        &:hover, &:focus{  border-bottom-color: $fontColor; color: $fontColor;}
+      display: block; height: 1.4em; line-height: 1.5;
+      // text-decoration: none; color: $fontColorLight;
+      // border-bottom: 1px solid transparent;
+      //   &:hover, &:focus{  border-bottom-color: $fontColor; color: $fontColor;}
     }
+  }
+  a{
+    display:inline-block; text-decoration: none; color: $fontColorLight;
+    border-bottom: 1px solid transparent;
+      &:hover {  border-bottom-color: $fontColor; color: $fontColor;}
+      &:focus{ box-shadow: $linkColor 0 0 0 1px}
   }
 }
 

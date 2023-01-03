@@ -18,25 +18,15 @@
 	.login {
 		display: none;
 		padding: 25px 20px 0;
-		background: #fff;
-		box-shadow: $shadowColor 0 0 50px;
+		background: #fff;box-shadow: $shadowColor 0 0 50px;
 		form {
-			margin: 0;
-			padding: 0;
+			margin: 0;padding: 0;
 			&>table {
-				margin: 0 auto;
-				padding: 0;
-				border: none;
-				border-collapse: collapse;
-				line-height: 1.5;
+				margin: 0 auto;padding: 0;border: none;border-collapse: collapse;line-height: 1.5;
 				td {
-					padding: 1px;
-					vertical-align: top;
+					padding: 1px;vertical-align: top;
 					&:nth-child(odd) {
-						text-align: right;
-						padding-top: .8em;
-						padding-right: .3em;
-						color: $fontColorDark;
+						text-align: right;padding-top: .8em;padding-right: .3em;color: $fontColorDark;
 						label {
 							display: inline-block;
 						}
@@ -109,29 +99,26 @@
 		.captcha {
 			padding: 3px;
 			img {
-				display: inline-block;
-				vertical-align: middle;
-				margin: 3px 5px 0 1px;
-				height: 35px;
+				display: inline-block;vertical-align: middle;margin: 3px 3px 0 1px;height: 35px;
 			}
 			input {
-				margin: 6px 0 3px;
-				display: block;
-				width: 100%;
+				margin: 6px 0 3px;display: block;width: 100%;
 			}
 			a {
 				display: inline-block;
+				&.captchaText{
+					text-decoration: none; vertical-align: middle;
+					height: 2em; line-height: 2.1; padding: 0 .4em; margin: 2px 0 0;
+					&:hover{box-shadow: $linkColor 0 0 0 1px;}
+					&:focus{box-shadow: $linkColor 0 0 0 2px;}
+				}
 			}
 		}
 		.btnDv {
-			// background: #eee;
-			text-align: center;
-			margin: 15px -20px 0;
+			text-align: center;margin: 15px -20px 0;
 			button,
 			input {
-				margin: 0;
-				height: 3.5em;
-				border-radius: 0;
+				margin: 0;height: 3.5em;border-radius: 0;
 				&:only-child {
 					width: 100%;
 				}
