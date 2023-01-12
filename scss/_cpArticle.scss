@@ -144,7 +144,7 @@
 
   .downloadFiles{
     flex: 0 1 auto;
-    li{margin:0 0 0 12px; padding:3px 0;}
+    li{margin:0 0 0 8px; padding:3px 0;}
     a{
       padding: 5px;display: block; 
       &:hover, &:focus {
@@ -157,6 +157,7 @@
     }
   }
 
-  .fileType{ display: inline-block; vertical-align: middle; margin-right: 5px;}
+  .fileType{ display: inline-block; vertical-align: middle;}
+  .fileSize{margin-left: 5px;}
 }
 // -----------------------------------------------------------------
