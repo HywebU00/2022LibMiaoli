@@ -322,13 +322,14 @@
 					background: $white;color: $fontColor;
 					text-decoration: none; transition: .2s;
 					&:hover, &:focus {
-						box-shadow: $assistant 0 0 0 1px;
+						box-shadow: $assistant 0 0 0 2px;
 					}
 					&.active {
 						background: $assistant; color: $white;
 						box-shadow: $assistant 0 0 0 3px;
 						&:hover, &:focus {
 							background: $assistant; color: $white;
+							box-shadow: #fff 0 0 0 2px, $assistant 0 0 0 4px;
 						}
 					}
 					&.small {font-size: .938em;}
