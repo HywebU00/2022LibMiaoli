@@ -112,7 +112,7 @@
 		max-width: 360px;
 		color: $fontColor;
 		--weekend: #cf1680;
-		--closed: #eceeee;
+		--closed: #edefef;
 		--closedFont: #abb1b1;
 
 		.pignose-calendar {
@@ -172,8 +172,7 @@
 
 			.pignose-calendar-unit {
 
-				a,
-				&>div {
+				a, &>div {
 					color: $fontColor;
 				}
 
@@ -186,7 +185,6 @@
 					}
 
 					&.pignose-calendar-unit-disabled {
-
 						a,
 						&>div {
 							color: var(--closedFont);
@@ -194,11 +192,25 @@
 					}
 				}
 
-				// 有活動
-				&.event a,
-				&.event>div {
-					background-color: $primaryColor;
-					color: $fontInvert;
+				// // 有活動
+				// &.event a,
+				// &.event>div {
+				// 	background-color: $primaryColor;
+				// 	color: $fontInvert;
+				// }
+			
+			
+				&.pignose-calendar-unit-disabled-weekdays{
+					
+					&>div{
+						outline: none;
+						&>span{
+							display: inline-block;
+							width: 2.4em; height: 2.4em; line-height: 2.4em;
+							background: var(--closed); border-radius: 50%;
+						}
+						&:focus>span{ box-shadow: var(--closedFont) 0 0 0 1px; background-color: transparent;}
+					}
 				}
 			}
 
@@ -210,10 +222,31 @@
 				}
 			}
 
-			.pignose-calendar-unit-active a {
-				background: none;
-				box-shadow: none;
-				font-weight: normal;
+
+			.pignose-calendar-unit-active {
+				a{
+					background: none;
+					box-shadow: none;
+					font-weight: normal;
+				}
+
+				// 有活動
+				&.event{
+					a, div {
+						background-color: $primaryColor;
+						color: $fontInvert;
+					}
+					a{
+						&:hover{
+							box-shadow:$white 0 0 0 1px inset, $primaryColor 0 0 0 2px
+						}
+						&:focus{
+							background-color: $assistant;
+							box-shadow:$white 0 0 0 2px inset, $assistant 0 0 0 3px
+						}
+						transition: .15s;
+					}
+				}
 			}
 
 			.pignose-calendar-button-schedule-container {
@@ -386,4 +419,18 @@
 			max-height: $wwMaximum*.44;
 		}
 	}
+}
+
+
+.pignose-calendar .pignose-calendar-unit span {
+	display: inline-block;
+	width: 2.4em;
+	height: 2.4em;
+	border-radius: 50%;
+	color: #49c4d0;
+	line-height: 2.4em;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: background-color .3s ease,color .3s ease;
+	transition: background-color .3s ease,color .3s ease;
 }
